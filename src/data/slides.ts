@@ -3,6 +3,7 @@ import { Slide0 } from '../components/slides/Slide0';
 import { Slide1 } from '../components/slides/Slide1';
 import { Slide2 } from '../components/slides/Slide2';
 import { Slide3 } from '../components/slides/Slide3';
+import { SlideAdopcion } from '../components/slides/SlideAdopcion';
 import { Slide4 } from '../components/slides/Slide4';
 import { Slide5 } from '../components/slides/Slide5';
 import { Slide6 } from '../components/slides/Slide6';
@@ -49,50 +50,57 @@ export const SLIDES: SlideDefinition[] = [
     Component: Slide3,
   },
   {
-    id: 'ejemplo',
+    id: 'adopcion-operativa',
     index: 4,
+    title: 'Cero fricción de entrada = Máxima adopción operativa.',
+    category: 'Propuesta de Valor',
+    Component: SlideAdopcion,
+  },
+  {
+    id: 'ejemplo',
+    index: 5,
     title: 'Ejemplo de fricción e industrias',
     category: 'Contexto',
     Component: Slide4,
   },
   {
     id: 'solucion',
-    index: 5,
+    index: 6,
     title: 'Solucion · Pipeline IA y Salida',
     category: 'Solución',
     Component: Slide5,
   },
   {
     id: 'blockchain',
-    index: 6,
+    index: 7,
     title: 'Por que Blockchain? · Hedera HCS',
     category: 'Tecnología',
     Component: Slide6,
   },
   {
     id: 'confianza',
-    index: 7,
+    index: 8,
     title: 'Confianza entre contrapartes',
     category: 'Verificación',
     Component: Slide7,
   },
   {
     id: 'arquitectura',
-    index: 8,
+    index: 9,
     title: 'Arquitectura robusta y moderna',
     category: 'Arquitectura',
     Component: Slide8,
   },
   {
     id: 'modelo-b2b',
-    index: 9,
+    index: 10,
     title: 'Modelo SaaS B2B escalable',
     category: 'Negocio',
     Component: Slide9,
   },
   {
     id: 'roadmap-equipo',
-    index: 10,
+    index: 11,
     title: 'Roadmap y equipo',
     category: 'Roadmap',
     Component: Slide10,
