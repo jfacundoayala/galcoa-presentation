@@ -108,6 +108,15 @@ export const Slide0: React.FC = () => {
 
         {/* Right Column: Visual Showcase */}
         <motion.div variants={itemVariants} className="lg:col-span-5 flex flex-col items-center space-y-4">
+          {/* Description text box on top (enlarged text) */}
+          <div className="w-full max-w-md px-6 py-4 rounded-2xl bg-white/95 border-2 border-stone-300 shadow-md flex items-center gap-3.5">
+            <div className="w-3 h-3 rounded-full bg-amber-600 flex-shrink-0 animate-pulse" />
+            <p className="text-sm md:text-base lg:text-[17px] text-stone-900 leading-snug font-semibold">
+              Transforma datos de lenguaje natural o fotos, en registros inmutables de grado regulatorio mediante Normativas, IA y Hedera (HCS).
+            </p>
+          </div>
+
+          {/* Hedera Ecosystem card below */}
           <div className="relative w-full max-w-md rounded-3xl overflow-hidden shadow-2xl border border-stone-300/70 bg-gradient-to-br from-[#174235] via-[#205847] to-[#123329] p-6 text-white flex flex-col justify-between">
             {/* Background decorative glows */}
             <div className="absolute top-0 right-0 w-44 h-44 bg-amber-500/20 rounded-full blur-3xl pointer-events-none" />
@@ -139,14 +148,6 @@ export const Slide0: React.FC = () => {
               <span className="font-mono">Status: Testnet Verified</span>
               <span className="font-semibold text-emerald-300">● Live Prototype</span>
             </div>
-          </div>
-
-          {/* Description under Hedera Ecosystem card */}
-          <div className="w-full max-w-md px-5 py-3.5 rounded-2xl bg-white/95 border border-stone-300/80 shadow-md flex items-center gap-3">
-            <div className="w-2.5 h-2.5 rounded-full bg-amber-600 flex-shrink-0 animate-pulse" />
-            <p className="text-xs md:text-sm text-stone-800 leading-relaxed font-medium">
-              Transforma datos de lenguaje natural o fotos, en registros inmutables de grado regulatorio mediante Normativas, IA y Hedera (HCS).
-            </p>
           </div>
         </motion.div>
       </div>
