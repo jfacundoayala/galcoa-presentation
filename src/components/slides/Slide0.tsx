@@ -108,12 +108,24 @@ export const Slide0: React.FC = () => {
 
         {/* Right Column: Visual Showcase */}
         <motion.div variants={itemVariants} className="lg:col-span-5 flex flex-col items-center space-y-4">
-          {/* Description text box on top (enlarged text) */}
-          <div className="w-full max-w-md px-6 py-4 rounded-2xl bg-white/95 border-2 border-stone-300 shadow-md flex items-center gap-3.5">
-            <div className="w-3 h-3 rounded-full bg-amber-600 flex-shrink-0 animate-pulse" />
-            <p className="text-sm md:text-base lg:text-[17px] text-stone-900 leading-snug font-semibold">
-              <span className="text-[#174235] font-bold">Harness para sanitización de datos:</span> Transforma datos de lenguaje natural o fotos en registros inmutables de grado regulatorio mediante normativas GAMP 5 y ALCOA+, IA y Hedera HCS.
+          {/* Pitch Maestro Box on top */}
+          <div className="w-full max-w-md px-6 py-4 rounded-2xl bg-white/95 border-2 border-stone-300 shadow-md flex flex-col gap-2">
+            <div className="flex items-center justify-between">
+              <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-amber-800 flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-amber-600 animate-pulse" />
+                Problema Real · Solución Inmediata
+              </span>
+              <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-[#174235]/10 text-[#174235]">
+                GAMP 5 + ALCOA+
+              </span>
+            </div>
+            <p className="text-xs sm:text-[13px] md:text-[13.5px] text-stone-800 leading-relaxed font-medium">
+              En industrias reguladas (farma, biotecnología, alimentos y cosmética), la fricción del operario al cargar datos cuesta millones en multas y lotes rechazados. <strong>GALCOA+</strong> automatiza la captura, sanitización y validación desde el móvil o PC con IA y Hedera HCS.
             </p>
+            <div className="pt-2 border-t border-stone-200/80 flex items-center justify-between text-xs font-bold">
+              <span className="text-[#174235] font-mono">+ DATOS EN TIEMPO Y FORMA</span>
+              <span className="text-red-700 font-mono">– PÉRDIDAS MILLONARIAS</span>
+            </div>
           </div>
 
           {/* Hedera Ecosystem card below with photorealistic generated image */}
