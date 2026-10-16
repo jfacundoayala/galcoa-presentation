@@ -50,18 +50,18 @@ export const SLIDES: SlideDefinition[] = [
     Component: Slide5,
   },
   {
-    id: 'validacion',
-    index: 4,
-    title: 'Validación real en campo',
-    category: 'Validación',
-    Component: Slide3,
-  },
-  {
     id: 'adopcion-operativa',
-    index: 5,
+    index: 4,
     title: 'Cero fricción de entrada = Máxima adopción operativa.',
     category: 'Propuesta de Valor',
     Component: SlideAdopcion,
+  },
+  {
+    id: 'validacion',
+    index: 5,
+    title: 'Validación real en campo',
+    category: 'Validación',
+    Component: Slide3,
   },
   {
     id: 'ejemplo',
