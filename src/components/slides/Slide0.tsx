@@ -107,8 +107,8 @@ export const Slide0: React.FC = () => {
         </div>
 
         {/* Right Column: Visual Showcase */}
-        <motion.div variants={itemVariants} className="lg:col-span-5 flex justify-center">
-          <div className="relative w-full max-w-md aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-stone-300/70 bg-gradient-to-br from-[#174235] via-[#205847] to-[#123329] p-6 text-white flex flex-col justify-between">
+        <motion.div variants={itemVariants} className="lg:col-span-5 flex flex-col items-center space-y-4">
+          <div className="relative w-full max-w-md rounded-3xl overflow-hidden shadow-2xl border border-stone-300/70 bg-gradient-to-br from-[#174235] via-[#205847] to-[#123329] p-6 text-white flex flex-col justify-between">
             {/* Background decorative glows */}
             <div className="absolute top-0 right-0 w-44 h-44 bg-amber-500/20 rounded-full blur-3xl pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-44 h-44 bg-emerald-400/20 rounded-full blur-3xl pointer-events-none" />
@@ -122,9 +122,9 @@ export const Slide0: React.FC = () => {
             </div>
 
             {/* Center Graphic */}
-            <div className="relative z-10 py-6 text-center space-y-3">
-              <div className="inline-flex p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-inner">
-                <ShieldCheck className="w-16 h-16 text-amber-300" />
+            <div className="relative z-10 py-5 text-center space-y-3">
+              <div className="inline-flex p-3.5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-inner">
+                <ShieldCheck className="w-14 h-14 text-amber-300" />
               </div>
               <h3 className="text-xl font-bold font-display tracking-tight text-white">
                 GAMP 5 + ALCOA+
@@ -139,6 +139,14 @@ export const Slide0: React.FC = () => {
               <span className="font-mono">Status: Testnet Verified</span>
               <span className="font-semibold text-emerald-300">● Live Prototype</span>
             </div>
+          </div>
+
+          {/* Description under Hedera Ecosystem card */}
+          <div className="w-full max-w-md px-5 py-3.5 rounded-2xl bg-white/95 border border-stone-300/80 shadow-md flex items-center gap-3">
+            <div className="w-2.5 h-2.5 rounded-full bg-amber-600 flex-shrink-0 animate-pulse" />
+            <p className="text-xs md:text-sm text-stone-800 leading-relaxed font-medium">
+              Transforma datos de lenguaje natural o fotos, en registros inmutables de grado regulatorio mediante Normativas, IA y Hedera (HCS).
+            </p>
           </div>
         </motion.div>
       </div>
