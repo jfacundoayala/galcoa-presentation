@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Cpu, Database, Award, Users, CheckCircle2 } from 'lucide-react';
+import { ShieldCheck, Cpu, Database, CheckCircle2 } from 'lucide-react';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -23,13 +23,6 @@ const itemVariants = {
 };
 
 export const Slide0: React.FC = () => {
-  const teamMembers = [
-    'Gaston Persoglia.',
-    'Nahuel Noir.',
-    'Facundo Ayala.',
-    'Federico Fontana.',
-    'Thomas Skarp.',
-  ];
 
   const steps = [
     { num: 1, title: 'Captura ágil', icon: <CheckCircle2 className="w-5 h-5 text-amber-600" /> },
@@ -80,30 +73,6 @@ export const Slide0: React.FC = () => {
               ))}
             </div>
           </motion.div>
-
-          {/* Project Context */}
-          <motion.div variants={itemVariants} className="border-t border-stone-300/70 pt-4">
-            <p className="text-base md:text-lg font-medium text-stone-600">
-              Proyecto final para la Ideathon Hedera - NEA Tech
-            </p>
-          </motion.div>
-
-          {/* Team Section */}
-          <motion.div variants={itemVariants} className="space-y-3">
-            <div className="flex items-center gap-2 text-stone-800 font-semibold text-base md:text-lg">
-              <Users className="w-5 h-5 text-[#174235]" />
-              <span>Equipo :</span>
-            </div>
-            
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-stone-700 text-base md:text-lg pl-1">
-              {teamMembers.map((member, index) => (
-                <li key={index} className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-amber-600 flex-shrink-0" />
-                  <span className="font-medium">{member}</span>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
         </div>
 
         {/* Right Column: Visual Showcase */}
@@ -122,25 +91,16 @@ export const Slide0: React.FC = () => {
             </div>
           </div>
 
-          {/* Hedera Ecosystem card below with photorealistic generated image */}
+          {/* Clean hero image card */}
           <div className="relative w-full max-w-md rounded-3xl overflow-hidden shadow-2xl border border-stone-300/80 group">
             <img
               src="/img/hero-galcoa.jpg"
               alt="Harness para Sanitización de Datos GALCOA+"
-              className="w-full h-[280px] sm:h-[300px] object-cover group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-[280px] sm:h-[320px] object-cover group-hover:scale-105 transition-transform duration-700"
             />
             
-            {/* Cinematic overlay with card details */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/20 p-5 flex flex-col justify-between text-white">
-              <div className="flex items-center justify-between">
-                <span className="text-[11px] font-mono uppercase tracking-widest text-amber-300 font-bold px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15">
-                  Hedera Ecosystem
-                </span>
-                <span className="text-[11px] font-mono text-emerald-300 font-semibold px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10">
-                  ● Live Prototype
-                </span>
-              </div>
-
+            {/* Elegant clean bottom title */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent p-5 flex flex-col justify-end text-white">
               <div className="space-y-1">
                 <h3 className="text-xl font-bold font-display text-white tracking-tight">
                   GAMP 5 + ALCOA+
@@ -148,10 +108,6 @@ export const Slide0: React.FC = () => {
                 <p className="text-xs text-stone-200 leading-relaxed">
                   Consenso inmutable y auditoría descentralizada en tiempo real.
                 </p>
-                <div className="pt-2 border-t border-white/20 flex items-center justify-between text-[11px] font-mono text-stone-300">
-                  <span>Status: Testnet Verified</span>
-                  <span className="text-amber-300 font-bold">SHA-256 HCS</span>
-                </div>
               </div>
             </div>
           </div>

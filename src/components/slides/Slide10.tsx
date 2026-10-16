@@ -23,6 +23,14 @@ const itemVariants = {
 };
 
 export const Slide10: React.FC = () => {
+  const teamMembers = [
+    'Gaston Persoglia.',
+    'Nahuel Noir.',
+    'Facundo Ayala.',
+    'Federico Fontana.',
+    'Thomas Skarp.',
+  ];
+
   const phases = [
     {
       num: 1,
@@ -57,26 +65,49 @@ export const Slide10: React.FC = () => {
       animate="visible"
       className="w-full max-w-6xl mx-auto h-full flex flex-col justify-center px-6 lg:px-12 py-8"
     >
-      <motion.div variants={itemVariants} className="mb-6 md:mb-8">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#174235]/10 text-[#174235] text-xs font-semibold uppercase tracking-wider mb-3">
+      <motion.div variants={itemVariants} className="mb-4 md:mb-6">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#174235]/10 text-[#174235] text-xs font-semibold uppercase tracking-wider mb-2">
           Próximos Pasos & Capacidad de Ejecución
         </div>
-        <h2 className="text-4xl md:text-6xl font-extrabold text-[#174235] tracking-tight font-display">
+        <h2 className="text-3xl md:text-5xl font-extrabold text-[#174235] tracking-tight font-display">
           Roadmap y equipo
         </h2>
       </motion.div>
 
-      {/* Top Banner: Equipo */}
-      <motion.div
-        variants={itemVariants}
-        className="bg-white/95 rounded-2xl p-6 lg:p-7 border border-stone-200/90 shadow-sm flex items-center gap-4 mb-8"
-      >
-        <div className="p-3 rounded-xl bg-[#174235]/10 text-[#174235] flex-shrink-0">
-          <Users className="w-6 h-6" />
+      {/* Top Banner: Contexto & Integrantes del Equipo */}
+      <motion.div variants={itemVariants} className="space-y-3 mb-6">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-xs text-stone-500 font-mono">
+          <span>Proyecto final para la Ideathon Hedera - NEA Tech</span>
+          <span className="text-[#174235] font-bold">5 Desarrolladores & Especialistas</span>
         </div>
-        <p className="text-stone-800 font-semibold text-lg lg:text-xl leading-relaxed">
-          Equipo: 5 desarrolladores y especialistas en Frontend, Backend, IA/Prompting, Web3/Hedera y Producto.
-        </p>
+
+        <div className="bg-white/95 rounded-2xl p-5 border border-stone-200/90 shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="p-2.5 rounded-xl bg-[#174235]/10 text-[#174235] flex-shrink-0">
+              <Users className="w-5 h-5" />
+            </div>
+            <div>
+              <span className="text-xs font-mono uppercase tracking-wider text-amber-700 font-bold block">
+                Equipo :
+              </span>
+              <p className="text-stone-700 text-xs sm:text-sm font-medium">
+                Especialistas en Frontend, Backend, IA/Prompting, Web3/Hedera y Producto.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2">
+            {teamMembers.map((member, i) => (
+              <span
+                key={i}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F6F3EB] border border-[#E0D9C8] text-stone-800 text-xs sm:text-sm font-semibold shadow-2xs"
+              >
+                <span className="w-2 h-2 rounded-full bg-amber-600 flex-shrink-0" />
+                {member}
+              </span>
+            ))}
+          </div>
+        </div>
       </motion.div>
 
       {/* Timeline Section */}
