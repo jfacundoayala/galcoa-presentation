@@ -73,13 +73,13 @@ export const Slide0: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Pitch Principal (2 párrafos destacados, sin recuadro blanco) */}
+        {/* Pitch Principal (unificado con el mismo formato y color text-stone-700 font-medium) */}
         <motion.div variants={itemVariants} className="pt-2 md:pt-4 max-w-4xl mx-auto space-y-5 text-center">
-          <p className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-bold text-stone-900 leading-snug md:leading-snug tracking-tight">
+          <p className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-medium text-stone-700 leading-relaxed md:leading-relaxed tracking-tight">
             - En industrias reguladas como Farma, Biotecnologia, Alimentos etc. La friccion del operario al cargar datos cuesta millones en Multas, Auditorias o Lotes rechazados.
           </p>
-          <p className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-bold text-stone-900 leading-snug md:leading-snug tracking-tight">
-            - <span className="text-[#174235]">Galcoa+</span> lo soluciona de forma simple: Automatiza la captura, sanitizacion y validacion de la informacion en tiempo y forma.
+          <p className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-medium text-stone-700 leading-relaxed md:leading-relaxed tracking-tight">
+            - <span className="text-[#174235] font-semibold">Galcoa+</span> lo soluciona de forma simple: Automatiza la captura, sanitizacion y validacion de la informacion en tiempo y forma.
           </p>
         </motion.div>
       </motion.div>
