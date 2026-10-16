@@ -116,37 +116,37 @@ export const Slide0: React.FC = () => {
             </p>
           </div>
 
-          {/* Hedera Ecosystem card below */}
-          <div className="relative w-full max-w-md rounded-3xl overflow-hidden shadow-2xl border border-stone-300/70 bg-gradient-to-br from-[#174235] via-[#205847] to-[#123329] p-6 text-white flex flex-col justify-between">
-            {/* Background decorative glows */}
-            <div className="absolute top-0 right-0 w-44 h-44 bg-amber-500/20 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-44 h-44 bg-emerald-400/20 rounded-full blur-3xl pointer-events-none" />
-
-            {/* Card Header */}
-            <div className="relative z-10 flex items-center justify-between">
-              <span className="text-xs font-mono uppercase tracking-widest text-amber-300 font-bold">
-                Hedera Ecosystem
-              </span>
-              <Award className="w-6 h-6 text-amber-400" />
-            </div>
-
-            {/* Center Graphic */}
-            <div className="relative z-10 py-5 text-center space-y-3">
-              <div className="inline-flex p-3.5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-inner">
-                <ShieldCheck className="w-14 h-14 text-amber-300" />
+          {/* Hedera Ecosystem card below with photorealistic generated image */}
+          <div className="relative w-full max-w-md rounded-3xl overflow-hidden shadow-2xl border border-stone-300/80 group">
+            <img
+              src="/img/hero-galcoa.jpg"
+              alt="Harness de Verificación GALCOA+"
+              className="w-full h-[280px] sm:h-[300px] object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            
+            {/* Cinematic overlay with card details */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/20 p-5 flex flex-col justify-between text-white">
+              <div className="flex items-center justify-between">
+                <span className="text-[11px] font-mono uppercase tracking-widest text-amber-300 font-bold px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15">
+                  Hedera Ecosystem
+                </span>
+                <span className="text-[11px] font-mono text-emerald-300 font-semibold px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10">
+                  ● Live Prototype
+                </span>
               </div>
-              <h3 className="text-xl font-bold font-display tracking-tight text-white">
-                GAMP 5 + ALCOA+
-              </h3>
-              <p className="text-xs text-stone-200 max-w-xs mx-auto">
-                Consenso inmutable y auditoría descentralizada en tiempo real.
-              </p>
-            </div>
 
-            {/* Footer metric badge */}
-            <div className="relative z-10 pt-3 border-t border-white/15 flex items-center justify-between text-xs text-stone-300">
-              <span className="font-mono">Status: Testnet Verified</span>
-              <span className="font-semibold text-emerald-300">● Live Prototype</span>
+              <div className="space-y-1">
+                <h3 className="text-xl font-bold font-display text-white tracking-tight">
+                  GAMP 5 + ALCOA+
+                </h3>
+                <p className="text-xs text-stone-200 leading-relaxed">
+                  Consenso inmutable y auditoría descentralizada en tiempo real.
+                </p>
+                <div className="pt-2 border-t border-white/20 flex items-center justify-between text-[11px] font-mono text-stone-300">
+                  <span>Status: Testnet Verified</span>
+                  <span className="text-amber-300 font-bold">SHA-256 HCS</span>
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
