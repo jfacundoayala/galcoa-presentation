@@ -112,7 +112,7 @@ export const Slide0: React.FC = () => {
           <div className="w-full max-w-md px-6 py-4 rounded-2xl bg-white/95 border-2 border-stone-300 shadow-md flex items-center gap-3.5">
             <div className="w-3 h-3 rounded-full bg-amber-600 flex-shrink-0 animate-pulse" />
             <p className="text-sm md:text-base lg:text-[17px] text-stone-900 leading-snug font-semibold">
-              <span className="text-[#174235] font-bold">Harness de verificación:</span> Transforma datos de lenguaje natural o fotos en registros inmutables de grado regulatorio mediante Normativas, IA y Hedera (HCS).
+              <span className="text-[#174235] font-bold">Harness para sanitización de datos:</span> Transforma datos de lenguaje natural o fotos en registros inmutables de grado regulatorio mediante normativas GAMP 5 y ALCOA+, IA y Hedera HCS.
             </p>
           </div>
 
@@ -120,7 +120,7 @@ export const Slide0: React.FC = () => {
           <div className="relative w-full max-w-md rounded-3xl overflow-hidden shadow-2xl border border-stone-300/80 group">
             <img
               src="/img/hero-galcoa.jpg"
-              alt="Harness de Verificación GALCOA+"
+              alt="Harness para Sanitización de Datos GALCOA+"
               className="w-full h-[280px] sm:h-[300px] object-cover group-hover:scale-105 transition-transform duration-700"
             />
             
