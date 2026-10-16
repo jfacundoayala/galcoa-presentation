@@ -2,10 +2,10 @@ import React from 'react';
 import { Slide0 } from '../components/slides/Slide0';
 import { Slide1 } from '../components/slides/Slide1';
 import { Slide2 } from '../components/slides/Slide2';
+import { Slide5 } from '../components/slides/Slide5';
 import { Slide3 } from '../components/slides/Slide3';
 import { SlideAdopcion } from '../components/slides/SlideAdopcion';
 import { Slide4 } from '../components/slides/Slide4';
-import { Slide5 } from '../components/slides/Slide5';
 import { Slide6 } from '../components/slides/Slide6';
 import { Slide7 } from '../components/slides/Slide7';
 import { Slide8 } from '../components/slides/Slide8';
@@ -43,32 +43,32 @@ export const SLIDES: SlideDefinition[] = [
     Component: Slide2,
   },
   {
-    id: 'validacion',
+    id: 'solucion',
     index: 3,
+    title: 'Solucion · Pipeline IA y Salida',
+    category: 'Solución',
+    Component: Slide5,
+  },
+  {
+    id: 'validacion',
+    index: 4,
     title: 'Validación real en campo',
     category: 'Validación',
     Component: Slide3,
   },
   {
     id: 'adopcion-operativa',
-    index: 4,
+    index: 5,
     title: 'Cero fricción de entrada = Máxima adopción operativa.',
     category: 'Propuesta de Valor',
     Component: SlideAdopcion,
   },
   {
     id: 'ejemplo',
-    index: 5,
+    index: 6,
     title: '"Los operarios no registran mal por falta de voluntad..."',
     category: 'Contexto',
     Component: Slide4,
-  },
-  {
-    id: 'solucion',
-    index: 6,
-    title: 'Solucion · Pipeline IA y Salida',
-    category: 'Solución',
-    Component: Slide5,
   },
   {
     id: 'blockchain',
