@@ -59,7 +59,7 @@ export const SLIDES: SlideDefinition[] = [
   {
     id: 'ejemplo',
     index: 5,
-    title: 'Ejemplo de fricción e industrias',
+    title: '"Los operarios no registran mal por falta de voluntad..."',
     category: 'Contexto',
     Component: Slide4,
   },

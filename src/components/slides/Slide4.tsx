@@ -30,21 +30,15 @@ export const Slide4: React.FC = () => {
       animate="visible"
       className="w-full max-w-6xl mx-auto h-full flex flex-col justify-center px-6 lg:px-12 py-8"
     >
-      <motion.div variants={itemVariants} className="mb-6 md:mb-8">
-        <h2 className="text-4xl md:text-6xl font-extrabold text-[#174235] tracking-tight font-display">
-          Ejemplo
-        </h2>
-      </motion.div>
-
-      <div className="space-y-6">
+      <div className="space-y-8">
         {/* Quote / Highlight Box */}
         <motion.div
           variants={itemVariants}
-          className="relative bg-gradient-to-r from-[#F0ECE1] to-[#E9E3D3] rounded-3xl p-8 lg:p-10 border border-[#D5CDBC] shadow-md shadow-stone-900/5"
+          className="relative bg-gradient-to-r from-[#F0ECE1] to-[#E9E3D3] rounded-3xl p-8 lg:p-12 border border-[#D5CDBC] shadow-md shadow-stone-900/5"
         >
-          <Quote className="w-10 h-10 text-amber-600/30 absolute top-6 right-6 pointer-events-none" />
-          <p className="text-xl md:text-3xl font-semibold text-stone-900 leading-snug tracking-tight font-display">
-            Los operarios no registran mal por falta de voluntad, sino porque las herramientas son más difíciles que la tarea misma.
+          <Quote className="w-12 h-12 text-amber-600/30 absolute top-6 right-6 pointer-events-none" />
+          <p className="text-2xl md:text-4xl font-semibold text-stone-900 leading-snug tracking-tight font-display">
+            "Los operarios no registran mal por falta de voluntad, sino porque las herramientas son más difíciles que la tarea misma."
           </p>
         </motion.div>
 
