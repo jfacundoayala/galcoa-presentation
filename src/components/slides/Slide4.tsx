@@ -23,11 +23,11 @@ type Variant = 'hedera' | 'agro';
 
 const COPY = {
   agro: {
-    quote: 'Los productores no registran mal por falta de voluntad, sino porque las herramientas son más difíciles que la tarea misma.',
+    quote: 'Los equipos no registran mal por falta de voluntad, sino porque las herramientas son más difíciles que la tarea misma.',
     steps: [
-      { title: 'El productor o técnico escribe, manda una foto o un audio.', text: 'Desde el lote, con el celular y en segundos. Sin cuadernos ni planillas.' },
-      { title: 'La IA ordena y revisa el registro.', text: 'Lo estructura (lote, labor, insumo, fecha) y detecta lo que falta o no cierra.' },
-      { title: 'Los responsables confirman.', text: 'Técnico y responsable validan la misma versión del registro.' },
+      { title: 'El técnico escribe, manda una foto o un audio.', text: 'Desde el cultivo o el laboratorio, con el celular y en segundos. Sin planillas.' },
+      { title: 'La IA ordena y revisa el registro.', text: 'Lo estructura (lote, etapa, parámetros, fecha) y detecta lo que falta o no cierra.' },
+      { title: 'Los responsables confirman.', text: 'Técnico y responsable de calidad validan la misma versión del registro.' },
       { title: 'Cada dato, sellado en Hedera.', text: 'PDF listo y huella en Hedera HCS. Nadie lo puede reescribir. Un QR muestra la historia del lote.' },
     ],
   },

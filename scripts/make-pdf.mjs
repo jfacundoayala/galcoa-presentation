@@ -9,7 +9,7 @@ import path from 'node:path';
 const PORT = 4173;
 const DECKS = [
   { deck: 'hedera', total: 11, pdf: 'GALCOA_Presentacion_Hedera_Ideathon.pdf' },
-  { deck: 'agro', total: 9, pdf: 'GALCOA_Presentacion_Agro.pdf' },
+  { deck: 'agro', total: 11, pdf: 'GALCOA_Presentacion_Agro.pdf' },
 ];
 const npx = process.platform === 'win32' ? 'npx.cmd' : 'npx';
 const npm = process.platform === 'win32' ? 'npm.cmd' : 'npm';

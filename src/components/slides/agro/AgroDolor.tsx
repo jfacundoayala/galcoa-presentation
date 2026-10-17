@@ -13,15 +13,15 @@ const item = {
 
 export const AgroDolor: React.FC = () => {
   const today = [
-    'Cuadernos de campo y planillas de papel',
-    'Excels armados a fin de mes',
-    'Fotos y audios sueltos en chats informales',
+    'Bitácoras y planillas de papel en cultivo',
+    'Excels de lotes, análisis y movimientos',
+    'Fotos y mensajes sueltos de cosecha y secado',
     'Datos cargados tarde, de memoria',
   ];
   const costs = [
     { icon: <FileSearch className="w-5 h-5" aria-hidden="true" />, tag: 'Evidencia dispersa', text: 'Cuando piden el registro, nadie lo encuentra.' },
-    { icon: <ClipboardX className="w-5 h-5" aria-hidden="true" />, tag: 'Hallazgos en auditoría', text: 'Documentación incompleta o armada a último momento.' },
-    { icon: <TrendingDown className="w-5 h-5" aria-hidden="true" />, tag: 'Pérdida de capital', text: 'Lotes demorados o rechazados y ventas en riesgo.' },
+    { icon: <ClipboardX className="w-5 h-5" aria-hidden="true" />, tag: 'Habilitación en riesgo', text: 'Registros incompletos ponen en juego permisos y auditorías.' },
+    { icon: <TrendingDown className="w-5 h-5" aria-hidden="true" />, tag: 'Pérdida de capital', text: 'Lotes retenidos o descartados y ventas perdidas.' },
   ];
 
   return (
@@ -31,7 +31,7 @@ export const AgroDolor: React.FC = () => {
           <AlertTriangle className="w-3.5 h-3.5" aria-hidden="true" />
           Diagnóstico de fricción operativa
         </div>
-        <h2 className="text-4xl md:text-6xl font-semibold text-brand-yellow tracking-tight font-display">El dolor en el campo</h2>
+        <h2 className="text-4xl md:text-6xl font-semibold text-brand-yellow tracking-tight font-display">El dolor en la cadena del cannabis</h2>
       </motion.div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-px bg-line border border-line">
@@ -46,7 +46,7 @@ export const AgroDolor: React.FC = () => {
 
         <div className="lg:col-span-7 bg-surface-deep p-5 lg:p-7 space-y-4">
           <motion.div variants={item} className="font-mono text-[11px] uppercase tracking-[0.05em] text-text-muted">
-            Y cuando llega la auditoría
+            Y cuando llega la auditoría o el cliente farma
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {costs.map((c) => (
@@ -61,7 +61,7 @@ export const AgroDolor: React.FC = () => {
       </div>
 
       <motion.p variants={item} className="mt-4 bg-brand-green text-text px-5 py-4 text-base md:text-lg font-semibold font-display leading-snug">
-        La causa raíz no es la gente: son herramientas más difíciles que la tarea misma.
+        Un cultivo con exigencias de farma, registrado con herramientas de campo.
       </motion.p>
     </motion.div>
   );

@@ -14,6 +14,7 @@ import { Slide4Agro } from '../components/slides/Slide4';
 import { AgroPortada } from '../components/slides/agro/AgroPortada';
 import { AgroDolor } from '../components/slides/agro/AgroDolor';
 import { AgroCiclo } from '../components/slides/agro/AgroCiclo';
+import { AgroValor } from '../components/slides/agro/AgroValor';
 
 export interface SlideDefinition {
   id: string;
@@ -117,14 +118,16 @@ const byId = (id: string) => {
   return slide;
 };
 
-/** Versión Agro: misma base, otro relato (campo y lote en primer plano; Hedera como sello de confianza). */
+/** Versión Agro: cannabis medicinal e industrial (cáñamo) rumbo a la industria farma; Hedera como sello de confianza. */
 const AGRO_SLIDES: SlideDefinition[] = [
-  { id: 'agro-portada', title: 'GALCOA+ Agro · Del lote a la auditoría', category: 'Portada', Component: AgroPortada },
-  { id: 'agro-dolor', title: 'El dolor en el campo', category: 'Problema', Component: AgroDolor },
+  { id: 'agro-portada', title: 'GALCOA+ Cannabis · De la semilla al producto', category: 'Portada', Component: AgroPortada },
+  { id: 'agro-dolor', title: 'El dolor en la cadena del cannabis', category: 'Problema', Component: AgroDolor },
+  byId('estandares'),
   byId('solucion'),
-  { id: 'agro-como-funciona', title: 'Cómo funciona · Del lote a evidencia sellada', category: 'Producto', Component: Slide4Agro },
+  { id: 'agro-como-funciona', title: 'Cómo funciona · Del cultivo a evidencia sellada', category: 'Producto', Component: Slide4Agro },
   { id: 'agro-ciclo', title: 'Cada etapa deja evidencia', category: 'Trazabilidad', Component: AgroCiclo },
   byId('blockchain'),
+  { id: 'agro-valor', title: 'Qué gana el productor · Vale más, se vende más, se exporta', category: 'Valor', Component: AgroValor },
   byId('validacion'),
   byId('modelo-b2b'),
   byId('roadmap-equipo'),

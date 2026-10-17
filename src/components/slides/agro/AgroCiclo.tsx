@@ -13,23 +13,23 @@ const item = {
 
 export const AgroCiclo: React.FC = () => {
   const stages = [
-    { n: '01', name: 'Siembra', text: 'Lote, fecha y responsable.' },
-    { n: '02', name: 'Aplicaciones', text: 'Producto, dosis y condiciones.' },
-    { n: '03', name: 'Cosecha', text: 'Cantidad, fecha y lote de origen.' },
-    { n: '04', name: 'Acopio y traslado', text: 'Quién lo movió, cuándo y hacia dónde.' },
-    { n: '05', name: 'Entrega', text: 'Documentación lista para auditar.' },
+    { n: '01', name: 'Cultivo', text: 'Lote, genética y responsable.' },
+    { n: '02', name: 'Cosecha y secado', text: 'Fechas, pesos y condiciones.' },
+    { n: '03', name: 'Procesamiento', text: 'Lote de entrada, lote de salida y responsable.' },
+    { n: '04', name: 'Calidad', text: 'Resultados de análisis asociados al lote.' },
+    { n: '05', name: 'Producto final', text: 'Documentación lista para auditar.' },
   ];
 
   return (
     <motion.div variants={container} initial="hidden" animate="visible" className="w-full max-w-6xl mx-auto px-6 lg:px-12 py-6">
       <motion.div variants={item} className="mb-5 md:mb-6 space-y-3">
         <div className="inline-flex px-3 py-1 bg-brand-yellow/10 text-brand-yellow text-xs font-semibold uppercase tracking-wider">
-          Trazabilidad del lote
+          Trazabilidad de la semilla al producto
         </div>
         <h2 className="text-4xl md:text-6xl font-semibold text-brand-yellow tracking-tight font-display">
           Cada etapa deja evidencia
         </h2>
-        <p className="text-text text-lg md:text-xl font-display leading-snug">De la siembra a la entrega, sin un solo registro suelto.</p>
+        <p className="text-text text-lg md:text-xl font-display leading-snug">Del cultivo al despacho, sin un solo registro suelto.</p>
       </motion.div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-line border border-line">
@@ -50,7 +50,7 @@ export const AgroCiclo: React.FC = () => {
       </div>
 
       <motion.p variants={item} className="mt-4 bg-brand-green text-text px-5 py-4 text-base md:text-lg font-semibold font-display leading-snug">
-        Un QR por lote: toda su historia, a un escaneo de distancia.
+        Un QR por lote: del cultivo al producto final, a un escaneo de distancia.
       </motion.p>
     </motion.div>
   );

@@ -21,7 +21,7 @@ La misma web sirve dos presentaciones, con relato distinto. Se elige con un par�
 | Versión | URL | Foco | Diapositivas |
 |---|---|---|---|
 | **Hedera** (por defecto) | `/` o `/?deck=hedera` | Industrias reguladas (farma primero) y Hedera como tecnología. | 11 |
-| **Agro** | `/?deck=agro` | Campo y lote: del cultivo a la auditoría, con Hedera como sello de confianza. | 9 |
+| **Agro** | `/?deck=agro` | Cannabis medicinal e industrial (cáñamo) hacia la industria farma: de la semilla al producto, con Hedera como sello de confianza y el valor para el productor. | 11 |
 
 - Las definiciones están en `src/data/slides.ts` (`DECKS`). Las diapositivas propias de Agro están en `src/components/slides/agro/`.
 - `npm run pdf` genera un PDF por versión: `GALCOA_Presentacion_Hedera_Ideathon.pdf` y `GALCOA_Presentacion_Agro.pdf`.
