@@ -63,10 +63,10 @@ export const SLIDES: SlideDefinition[] = [
     Component: Slide3,
   },
   {
-    id: 'ejemplo',
+    id: 'como-funciona',
     index: 6,
-    title: '“Los operarios no registran mal por falta de voluntad...”',
-    category: 'Contexto',
+    title: 'Cómo funciona · De mensaje a evidencia sellada',
+    category: 'Producto',
     Component: Slide4,
   },
   {

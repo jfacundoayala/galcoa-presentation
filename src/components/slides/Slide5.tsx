@@ -200,7 +200,7 @@ export const Slide5: React.FC = () => {
                   LOTES APROBADOS
                 </span>
                 <span className="text-[11px] font-mono text-text/80 mt-1">
-                  Trazabilidad 100% inmutable
+                  Sellado en Hedera. Nadie lo puede reescribir.
                 </span>
               </div>
             </div>

@@ -34,14 +34,14 @@ export const SlideAdopcion: React.FC = () => {
     },
     {
       title: 'Trazabilidad estricta:',
-      text: 'Garantiza principios ALCOA+ y GAMP 5 de forma automática.',
+      text: 'Cada registro nace con ALCOA+ incluido.',
       icon: <ShieldCheck className="w-6 h-6 text-brand-yellow" />,
       badgeBg: 'bg-brand-yellow/10 text-brand-yellow border-line',
       border: 'border-line',
     },
     {
       title: 'Alto valor regulatorio:',
-      text: 'Blinda a sectores críticos (farma, agro, química, minería) contra multas y fallos de auditoría con verificación instantánea por QR.',
+      text: 'Elimina la causa de las multas: el dato mal cargado. Para sectores críticos (farma, agro, química, minería), con verificación instantánea por QR.',
       icon: <Award className="w-6 h-6 text-brand-yellow" />,
       badgeBg: 'bg-brand-yellow/10 text-brand-yellow border-brand-yellow',
       border: 'border-brand-yellow',
