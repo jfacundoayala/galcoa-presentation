@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { AlertTriangle, FileSpreadsheet, Layers, XCircle, Ban } from 'lucide-react';
+import { AlertTriangle, FileSpreadsheet, Layers, XCircle, Ban, TrendingDown } from 'lucide-react';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -114,7 +114,7 @@ export const Slide2: React.FC = () => {
           </div>
         </div>
 
-        {/* Recuadro 3: Consecuencia con 3 Sellos (Octagonal, Triangular, Rectangular) */}
+        {/* Recuadro 3: Consecuencia con 4 Sellos (Octagonal, Triangular, Rectangular, Punteado) */}
         <div className="relative">
           <motion.div
             variants={itemVariants}
@@ -125,8 +125,8 @@ export const Slide2: React.FC = () => {
               <span>Consecuencia:</span>
             </div>
 
-            {/* 3 Sellos llamativos: Octagonal, Triangular, Rectangular */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 pt-1 items-center">
+            {/* 4 Sellos llamativos */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 pt-1 items-center">
               {/* Sello 1: MULTAS (Octagonal) */}
               <div className="relative flex flex-col items-center justify-center p-3.5 min-h-[130px] text-center transform -rotate-1 hover:rotate-0 transition-transform">
                 <svg className="absolute inset-0 w-full h-full text-danger" viewBox="0 0 160 120" preserveAspectRatio="none">
@@ -160,7 +160,7 @@ export const Slide2: React.FC = () => {
               </div>
 
               {/* Sello 2: AUDITORÍAS DESAPROBADAS (Triangular calibrado) */}
-              <div className="relative flex flex-col items-center justify-center p-3 min-h-[130px] text-center transform rotate-1 hover:rotate-0 transition-transform">
+              <div className="relative flex flex-col items-center justify-center p-3 min-h-[150px] text-center transform rotate-1 hover:rotate-0 transition-transform">
                 <svg className="absolute inset-0 w-full h-full text-brand-yellow" viewBox="0 0 170 130" preserveAspectRatio="none">
                   <polygon
                     points="85,6 164,122 6,122"
@@ -176,12 +176,12 @@ export const Slide2: React.FC = () => {
                     opacity="0.6"
                   />
                 </svg>
-                <div className="relative z-10 flex flex-col items-center pt-7 pb-1">
+                <div className="relative z-10 flex flex-col items-center pt-10 pb-2">
                   <div className="flex items-center gap-1 text-[10px] font-mono font-bold tracking-wider uppercase text-brand-yellow">
                     <XCircle className="w-3 h-3" />
                     <span>No Conformidad</span>
                   </div>
-                  <span className="text-xs sm:text-sm md:text-base font-semibold font-display tracking-tight uppercase text-brand-yellow leading-tight my-0.5">
+                  <span className="text-[11px] sm:text-xs md:text-sm font-semibold font-display tracking-tight uppercase text-brand-yellow leading-tight my-0.5">
                     AUDITORÍAS DESAPROBADAS
                   </span>
                   <span className="text-[10px] font-medium text-brand-yellow/90 leading-tight">
@@ -201,6 +201,20 @@ export const Slide2: React.FC = () => {
                 </span>
                 <span className="text-[11px] font-mono text-brand-yellow/80 mt-1">
                   Destrucción física del producto
+                </span>
+              </div>
+
+              {/* Sello 4: PÉRDIDA DE CAPITAL (Rectangular punteado) */}
+              <div className="relative border-2 border-dashed border-brand-yellow p-3.5 bg-brand-yellow/10 text-brand-yellow flex flex-col items-center justify-center text-center transform rotate-1 hover:rotate-0 transition-transform min-h-[130px]">
+                <div className="flex items-center gap-1.5 text-xs font-mono font-bold tracking-widest uppercase text-brand-yellow mb-0.5">
+                  <TrendingDown className="w-3.5 h-3.5" />
+                  <span>Impacto económico</span>
+                </div>
+                <span className="text-xl md:text-2xl font-semibold tracking-tighter uppercase text-brand-yellow font-sans leading-tight">
+                  PÉRDIDA DE CAPITAL
+                </span>
+                <span className="text-[11px] font-mono text-brand-yellow/80 mt-1">
+                  Dinero perdido en multas, lotes y paradas
                 </span>
               </div>
             </div>

@@ -24,11 +24,11 @@ const itemVariants = {
 
 export const Slide10: React.FC = () => {
   const teamMembers = [
-    'Gaston Persoglia.',
-    'Nahuel Noir.',
-    'Facundo Ayala.',
-    'Federico Fontana.',
-    'Thomas Skarp.',
+    'Gaston Persoglia',
+    'Nahuel Noir',
+    'Facundo Ayala',
+    'Federico Fontana',
+    'Thomas Skarp',
   ];
 
   const phases = [

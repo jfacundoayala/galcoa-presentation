@@ -33,10 +33,10 @@ export const Slide1: React.FC = () => {
     >
       <motion.div variants={cardVariants} className="mb-8 md:mb-12">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-yellow/10 text-brand-yellow text-xs font-semibold uppercase tracking-wider mb-3">
-          Marco Regulatorio & Compliance
+          Buenas prácticas & integridad de datos
         </div>
         <h2 className="text-4xl md:text-6xl font-semibold text-brand-yellow tracking-tight font-display">
-          Normativas.
+          Estándares.
         </h2>
       </motion.div>
 
@@ -60,7 +60,7 @@ export const Slide1: React.FC = () => {
             </h3>
 
             <p className="text-lg lg:text-xl text-text leading-relaxed font-normal">
-              Estándar internacional que exige que todo software y proceso en industrias reguladas (como farma) esté validado y libre de riesgos de manipulación.
+              Guía internacional de buenas prácticas de fabricación automatizada: busca que el software y los procesos de industrias reguladas (como farma) sean confiables, estén validados y libres de riesgos de manipulación.
             </p>
           </div>
 
@@ -89,7 +89,7 @@ export const Slide1: React.FC = () => {
             </h3>
 
             <p className="text-lg lg:text-xl text-text leading-relaxed font-normal">
-              Principio de integridad que exige que todo dato sea: Atribuible, Legible, Contemporáneo (al momento), Original y Exacto (+ Completo, Consistente y Duradero).
+              Principios de integridad de datos: todo dato debe ser Atribuible, Legible, Contemporáneo (al momento), Original y Exacto (+ Completo, Consistente y Duradero).
             </p>
           </div>
 

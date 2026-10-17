@@ -67,10 +67,10 @@ export const Slide0: React.FC = () => {
 
           {/* Recuadritos debajo de GALCOA+ (sin puntitos) */}
           <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3.5 pt-1">
-            <span className="px-3.5 py-1 rounded-full bg-brand-yellow/10 border border-brand-yellow text-brand-yellow font-mono font-bold text-xs sm:text-sm">
+            <span className="px-4 py-2 bg-brand-green border border-text/25 text-text font-mono font-bold text-sm sm:text-base">
               + datos en tiempo y forma
             </span>
-            <span className="px-3.5 py-1 rounded-full bg-red-700/10 border border-red-700/20 text-danger font-mono font-bold text-xs sm:text-sm">
+            <span className="px-3.5 py-1 bg-danger/10 border border-danger/40 text-danger font-mono font-bold text-xs sm:text-sm">
               - perdidas millonarias
             </span>
           </div>

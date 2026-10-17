@@ -28,9 +28,9 @@ export const SLIDES: SlideDefinition[] = [
     Component: Slide0,
   },
   {
-    id: 'normativas',
+    id: 'estandares',
     index: 1,
-    title: 'Normativas · GAMP 5 & ALCOA+',
+    title: 'Estándares · GAMP 5 & ALCOA+',
     category: 'Compliance',
     Component: Slide1,
   },
