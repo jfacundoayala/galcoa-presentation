@@ -69,6 +69,13 @@ export const Header: React.FC<HeaderProps> = ({
             {d.label}
           </a>
         ))}
+        <a
+          href="/demo"
+          data-no-nav="true"
+          className="hidden sm:flex min-h-[44px] px-5 items-center font-mono text-xs uppercase tracking-[0.05em] font-semibold border-r border-line text-brand-yellow hover:bg-surface"
+        >
+          Demo
+        </a>
       </nav>
 
       {/* Atajos */}

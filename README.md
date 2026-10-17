@@ -34,6 +34,15 @@ La misma web sirve dos presentaciones, con relato distinto. Se elige con la ruta
 
 ---
 
+## 🧪 Demo interactiva
+`/demo` recorre el flujo (captura → IA → confirmación → sello) con datos de ejemplo (farma y cannabis). Calcula una huella SHA-256 real en el navegador y permite alterar un dato para ver cómo deja de coincidir. **No publica en Hedera.**
+
+## 📦 Entrega al formulario
+- [`docs/ENTREGA-FORMS.md`](docs/ENTREGA-FORMS.md): qué va en cada campo.
+- [`docs/VIDEO-PITCH.md`](docs/VIDEO-PITCH.md): guion del video de 2:30.
+
+---
+
 ## 🎨 Sistema de diseño
 La presentación sigue [`DESIGN.md`](DESIGN.md) (Structured Intelligence / Verified Evidence): fondo oscuro verdoso, retícula visible, esquinas rectas (`border-radius: 0`), verde `#174235` y amarillo `#FCD34D` como únicos colores de marca, Space Grotesk + IBM Plex Mono.
 
