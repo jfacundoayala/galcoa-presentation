@@ -103,7 +103,7 @@ export const Slide8: React.FC = () => {
             </div>
 
             <div className="pt-3 border-t border-line flex items-center justify-between text-xs font-mono text-text-muted">
-              <span>Producción Ready</span>
+              <span>Listo para producción</span>
               <span>100% Tipado</span>
             </div>
           </motion.div>

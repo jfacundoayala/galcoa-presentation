@@ -77,7 +77,7 @@ export const Slide10: React.FC = () => {
       {/* Top Banner: Contexto & Integrantes del Equipo */}
       <motion.div variants={itemVariants} className="space-y-3 mb-6">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-xs text-text-muted font-mono">
-          <span>Proyecto final para la Ideathon Hedera - NEA Tech</span>
+          <span>Proyecto final para la Ideathon Hedera · NEA Tech</span>
           <span className="text-brand-yellow font-bold">5 Desarrolladores & Especialistas</span>
         </div>
 
@@ -87,7 +87,7 @@ export const Slide10: React.FC = () => {
               <Users className="w-5 h-5" />
             </div>
             <span className="text-sm font-mono uppercase tracking-wider text-brand-yellow font-bold">
-              Equipo :
+              Equipo:
             </span>
           </div>
 

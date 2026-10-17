@@ -61,7 +61,7 @@ export const SlideAdopcion: React.FC = () => {
           Adopción Operativa & Impacto
         </div>
         <h2 className="text-3xl md:text-5xl font-semibold text-brand-yellow tracking-tight font-display leading-tight">
-          "Cero fricción de entrada = Máxima adopción operativa."
+          “Cero fricción de entrada = Máxima adopción operativa.”
         </h2>
       </motion.div>
 

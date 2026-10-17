@@ -44,7 +44,7 @@ export const SLIDES: SlideDefinition[] = [
   {
     id: 'solucion',
     index: 3,
-    title: 'Solucion · Pipeline IA y Salida',
+    title: 'Solución · Pipeline IA y Salida',
     category: 'Solución',
     Component: Slide5,
   },
@@ -65,14 +65,14 @@ export const SLIDES: SlideDefinition[] = [
   {
     id: 'ejemplo',
     index: 6,
-    title: '"Los operarios no registran mal por falta de voluntad..."',
+    title: '“Los operarios no registran mal por falta de voluntad...”',
     category: 'Contexto',
     Component: Slide4,
   },
   {
     id: 'blockchain',
     index: 7,
-    title: 'Por que Blockchain? · Hedera HCS',
+    title: '¿Por qué Blockchain? · Hedera HCS',
     category: 'Tecnología',
     Component: Slide6,
   },

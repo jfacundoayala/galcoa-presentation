@@ -66,7 +66,7 @@ export const Slide6: React.FC = () => {
           Tecnología DLT de Nivel Institucional
         </div>
         <h2 className="text-4xl md:text-6xl font-semibold text-brand-yellow tracking-tight font-display">
-          Por que Blockchain?
+          ¿Por qué Blockchain?
         </h2>
       </motion.div>
 

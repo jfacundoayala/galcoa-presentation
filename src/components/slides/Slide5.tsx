@@ -38,7 +38,7 @@ export const Slide5: React.FC = () => {
         </div>
         
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-brand-yellow tracking-tight font-display">
-          Solucion
+          Solución
         </h2>
       </motion.div>
 
@@ -55,7 +55,7 @@ export const Slide5: React.FC = () => {
               <span>Causa raíz:</span>
             </div>
             <p className="text-base md:text-lg text-text leading-relaxed font-medium">
-              en campo el operario registra por chat con lenguaje natural o imagenes. eliminando pasos que solo afectan a la agilidad del proceso .
+              En campo, el operario registra por chat con lenguaje natural o imágenes, eliminando pasos que solo afectan la agilidad del proceso.
             </p>
           </motion.div>
 
@@ -87,10 +87,10 @@ export const Slide5: React.FC = () => {
           >
             <div className="flex items-center gap-2 text-brand-yellow font-bold text-lg md:text-xl font-display">
               <Layers className="w-5 h-5 text-brand-yellow" />
-              <span>Se ve reflejado en :</span>
+              <span>Se ve reflejado en:</span>
             </div>
             <p className="text-base md:text-lg text-text leading-relaxed font-medium">
-              Trazabilidad de los datos desde el dia 1 hasta el final del proceso productivo .
+              Trazabilidad de los datos desde el día 1 hasta el final del proceso productivo.
             </p>
           </motion.div>
 

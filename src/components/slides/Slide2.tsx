@@ -87,10 +87,10 @@ export const Slide2: React.FC = () => {
           >
             <div className="flex items-center gap-2 text-brand-yellow font-bold text-lg md:text-xl font-display">
               <Layers className="w-5 h-5 text-brand-yellow" />
-              <span>Se ve reflejado en :</span>
+              <span>Se ve reflejado en:</span>
             </div>
             <p className="text-base md:text-lg text-text leading-relaxed font-medium">
-              Cargas tardias, datos dispersos, manipulacion, dificil acceso a la trazabilidad de los datos.
+              Cargas tardías, datos dispersos, manipulación, difícil acceso a la trazabilidad de los datos.
             </p>
           </motion.div>
 

@@ -34,7 +34,7 @@ export const Slide4: React.FC = () => {
         className="relative bg-surface p-10 sm:p-14 md:p-16 border border-line text-center max-w-4xl"
       >
         <p className="text-2xl sm:text-3xl md:text-5xl font-semibold text-text leading-snug md:leading-snug tracking-tight font-display">
-          "Los operarios no registran mal por falta de voluntad, sino porque las herramientas son más difíciles que la tarea misma."
+          “Los operarios no registran mal por falta de voluntad, sino porque las herramientas son más difíciles que la tarea misma.”
         </p>
       </motion.div>
     </motion.div>

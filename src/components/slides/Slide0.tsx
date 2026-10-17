@@ -71,7 +71,7 @@ export const Slide0: React.FC = () => {
               + datos en tiempo y forma
             </span>
             <span className="px-3.5 py-1 bg-danger/10 border border-danger/40 text-danger font-mono font-bold text-xs sm:text-sm">
-              - perdidas millonarias
+              - pérdidas millonarias
             </span>
           </div>
         </motion.div>
@@ -79,10 +79,10 @@ export const Slide0: React.FC = () => {
         {/* Pitch Principal (sin recuadro blanco, perfectamente visible y legible sin desbordar) */}
         <motion.div variants={itemVariants} className="pt-1 md:pt-2 max-w-4xl mx-auto space-y-3.5 text-center">
           <p className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium text-text leading-snug md:leading-relaxed tracking-tight">
-            - En industrias reguladas como Farma, Biotecnología o Alimentos, cumplir con GAMP5 y ALCOA+ (Trazabilidad de datos) es una exigencia. La friccion del operario al cargar datos puede costar millones en Multas, Auditorias o Lotes rechazados.
+            - En industrias reguladas como Farma, Biotecnología o Alimentos, cumplir con GAMP 5 y ALCOA+ (Trazabilidad de datos) es una exigencia. La fricción del operario al cargar datos puede costar millones en Multas, Auditorías o Lotes rechazados.
           </p>
           <p className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium text-text leading-snug md:leading-relaxed tracking-tight">
-            - <span className="text-brand-yellow font-semibold">Galcoa+</span> lo soluciona de forma simple: Automatiza la captura, sanitizacion y validacion de la informacion en tiempo y forma.
+            - <span className="text-brand-yellow font-semibold">GALCOA+</span> lo soluciona de forma simple: Automatiza la captura, sanitización y validación de la información en tiempo y forma.
           </p>
         </motion.div>
       </motion.div>
