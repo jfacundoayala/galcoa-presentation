@@ -54,9 +54,14 @@ export const Slide0: React.FC = () => {
             <span>Ideathon Hedera · NEA Tech</span>
           </div>
 
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight text-[#174235] font-display leading-none">
-            GALCOA+
-          </h1>
+          <h1 className="sr-only">GALCOA+</h1>
+          <div className="py-1">
+            <img
+              src="/img/logo-galcoa.png"
+              alt="GALCOA+"
+              className="h-14 sm:h-18 md:h-22 lg:h-24 w-auto object-contain mx-auto drop-shadow-2xs"
+            />
+          </div>
 
           <p className="text-base sm:text-lg md:text-xl font-medium text-stone-700">
             Documentación y trazabilidad de datos.
