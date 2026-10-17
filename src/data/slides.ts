@@ -138,7 +138,11 @@ export const DECKS: Record<DeckId, DeckDefinition> = {
   agro: { id: 'agro', label: 'Agro', slides: AGRO_SLIDES },
 };
 
+/** Ruta limpia (/agro, /hedera) con respaldo en ?deck=agro. Sin nada, Hedera. */
 export const getDeckFromUrl = (): DeckDefinition => {
-  const requested = new URLSearchParams(window.location.search).get('deck');
+  const fromPath = window.location.pathname.split('/').filter(Boolean)[0];
+  const requested = fromPath === 'agro' || fromPath === 'hedera'
+    ? fromPath
+    : new URLSearchParams(window.location.search).get('deck');
   return requested === 'agro' ? DECKS.agro : DECKS.hedera;
 };

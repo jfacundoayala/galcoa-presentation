@@ -59,7 +59,7 @@ export const Header: React.FC<HeaderProps> = ({
         {decks.map((d) => (
           <a
             key={d.id}
-            href={`?deck=${d.id}#0`}
+            href={`/${d.id}#0`}
             aria-current={d.id === deckId ? 'page' : undefined}
             data-no-nav="true"
             className={`min-h-[44px] px-3 sm:px-5 flex items-center font-mono text-[11px] sm:text-xs uppercase tracking-[0.05em] font-semibold border-r border-line transition-colors ${
