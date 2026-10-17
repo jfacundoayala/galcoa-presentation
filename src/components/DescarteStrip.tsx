@@ -23,12 +23,12 @@ export const DescarteStrip: React.FC = () => {
 
   return (
     <div className="border border-line bg-surface-deep">
-      <div className="px-4 pt-3 font-mono text-[11px] uppercase tracking-[0.05em] text-brand-yellow">
+      <div className="px-4 pt-2.5 font-mono text-[11px] uppercase tracking-[0.05em] text-brand-yellow">
         Sin evidencia, se descarta
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-line">
         {cases.map((c) => (
-          <div key={c.who} className="p-4 space-y-1.5">
+          <div key={c.who} className="p-3 space-y-1">
             <div className="flex items-center gap-2 text-text font-display font-semibold">
               <span className="text-brand-yellow">{c.icon}</span>
               {c.who}

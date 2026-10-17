@@ -44,12 +44,12 @@ export const Slide2: React.FC = () => {
       </motion.div>
 
       {/* 3 Main Full-Width Cards with Connected Hand-Drawn Flow Arrows */}
-      <div className="space-y-4 pt-1">
+      <div className="space-y-3 pt-1">
         {/* Recuadro 1: Causa raíz con flecha que sale del cuadro hacia el segundo */}
         <div className="relative">
           <motion.div
             variants={itemVariants}
-            className="bg-surface rounded-2xl p-5 md:p-6 border-l-4 border-brand-yellow border border-line space-y-2"
+            className="bg-surface rounded-2xl p-4 border-l-4 border-brand-yellow border border-line space-y-2"
           >
             <div className="flex items-center gap-2 text-brand-yellow font-bold text-lg md:text-xl font-display">
               <FileSpreadsheet className="w-5 h-5 text-brand-yellow" />
@@ -84,7 +84,7 @@ export const Slide2: React.FC = () => {
         <div className="relative">
           <motion.div
             variants={itemVariants}
-            className="bg-surface rounded-2xl p-5 md:p-6 border-l-4 border-brand-yellow border border-line space-y-2"
+            className="bg-surface rounded-2xl p-4 border-l-4 border-brand-yellow border border-line space-y-2"
           >
             <div className="flex items-center gap-2 text-brand-yellow font-bold text-lg md:text-xl font-display">
               <Layers className="w-5 h-5 text-brand-yellow" />
@@ -119,7 +119,7 @@ export const Slide2: React.FC = () => {
         <div className="relative">
           <motion.div
             variants={itemVariants}
-            className="bg-surface rounded-2xl p-5 md:p-6 border-l-4 border-red-500 border border-line space-y-3"
+            className="bg-surface rounded-2xl p-4 border-l-4 border-red-500 border border-line space-y-3"
           >
             <div className="flex items-center gap-2 text-danger font-bold text-lg md:text-xl font-display">
               <AlertTriangle className="w-5 h-5 text-danger" />
@@ -129,7 +129,7 @@ export const Slide2: React.FC = () => {
             {/* 4 Sellos llamativos */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 pt-1 items-center">
               {/* Sello 1: MULTAS (Octagonal) */}
-              <div className="relative flex flex-col items-center justify-center p-3.5 min-h-[130px] text-center transform -rotate-1 hover:rotate-0 transition-transform">
+              <div className="relative flex flex-col items-center justify-center p-3.5 min-h-[112px] text-center transform -rotate-1 hover:rotate-0 transition-transform">
                 <svg className="absolute inset-0 w-full h-full text-danger" viewBox="0 0 160 120" preserveAspectRatio="none">
                   <polygon
                     points="44,4 116,4 156,36 156,84 116,116 44,116 4,84 4,36"
@@ -161,7 +161,7 @@ export const Slide2: React.FC = () => {
               </div>
 
               {/* Sello 2: AUDITORÍAS DESAPROBADAS (Triangular calibrado) */}
-              <div className="relative flex flex-col items-center justify-center p-3 min-h-[150px] text-center transform rotate-1 hover:rotate-0 transition-transform">
+              <div className="relative flex flex-col items-center justify-center p-3 min-h-[128px] text-center transform rotate-1 hover:rotate-0 transition-transform">
                 <svg className="absolute inset-0 w-full h-full text-brand-yellow" viewBox="0 0 170 130" preserveAspectRatio="none">
                   <polygon
                     points="85,6 164,122 6,122"
@@ -177,7 +177,7 @@ export const Slide2: React.FC = () => {
                     opacity="0.6"
                   />
                 </svg>
-                <div className="relative z-10 flex flex-col items-center pt-10 pb-2">
+                <div className="relative z-10 flex flex-col items-center pt-8 pb-1">
                   <div className="flex items-center gap-1 text-[10px] font-mono font-bold tracking-wider uppercase text-brand-yellow">
                     <XCircle className="w-3 h-3" />
                     <span>No Conformidad</span>
@@ -192,7 +192,7 @@ export const Slide2: React.FC = () => {
               </div>
 
               {/* Sello 3: LOTES RECHAZADOS (Rectangular) */}
-              <div className="relative border-2 border-brand-yellow rounded-xl p-3.5 bg-brand-yellow/10 text-brand-yellow flex flex-col items-center justify-center text-center transform -rotate-1 hover:rotate-0 transition-transform min-h-[130px]">
+              <div className="relative border-2 border-brand-yellow rounded-xl p-3.5 bg-brand-yellow/10 text-brand-yellow flex flex-col items-center justify-center text-center transform -rotate-1 hover:rotate-0 transition-transform min-h-[112px]">
                 <div className="flex items-center gap-1.5 text-xs font-mono font-bold tracking-widest uppercase text-brand-yellow mb-0.5">
                   <Ban className="w-3.5 h-3.5" />
                   <span>Cuarentena Total</span>
@@ -206,7 +206,7 @@ export const Slide2: React.FC = () => {
               </div>
 
               {/* Sello 4: PÉRDIDA DE CAPITAL (Rectangular punteado) */}
-              <div className="relative border-2 border-dashed border-brand-yellow p-3.5 bg-brand-yellow/10 text-brand-yellow flex flex-col items-center justify-center text-center transform rotate-1 hover:rotate-0 transition-transform min-h-[130px]">
+              <div className="relative border-2 border-dashed border-brand-yellow p-3.5 bg-brand-yellow/10 text-brand-yellow flex flex-col items-center justify-center text-center transform rotate-1 hover:rotate-0 transition-transform min-h-[112px]">
                 <div className="flex items-center gap-1.5 text-xs font-mono font-bold tracking-widest uppercase text-brand-yellow mb-0.5">
                   <TrendingDown className="w-3.5 h-3.5" />
                   <span>Impacto económico</span>
