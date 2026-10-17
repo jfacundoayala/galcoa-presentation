@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { DescarteStrip } from '../../DescarteStrip';
 import { AlertTriangle, FileSearch, ClipboardX, TrendingDown } from 'lucide-react';
 
 const container = {
@@ -21,7 +22,7 @@ export const AgroDolor: React.FC = () => {
   const costs = [
     { icon: <FileSearch className="w-5 h-5" aria-hidden="true" />, tag: 'Evidencia dispersa', text: 'Cuando piden el registro, nadie lo encuentra.' },
     { icon: <ClipboardX className="w-5 h-5" aria-hidden="true" />, tag: 'Habilitación en riesgo', text: 'Registros incompletos ponen en juego permisos y auditorías.' },
-    { icon: <TrendingDown className="w-5 h-5" aria-hidden="true" />, tag: 'Pérdida de capital', text: 'Lotes retenidos o descartados y ventas perdidas.' },
+    { icon: <TrendingDown className="w-5 h-5" aria-hidden="true" />, tag: 'Pérdida de capital', text: 'Un lote sin trazabilidad demostrable se descarta: hay que incinerar el material.' },
   ];
 
   return (
@@ -60,7 +61,11 @@ export const AgroDolor: React.FC = () => {
         </div>
       </div>
 
-      <motion.p variants={item} className="mt-4 bg-brand-green text-text px-5 py-4 text-base md:text-lg font-semibold font-display leading-snug">
+      <motion.div variants={item} className="mt-4">
+        <DescarteStrip />
+      </motion.div>
+
+      <motion.p variants={item} className="mt-3 bg-brand-green text-text px-5 py-4 text-base md:text-lg font-semibold font-display leading-snug">
         Un cultivo con exigencias de farma, registrado con herramientas de campo.
       </motion.p>
     </motion.div>

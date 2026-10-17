@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { DescarteStrip } from '../DescarteStrip';
 import { AlertTriangle, FileSpreadsheet, Layers, XCircle, Ban, TrendingDown } from 'lucide-react';
 
 const containerVariants = {
@@ -220,6 +221,10 @@ export const Slide2: React.FC = () => {
             </div>
           </motion.div>
         </div>
+
+        <motion.div variants={itemVariants}>
+          <DescarteStrip />
+        </motion.div>
       </div>
     </motion.div>
   );
