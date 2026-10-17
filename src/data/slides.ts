@@ -7,7 +7,6 @@ import { Slide3 } from '../components/slides/Slide3';
 import { SlideAdopcion } from '../components/slides/SlideAdopcion';
 import { Slide4 } from '../components/slides/Slide4';
 import { Slide6 } from '../components/slides/Slide6';
-import { Slide7 } from '../components/slides/Slide7';
 import { Slide8 } from '../components/slides/Slide8';
 import { Slide9 } from '../components/slides/Slide9';
 import { Slide10 } from '../components/slides/Slide10';
@@ -78,29 +77,22 @@ export const SLIDES: SlideDefinition[] = [
     Component: Slide6,
   },
   {
-    id: 'confianza',
-    index: 8,
-    title: 'Confianza entre contrapartes',
-    category: 'Verificación',
-    Component: Slide7,
-  },
-  {
     id: 'arquitectura',
-    index: 9,
+    index: 8,
     title: 'Arquitectura robusta y moderna',
     category: 'Arquitectura',
     Component: Slide8,
   },
   {
     id: 'modelo-b2b',
-    index: 10,
+    index: 9,
     title: 'Modelo SaaS B2B escalable',
     category: 'Negocio',
     Component: Slide9,
   },
   {
     id: 'roadmap-equipo',
-    index: 11,
+    index: 10,
     title: 'Roadmap y equipo',
     category: 'Roadmap',
     Component: Slide10,
