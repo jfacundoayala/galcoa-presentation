@@ -86,14 +86,9 @@ export const Slide10: React.FC = () => {
             <div className="p-2.5 rounded-xl bg-[#174235]/10 text-[#174235] flex-shrink-0">
               <Users className="w-5 h-5" />
             </div>
-            <div>
-              <span className="text-xs font-mono uppercase tracking-wider text-amber-700 font-bold block">
-                Equipo :
-              </span>
-              <p className="text-stone-700 text-xs sm:text-sm font-medium">
-                Especialistas en Frontend, Backend, IA/Prompting, Web3/Hedera y Producto.
-              </p>
-            </div>
+            <span className="text-sm font-mono uppercase tracking-wider text-amber-700 font-bold">
+              Equipo :
+            </span>
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
