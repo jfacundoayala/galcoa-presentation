@@ -1,12 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { HelpCircle } from 'lucide-react';
+import type { DeckDefinition, DeckId } from '../data/slides';
 
 interface HeaderProps {
   currentIndex: number;
   totalSlides: number;
   category?: string;
   onShowShortcuts?: () => void;
+  deckId: DeckId;
+  decks: DeckDefinition[];
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -14,6 +17,8 @@ export const Header: React.FC<HeaderProps> = ({
   totalSlides,
   category,
   onShowShortcuts,
+  deckId,
+  decks,
 }) => {
   const pad = (n: number) => String(n).padStart(2, '0');
 
@@ -39,7 +44,7 @@ export const Header: React.FC<HeaderProps> = ({
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.26, ease: [0.16, 1, 0.3, 1] }}
-            className="truncate font-mono text-[11px] sm:text-xs uppercase tracking-[0.05em] text-text-muted font-medium"
+            className="hidden sm:block truncate font-mono text-[11px] sm:text-xs uppercase tracking-[0.05em] text-text-muted font-medium"
           >
             <span className="text-brand-yellow">{pad(currentIndex + 1)}</span>
             <span className="mx-2 text-line">/</span>
@@ -48,6 +53,23 @@ export const Header: React.FC<HeaderProps> = ({
           </motion.span>
         )}
       </div>
+
+      {/* Selector de versión: Hedera / Agro */}
+      <nav aria-label="Versión de la presentación" className="flex items-stretch border-l border-line">
+        {decks.map((d) => (
+          <a
+            key={d.id}
+            href={`?deck=${d.id}#0`}
+            aria-current={d.id === deckId ? 'page' : undefined}
+            data-no-nav="true"
+            className={`min-h-[44px] px-3 sm:px-5 flex items-center font-mono text-[11px] sm:text-xs uppercase tracking-[0.05em] font-semibold border-r border-line transition-colors ${
+              d.id === deckId ? 'bg-brand-yellow text-brand-green' : 'text-text-muted hover:bg-surface hover:text-text'
+            }`}
+          >
+            {d.label}
+          </a>
+        ))}
+      </nav>
 
       {/* Atajos */}
       <button

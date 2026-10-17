@@ -1,13 +1,16 @@
 // Genera el PDF de la presentación de punta a punta (multiplataforma):
 //   npm run pdf
 // Compila, levanta la app local, captura las 11 filminas y guarda el PDF en
-// la raíz y en public/. Opcional: CHROME_PATH=/ruta/a/chrome
+// la raíz y en public/ (una por versión: Hedera y Agro). Opcional: CHROME_PATH=/ruta/a/chrome
 import { spawn, spawnSync } from 'node:child_process';
 import { existsSync, copyFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 
 const PORT = 4173;
-const PDF = 'GALCOA_Presentacion_Hedera_Ideathon.pdf';
+const DECKS = [
+  { deck: 'hedera', total: 11, pdf: 'GALCOA_Presentacion_Hedera_Ideathon.pdf' },
+  { deck: 'agro', total: 9, pdf: 'GALCOA_Presentacion_Agro.pdf' },
+];
 const npx = process.platform === 'win32' ? 'npx.cmd' : 'npx';
 const npm = process.platform === 'win32' ? 'npm.cmd' : 'npm';
 
@@ -51,14 +54,15 @@ const server = spawn(npx, ['vite', 'preview', '--port', String(PORT), '--host', 
 let code = 1;
 try {
   await waitFor(`http://127.0.0.1:${PORT}/`);
-  const res = spawnSync(process.execPath, ['scripts/export-pdf.mjs'], {
-    stdio: 'inherit',
-    env: { ...process.env, CHROME_PATH: chrome, BASE_URL: `http://127.0.0.1:${PORT}`, OUTPUT_PDF_PATH: PDF },
-  });
-  code = res.status ?? 1;
-  if (code === 0) {
-    copyFileSync(PDF, path.join('public', PDF));
-    console.log(`Listo: ${PDF} (y copia en public/)`);
+  code = 0;
+  for (const { deck, total, pdf } of DECKS) {
+    const res = spawnSync(process.execPath, ['scripts/export-pdf.mjs'], {
+      stdio: 'inherit',
+      env: { ...process.env, CHROME_PATH: chrome, BASE_URL: `http://127.0.0.1:${PORT}`, OUTPUT_PDF_PATH: pdf, DECK: deck, TOTAL_SLIDES: String(total) },
+    });
+    if ((res.status ?? 1) !== 0) { code = res.status ?? 1; break; }
+    copyFileSync(pdf, path.join('public', pdf));
+    console.log(`Listo: ${pdf} (y copia en public/)`);
   }
 } finally {
   server.kill();

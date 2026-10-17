@@ -10,6 +10,10 @@ import { Slide6 } from '../components/slides/Slide6';
 import { Slide8 } from '../components/slides/Slide8';
 import { Slide9 } from '../components/slides/Slide9';
 import { Slide10 } from '../components/slides/Slide10';
+import { Slide4Agro } from '../components/slides/Slide4';
+import { AgroPortada } from '../components/slides/agro/AgroPortada';
+import { AgroDolor } from '../components/slides/agro/AgroDolor';
+import { AgroCiclo } from '../components/slides/agro/AgroCiclo';
 
 export interface SlideDefinition {
   id: string;
@@ -98,3 +102,40 @@ export const SLIDES: SlideDefinition[] = [
     Component: Slide10,
   },
 ];
+
+export type DeckId = 'hedera' | 'agro';
+
+export interface DeckDefinition {
+  id: DeckId;
+  label: string;
+  slides: SlideDefinition[];
+}
+
+const byId = (id: string) => {
+  const slide = SLIDES.find((s) => s.id === id);
+  if (!slide) throw new Error(`Diapositiva inexistente: ${id}`);
+  return slide;
+};
+
+/** Versión Agro: misma base, otro relato (campo y lote en primer plano; Hedera como sello de confianza). */
+const AGRO_SLIDES: SlideDefinition[] = [
+  { id: 'agro-portada', title: 'GALCOA+ Agro · Del lote a la auditoría', category: 'Portada', Component: AgroPortada },
+  { id: 'agro-dolor', title: 'El dolor en el campo', category: 'Problema', Component: AgroDolor },
+  byId('solucion'),
+  { id: 'agro-como-funciona', title: 'Cómo funciona · Del lote a evidencia sellada', category: 'Producto', Component: Slide4Agro },
+  { id: 'agro-ciclo', title: 'Cada etapa deja evidencia', category: 'Trazabilidad', Component: AgroCiclo },
+  byId('blockchain'),
+  byId('validacion'),
+  byId('modelo-b2b'),
+  byId('roadmap-equipo'),
+].map((slide, index) => ({ ...slide, index }));
+
+export const DECKS: Record<DeckId, DeckDefinition> = {
+  hedera: { id: 'hedera', label: 'Hedera', slides: SLIDES },
+  agro: { id: 'agro', label: 'Agro', slides: AGRO_SLIDES },
+};
+
+export const getDeckFromUrl = (): DeckDefinition => {
+  const requested = new URLSearchParams(window.location.search).get('deck');
+  return requested === 'agro' ? DECKS.agro : DECKS.hedera;
+};

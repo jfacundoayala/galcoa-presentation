@@ -15,6 +15,19 @@ Automatiza la captura ágil de datos de campo (mediante chat conversacional en l
 
 ---
 
+## 🔀 Versiones del pitch
+La misma web sirve dos presentaciones, con relato distinto. Se elige con un parámetro de URL y con el selector `HEDERA | AGRO` del header:
+
+| Versión | URL | Foco | Diapositivas |
+|---|---|---|---|
+| **Hedera** (por defecto) | `/` o `/?deck=hedera` | Industrias reguladas (farma primero) y Hedera como tecnología. | 11 |
+| **Agro** | `/?deck=agro` | Campo y lote: del cultivo a la auditoría, con Hedera como sello de confianza. | 9 |
+
+- Las definiciones están en `src/data/slides.ts` (`DECKS`). Las diapositivas propias de Agro están en `src/components/slides/agro/`.
+- `npm run pdf` genera un PDF por versión: `GALCOA_Presentacion_Hedera_Ideathon.pdf` y `GALCOA_Presentacion_Agro.pdf`.
+
+---
+
 ## 🎨 Sistema de diseño
 La presentación sigue [`DESIGN.md`](DESIGN.md) (Structured Intelligence / Verified Evidence): fondo oscuro verdoso, retícula visible, esquinas rectas (`border-radius: 0`), verde `#174235` y amarillo `#FCD34D` como únicos colores de marca, Space Grotesk + IBM Plex Mono.
 

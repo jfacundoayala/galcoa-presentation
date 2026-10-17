@@ -5,7 +5,8 @@ import path from 'path';
 
 // Configurables por entorno: CHROME_PATH, BASE_URL, OUTPUT_PDF_PATH
 const CHROME_PATH = process.env.CHROME_PATH || 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
-const TOTAL_SLIDES = 11;
+const TOTAL_SLIDES = Number(process.env.TOTAL_SLIDES || 11);
+const DECK = process.env.DECK || 'hedera';
 const BASE_URL = process.env.BASE_URL || 'https://happy-bell.vercel.app';
 const OUTPUT_PDF_PATH = path.resolve(process.env.OUTPUT_PDF_PATH || 'c:/Users/tomas/Documents/antigravity/happy-bell/GALCOA_Presentacion_Hedera_Ideathon.pdf');
 
@@ -34,7 +35,7 @@ async function generatePDF() {
   console.log(`Renderizando ${TOTAL_SLIDES} filminas en alta resolución (1080p Retina)...`);
 
   for (let i = 0; i < TOTAL_SLIDES; i++) {
-    const slideUrl = `${BASE_URL}/#${i}`;
+    const slideUrl = `${BASE_URL}/?deck=${DECK}#${i}`;
     console.log(`Capturando filmina ${i + 1}/${TOTAL_SLIDES}: ${slideUrl}`);
     
     await page.goto(slideUrl, { waitUntil: 'networkidle0', timeout: 30000 });
@@ -45,6 +46,7 @@ async function generatePDF() {
         button[aria-label="Ver atajos de teclado"],
         button[aria-label="Pantalla completa"],
         button[aria-label="Diapositiva anterior"],
+        nav[aria-label="Versión de la presentación"] a:not([aria-current="page"]),
         button[aria-label="Siguiente diapositiva"] {
           display: none !important;
         }

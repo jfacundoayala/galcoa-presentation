@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { SLIDES } from '../data/slides';
+import { DECKS, DeckDefinition } from '../data/slides';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { ShortcutsModal } from './ShortcutsModal';
@@ -20,7 +20,8 @@ const slideVariants = {
   }),
 };
 
-export const Deck: React.FC = () => {
+export const Deck: React.FC<{ deck: DeckDefinition }> = ({ deck }) => {
+  const SLIDES = deck.slides;
   const getInitialIndex = () => {
     const hash = window.location.hash.replace('#', '');
     const parsed = parseInt(hash, 10);
@@ -260,6 +261,8 @@ export const Deck: React.FC = () => {
         currentIndex={currentIndex}
         totalSlides={SLIDES.length}
         category={currentSlideData.category}
+        deckId={deck.id}
+        decks={Object.values(DECKS)}
         onShowShortcuts={() => setShowShortcuts(true)}
       />
 

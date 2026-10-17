@@ -19,7 +19,21 @@ const itemVariants = {
   },
 };
 
-export const Slide4: React.FC = () => {
+type Variant = 'hedera' | 'agro';
+
+const COPY = {
+  agro: {
+    quote: 'Los productores no registran mal por falta de voluntad, sino porque las herramientas son más difíciles que la tarea misma.',
+    steps: [
+      { title: 'El productor o técnico escribe, manda una foto o un audio.', text: 'Desde el lote, con el celular y en segundos. Sin cuadernos ni planillas.' },
+      { title: 'La IA ordena y revisa el registro.', text: 'Lo estructura (lote, labor, insumo, fecha) y detecta lo que falta o no cierra.' },
+      { title: 'Los responsables confirman.', text: 'Técnico y responsable validan la misma versión del registro.' },
+      { title: 'Cada dato, sellado en Hedera.', text: 'PDF listo y huella en Hedera HCS. Nadie lo puede reescribir. Un QR muestra la historia del lote.' },
+    ],
+  },
+} as const;
+
+const ComoFunciona: React.FC<{ variant: Variant }> = ({ variant }) => {
   const steps = [
     {
       num: '01',
@@ -52,6 +66,9 @@ export const Slide4: React.FC = () => {
     },
   ];
 
+  const agro = variant === 'agro' ? COPY.agro : null;
+  const shown = agro ? steps.map((st, i) => ({ ...st, ...agro.steps[i] })) : steps;
+
   return (
     <motion.div
       variants={containerVariants}
@@ -67,12 +84,12 @@ export const Slide4: React.FC = () => {
           Cómo funciona
         </h2>
         <p className="max-w-3xl text-text-muted text-base md:text-lg leading-snug">
-          “Los operarios no registran mal por falta de voluntad, sino porque las herramientas son más difíciles que la tarea misma.”
+          “{agro ? agro.quote : 'Los operarios no registran mal por falta de voluntad, sino porque las herramientas son más difíciles que la tarea misma.'}”
         </p>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-line border border-line">
-        {steps.map((step) => (
+        {shown.map((step) => (
           <motion.div
             key={step.num}
             variants={itemVariants}
@@ -114,3 +131,6 @@ export const Slide4: React.FC = () => {
     </motion.div>
   );
 };
+
+export const Slide4: React.FC = () => <ComoFunciona variant="hedera" />;
+export const Slide4Agro: React.FC = () => <ComoFunciona variant="agro" />;
