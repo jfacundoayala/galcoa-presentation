@@ -19,15 +19,13 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="relative z-20 w-full flex items-stretch border-b border-line bg-ink min-h-[56px] md:min-h-[64px] pointer-events-auto">
-      {/* Marca: placa crema para respetar el contraste del logo verde */}
+      {/* Marca: variante del logo para fondo oscuro, sin placa */}
       <div className="flex items-center gap-3 sm:gap-4 pl-4 sm:pl-6 lg:pl-8 pr-3 sm:pr-6 border-r border-line">
-        <div className="bg-paper px-2.5 py-1.5">
-          <img
-            src="/img/logo-galcoa.svg"
-            alt="GALCOA+"
-            className="h-6 sm:h-7 md:h-8 w-auto"
-          />
-        </div>
+        <img
+          src="/img/logo-galcoa-oscuro.svg"
+          alt="GALCOA+"
+          className="h-7 sm:h-8 md:h-9 w-auto"
+        />
         <span className="hidden md:block font-mono text-[11px] uppercase tracking-[0.05em] text-text-muted font-medium">
           Hedera · NEA Tech 2026
         </span>

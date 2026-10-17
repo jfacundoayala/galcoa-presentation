@@ -19,7 +19,7 @@ Automatiza la captura ágil de datos de campo (mediante chat conversacional en l
 La presentación sigue [`DESIGN.md`](DESIGN.md) (Structured Intelligence / Verified Evidence): fondo oscuro verdoso, retícula visible, esquinas rectas (`border-radius: 0`), verde `#174235` y amarillo `#FCD34D` como únicos colores de marca, Space Grotesk + IBM Plex Mono.
 
 - Los tokens viven en `tailwind.config.js` (`brand`, `ink`, `surface`, `line`, `text`) y en las variables CSS de `src/index.css`.
-- Logos en `public/img/`: `logo-galcoa.svg` (horizontal, se usa sobre placa crema porque el wordmark es verde) e `isotipo-galcoa.svg`.
+- Logos en `public/img/`: `logo-galcoa-oscuro.svg` (horizontal, letras en crema, para fondos oscuros; es el que usa la app), `logo-galcoa.svg` (colores originales, para fondos claros) e `isotipo-galcoa.svg`.
 - Responsive verificado en 375, 768, 1024 y 1440 px sin overflow horizontal; en pantallas bajas la diapositiva se desplaza verticalmente.
 
 ---

@@ -55,13 +55,11 @@ export const Slide0: React.FC = () => {
           </div>
 
           <h1 className="sr-only">GALCOA+</h1>
-          <div className="bg-paper px-5 py-3 sm:px-7 sm:py-4">
-            <img
-              src="/img/logo-galcoa.svg"
-              alt="GALCOA+"
-              className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain mx-auto"
-            />
-          </div>
+          <img
+            src="/img/logo-galcoa-oscuro.svg"
+            alt="GALCOA+"
+            className="h-14 sm:h-18 md:h-22 lg:h-24 w-auto object-contain mx-auto"
+          />
 
           <p className="text-base sm:text-lg md:text-xl font-medium text-text">
             Documentación y trazabilidad de datos.
