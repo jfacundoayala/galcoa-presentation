@@ -4,57 +4,44 @@ import { Layout, Database, Sparkles, Blocks } from 'lucide-react';
 
 const containerVariants = {
   hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.1,
-    },
-  },
+  visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.1 } },
 };
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 25, scale: 0.97 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: { duration: 0.5, ease: [0.2, 0.7, 0.3, 1] },
-  },
+const itemVariants = {
+  hidden: { opacity: 0, y: 12 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.26, ease: [0.16, 1, 0.3, 1] } },
 };
 
 export const Slide8: React.FC = () => {
   const layers = [
     {
-      badge: 'Capa 1 · Web',
-      icon: <Layout className="w-5 h-5 text-brand-yellow" />,
-      title: 'Frontend y backend:',
-      content: 'Next.js 16 (App Router), TypeScript, Tailwind CSS v4 y shadcn/ui.',
-      badgeStyle: 'bg-brand-yellow/10 text-brand-yellow border-brand-yellow',
+      n: '01',
+      label: 'Web',
+      icon: <Layout className="w-5 h-5" aria-hidden="true" />,
+      title: 'Frontend y backend',
+      stack: ['Next.js 16 (App Router)', 'TypeScript', 'Tailwind CSS v4', 'shadcn/ui'],
     },
     {
-      badge: 'Capa 2 · Datos',
-      icon: <Database className="w-5 h-5 text-brand-yellow" />,
-      title: 'Backend y base de datos:',
-      content:
-        'Supabase, PostgreSQL con RLS, Auth y Storage privado para evidencias.',
-      badgeStyle: 'bg-brand-yellow/10 text-brand-yellow border-brand-yellow',
+      n: '02',
+      label: 'Datos',
+      icon: <Database className="w-5 h-5" aria-hidden="true" />,
+      title: 'Base de datos y evidencias',
+      stack: ['Supabase', 'PostgreSQL con RLS', 'Auth', 'Storage privado'],
     },
     {
-      badge: 'Capa 3 · IA',
-      icon: <Sparkles className="w-5 h-5 text-brand-yellow" />,
-      title: 'IA dual:',
-      content:
-        'Gemini 3.5 Flash-Lite para redacción autónoma y GPT-OSS 120B en Groq para contraste textual de coherencia.',
-      badgeStyle: 'bg-brand-yellow/10 text-brand-yellow border-brand-yellow',
+      n: '03',
+      label: 'IA',
+      icon: <Sparkles className="w-5 h-5" aria-hidden="true" />,
+      title: 'IA dual',
+      stack: ['Gemini 3.5 Flash-Lite · redacción autónoma', 'GPT-OSS 120B en Groq · contraste de coherencia'],
     },
     {
-      badge: 'Capa 4 · Web3',
-      icon: <Blocks className="w-5 h-5 text-brand-yellow" />,
-      title: 'Blockchain y documentos:',
-      content:
-        'Hedera HCS SDK (@hiero-ledger/sdk en Testnet) y @react-pdf/renderer.',
-      badgeStyle: 'bg-brand-yellow/10 text-brand-yellow border-line',
+      n: '04',
+      label: 'Web3',
+      icon: <Blocks className="w-5 h-5" aria-hidden="true" />,
+      title: 'Sello en Hedera y documentos',
+      stack: ['Hedera HCS SDK (@hiero-ledger/sdk)', 'Testnet', '@react-pdf/renderer'],
+      hero: true,
     },
   ];
 
@@ -63,52 +50,56 @@ export const Slide8: React.FC = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="w-full max-w-6xl mx-auto h-full flex flex-col justify-center px-6 lg:px-12 py-8"
+      className="w-full max-w-6xl mx-auto h-full flex flex-col justify-center px-6 lg:px-12 py-6"
     >
-      <motion.div variants={cardVariants} className="mb-8 md:mb-10">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-yellow/10 text-brand-yellow text-xs font-semibold uppercase tracking-wider mb-3">
-          Stack Tecnológico de Producción
+      <motion.div variants={itemVariants} className="mb-5 md:mb-6 space-y-3">
+        <div className="inline-flex px-3 py-1 bg-brand-yellow/10 text-brand-yellow text-xs font-semibold uppercase tracking-wider">
+          Stack tecnológico de producción
         </div>
         <h2 className="text-4xl md:text-6xl font-semibold text-brand-yellow tracking-tight font-display">
           Arquitectura robusta y moderna
         </h2>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      <div className="border border-line">
         {layers.map((layer, idx) => (
           <motion.div
-            key={idx}
-            variants={cardVariants}
-            whileHover={{ y: -6, transition: { duration: 0.25 } }}
-            className="bg-surface rounded-3xl p-7 lg:p-8 border border-line flex flex-col justify-between space-y-4"
+            key={layer.n}
+            variants={itemVariants}
+            className={`grid grid-cols-1 md:grid-cols-12 ${idx > 0 ? 'border-t border-line' : ''}`}
           >
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <span
-                  className={`text-xs font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full border ${layer.badgeStyle}`}
-                >
-                  {layer.badge}
-                </span>
+            <div
+              className={`md:col-span-3 p-4 lg:p-5 flex md:flex-col justify-between md:justify-center gap-2 ${
+                layer.hero ? 'bg-brand-yellow text-brand-green' : 'bg-surface-deep text-text'
+              }`}
+            >
+              <span className="font-mono text-sm font-semibold">{layer.n}</span>
+              <span className="flex items-center gap-2 font-display text-lg font-semibold uppercase tracking-tight">
                 {layer.icon}
-              </div>
-
-              <div className="space-y-2">
-                <h3 className="text-xl lg:text-2xl font-bold text-text font-display">
-                  {layer.title}
-                </h3>
-                <p className="text-text text-base lg:text-lg leading-relaxed">
-                  {layer.content}
-                </p>
-              </div>
+                {layer.label}
+              </span>
             </div>
 
-            <div className="pt-3 border-t border-line flex items-center justify-between text-xs font-mono text-text-muted">
-              <span>Listo para producción</span>
-              <span>100% Tipado</span>
+            <div className={`md:col-span-9 p-4 lg:p-5 space-y-2 ${layer.hero ? 'bg-brand-green' : 'bg-surface'}`}>
+              <h3 className="text-lg lg:text-xl font-semibold text-text font-display leading-tight">{layer.title}</h3>
+              <ul className="flex flex-wrap gap-2">
+                {layer.stack.map((tech) => (
+                  <li
+                    key={tech}
+                    className="px-2.5 py-1 border border-line bg-ink/40 text-text text-xs sm:text-sm font-mono"
+                  >
+                    {tech}
+                  </li>
+                ))}
+              </ul>
             </div>
           </motion.div>
         ))}
       </div>
+
+      <motion.p variants={itemVariants} className="mt-3 font-mono text-xs text-text-muted">
+        Cada capa lista para producción y 100% tipada.
+      </motion.p>
     </motion.div>
   );
 };
