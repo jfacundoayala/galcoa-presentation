@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { QrCode, ShieldCheck, CheckCheck } from 'lucide-react';
+import { QrCode, ShieldCheck } from 'lucide-react';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -74,17 +74,6 @@ export const Slide7: React.FC = () => {
               Cualquiera con el PDF final puede auditar la integridad del archivo contra el Mirror Node de Hedera en segundos.
             </p>
           </div>
-        </motion.div>
-
-        {/* Bottom highlight bar */}
-        <motion.div
-          variants={itemVariants}
-          className="bg-[#F0ECE1] rounded-2xl p-5 lg:p-6 border border-[#DDD5C5] text-center flex items-center justify-center gap-3 text-stone-800 font-semibold text-base lg:text-xl"
-        >
-          <CheckCheck className="w-6 h-6 text-[#174235] flex-shrink-0" />
-          <span>
-            Verificación descentralizada instantánea sin fricción de registro para clientes y auditores externos.
-          </span>
         </motion.div>
       </div>
     </motion.div>
