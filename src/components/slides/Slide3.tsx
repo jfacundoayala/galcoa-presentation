@@ -28,9 +28,9 @@ export const Slide3: React.FC = () => {
     {
       num: '1',
       icon: <Search className="w-5 h-5 text-amber-700" />,
-      title: 'Entrevista:',
+      title: 'Busqueda del problema:',
       content:
-        'Responsables de Fundación Panacea, cultivo de cannabis medicinal buscando calificar ante la industria farmacéutica.',
+        'Llevamos tiempo investigando las regulaciones de la industria farmacéutica, conocemos de cerca el dolor principal en la falta de un sistema de trazabilidad de datos y con el equipo llegamos a una solución simple y efectiva, que logra ahorrar tiempo y dinero.',
       highlightColor: 'border-amber-600/30',
       badgeBg: 'bg-amber-100 text-amber-900 border-amber-300',
     },
@@ -48,7 +48,7 @@ export const Slide3: React.FC = () => {
       icon: <QrCode className="w-5 h-5 text-teal-700" />,
       title: 'Resultado esperado:',
       content:
-        'Escanear un QR en el lote y ver al instante su historial cronológico inmutable: riego, fertilizantes aplicados, tiempos de secado y firmas de conformidad.',
+        'Escanear un QR en el lote y ver al instante su historial cronológico inmutable y firmas de conformidad.',
       highlightColor: 'border-teal-600/30',
       badgeBg: 'bg-teal-100 text-teal-900 border-teal-300',
     },
