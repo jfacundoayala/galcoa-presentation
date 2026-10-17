@@ -267,7 +267,7 @@ export const Deck: React.FC<{ deck: DeckDefinition }> = ({ deck }) => {
       />
 
       {/* Main Slide Stage */}
-      <main ref={stageRef} className="relative z-10 flex-1 min-h-0 w-full overflow-x-hidden overflow-y-auto overscroll-contain flex">
+      <main ref={stageRef} tabIndex={0} aria-label={`Diapositiva ${currentIndex + 1} de ${SLIDES.length}: ${currentSlideData.title}`} className="relative z-10 flex-1 min-h-0 w-full overflow-x-hidden overflow-y-auto overscroll-contain flex">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={currentIndex}
