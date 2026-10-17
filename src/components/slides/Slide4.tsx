@@ -31,9 +31,9 @@ export const Slide4: React.FC = () => {
     >
       <motion.div
         variants={itemVariants}
-        className="relative bg-gradient-to-r from-[#F0ECE1] to-[#E9E3D3] rounded-3xl p-10 sm:p-14 md:p-16 border border-[#D5CDBC] shadow-lg shadow-stone-900/5 text-center max-w-4xl"
+        className="relative bg-surface p-10 sm:p-14 md:p-16 border border-line text-center max-w-4xl"
       >
-        <p className="text-2xl sm:text-3xl md:text-5xl font-semibold text-stone-900 leading-snug md:leading-snug tracking-tight font-display">
+        <p className="text-2xl sm:text-3xl md:text-5xl font-semibold text-text leading-snug md:leading-snug tracking-tight font-display">
           "Los operarios no registran mal por falta de voluntad, sino porque las herramientas son más difíciles que la tarea misma."
         </p>
       </motion.div>

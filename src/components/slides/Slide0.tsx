@@ -49,30 +49,30 @@ export const Slide0: React.FC = () => {
       >
         {/* Top Centered Section: Badge, GALCOA+, Subtítulo y Recuadritos sin puntitos */}
         <motion.div variants={itemVariants} className="flex flex-col items-center space-y-2">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#174235]/10 border border-[#174235]/20 text-[#174235] text-xs md:text-sm font-semibold tracking-wide shadow-2xs">
-            <ShieldCheck className="w-3.5 h-3.5 text-[#174235]" />
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-brand-yellow/10 border border-line text-brand-yellow text-xs md:text-sm font-semibold tracking-wide">
+            <ShieldCheck className="w-3.5 h-3.5 text-brand-yellow" />
             <span>Ideathon Hedera · NEA Tech</span>
           </div>
 
           <h1 className="sr-only">GALCOA+</h1>
-          <div className="py-1">
+          <div className="bg-paper px-5 py-3 sm:px-7 sm:py-4">
             <img
-              src="/img/logo-galcoa.png"
+              src="/img/logo-galcoa.svg"
               alt="GALCOA+"
-              className="h-14 sm:h-18 md:h-22 lg:h-24 w-auto object-contain mx-auto drop-shadow-2xs"
+              className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain mx-auto"
             />
           </div>
 
-          <p className="text-base sm:text-lg md:text-xl font-medium text-stone-700">
+          <p className="text-base sm:text-lg md:text-xl font-medium text-text">
             Documentación y trazabilidad de datos.
           </p>
 
           {/* Recuadritos debajo de GALCOA+ (sin puntitos) */}
           <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3.5 pt-1">
-            <span className="px-3.5 py-1 rounded-full bg-emerald-700/10 border border-emerald-700/20 text-[#174235] font-mono font-bold text-xs sm:text-sm">
+            <span className="px-3.5 py-1 rounded-full bg-brand-yellow/10 border border-brand-yellow text-brand-yellow font-mono font-bold text-xs sm:text-sm">
               + datos en tiempo y forma
             </span>
-            <span className="px-3.5 py-1 rounded-full bg-red-700/10 border border-red-700/20 text-red-700 font-mono font-bold text-xs sm:text-sm">
+            <span className="px-3.5 py-1 rounded-full bg-red-700/10 border border-red-700/20 text-danger font-mono font-bold text-xs sm:text-sm">
               - perdidas millonarias
             </span>
           </div>
@@ -80,11 +80,11 @@ export const Slide0: React.FC = () => {
 
         {/* Pitch Principal (sin recuadro blanco, perfectamente visible y legible sin desbordar) */}
         <motion.div variants={itemVariants} className="pt-1 md:pt-2 max-w-4xl mx-auto space-y-3.5 text-center">
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium text-stone-700 leading-snug md:leading-relaxed tracking-tight">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium text-text leading-snug md:leading-relaxed tracking-tight">
             - En industrias reguladas como Farma, Biotecnología o Alimentos, cumplir con GAMP5 y ALCOA+ (Trazabilidad de datos) es una exigencia. La friccion del operario al cargar datos puede costar millones en Multas, Auditorias o Lotes rechazados.
           </p>
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium text-stone-700 leading-snug md:leading-relaxed tracking-tight">
-            - <span className="text-[#174235] font-semibold">Galcoa+</span> lo soluciona de forma simple: Automatiza la captura, sanitizacion y validacion de la informacion en tiempo y forma.
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium text-text leading-snug md:leading-relaxed tracking-tight">
+            - <span className="text-brand-yellow font-semibold">Galcoa+</span> lo soluciona de forma simple: Automatiza la captura, sanitizacion y validacion de la informacion en tiempo y forma.
           </p>
         </motion.div>
       </motion.div>

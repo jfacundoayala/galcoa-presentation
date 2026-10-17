@@ -27,30 +27,30 @@ export const Slide6: React.FC = () => {
   const cards = [
     {
       badge: 'Hedera HCS',
-      badgeBg: 'bg-[#174235] text-white',
-      icon: <ShieldCheck className="w-5 h-5 text-emerald-400" />,
+      badgeBg: 'bg-brand-green text-white',
+      icon: <ShieldCheck className="w-5 h-5 text-brand-yellow" />,
       title: 'Hedera Consensus Service:',
       content:
         'Otorga sello temporal de consenso inmutable y orden justo a prueba de adulteración.',
-      border: 'border-[#174235]/30',
+      border: 'border-line',
     },
     {
       badge: 'Privacidad Criptográfica',
-      badgeBg: 'bg-[#E3A83F] text-stone-900',
-      icon: <Lock className="w-5 h-5 text-stone-900" />,
+      badgeBg: 'bg-brand-yellow text-brand-green',
+      icon: <Lock className="w-5 h-5 text-text" />,
       title: 'Privacidad absoluta:',
       content:
         'Solo se publica en el topic de Hedera el hash criptográfico del manifiesto, SHA-256; los datos comerciales y privados jamás se exponen en la red pública.',
-      border: 'border-[#E3A83F]/50',
+      border: 'border-brand-yellow/50',
     },
     {
       badge: 'Escala Enterprise',
-      badgeBg: 'bg-[#C1653B] text-white',
-      icon: <TrendingUp className="w-5 h-5 text-amber-200" />,
+      badgeBg: 'bg-brand-yellow text-brand-green',
+      icon: <TrendingUp className="w-5 h-5 text-brand-yellow" />,
       title: 'Eficiencia y predictibilidad:',
       content:
         'Costos fijos en USD, altísima velocidad y bajo consumo energético, ideal para escala enterprise.',
-      border: 'border-[#C1653B]/30',
+      border: 'border-brand-yellow/30',
     },
   ];
 
@@ -62,10 +62,10 @@ export const Slide6: React.FC = () => {
       className="w-full max-w-6xl mx-auto h-full flex flex-col justify-center px-6 lg:px-12 py-8"
     >
       <motion.div variants={cardVariants} className="mb-8 md:mb-10">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#174235]/10 text-[#174235] text-xs font-semibold uppercase tracking-wider mb-3">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-yellow/10 text-brand-yellow text-xs font-semibold uppercase tracking-wider mb-3">
           Tecnología DLT de Nivel Institucional
         </div>
-        <h2 className="text-4xl md:text-6xl font-extrabold text-[#174235] tracking-tight font-display">
+        <h2 className="text-4xl md:text-6xl font-semibold text-brand-yellow tracking-tight font-display">
           Por que Blockchain?
         </h2>
       </motion.div>
@@ -76,7 +76,7 @@ export const Slide6: React.FC = () => {
             key={idx}
             variants={cardVariants}
             whileHover={{ y: -8, transition: { duration: 0.25 } }}
-            className={`bg-white/95 rounded-3xl overflow-hidden border-2 ${c.border} shadow-lg shadow-stone-900/5 flex flex-col`}
+            className={`bg-surface rounded-3xl overflow-hidden border-2 ${c.border}   flex flex-col`}
           >
             {/* Header banner badge */}
             <div
@@ -89,15 +89,15 @@ export const Slide6: React.FC = () => {
             {/* Body */}
             <div className="p-7 lg:p-8 flex-1 flex flex-col justify-between space-y-4">
               <div className="space-y-3">
-                <h3 className="text-xl lg:text-2xl font-bold text-stone-900 font-display">
+                <h3 className="text-xl lg:text-2xl font-bold text-text font-display">
                   {c.title}
                 </h3>
-                <p className="text-stone-700 text-base lg:text-lg leading-relaxed">
+                <p className="text-text text-base lg:text-lg leading-relaxed">
                   {c.content}
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-stone-200/80 text-xs font-mono text-stone-400">
+              <div className="pt-4 border-t border-line text-xs font-mono text-text-muted">
                 Hedera Hashgraph Network
               </div>
             </div>

@@ -3,10 +3,11 @@ import { PDFDocument } from 'pdf-lib';
 import fs from 'fs';
 import path from 'path';
 
-const CHROME_PATH = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
+// Configurables por entorno: CHROME_PATH, BASE_URL, OUTPUT_PDF_PATH
+const CHROME_PATH = process.env.CHROME_PATH || 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 const TOTAL_SLIDES = 11;
-const BASE_URL = 'https://happy-bell.vercel.app';
-const OUTPUT_PDF_PATH = path.resolve('c:/Users/tomas/Documents/antigravity/happy-bell/GALCOA_Presentacion_Hedera_Ideathon.pdf');
+const BASE_URL = process.env.BASE_URL || 'https://happy-bell.vercel.app';
+const OUTPUT_PDF_PATH = path.resolve(process.env.OUTPUT_PDF_PATH || 'c:/Users/tomas/Documents/antigravity/happy-bell/GALCOA_Presentacion_Hedera_Ideathon.pdf');
 
 async function generatePDF() {
   console.log('Iniciando navegador Chrome headless...');
@@ -41,8 +42,8 @@ async function generatePDF() {
     // Ocultar botones de navegación interactivos (<, >, ?, fullscreen) para que el PDF se vea limpio
     await page.addStyleTag({
       content: `
-        button[title="Ver atajos de teclado"],
-        button[title="Pantalla completa (F)"],
+        button[aria-label="Ver atajos de teclado"],
+        button[aria-label="Pantalla completa"],
         button[aria-label="Diapositiva anterior"],
         button[aria-label="Siguiente diapositiva"] {
           display: none !important;

@@ -32,12 +32,12 @@ export const Slide2: React.FC = () => {
     >
       {/* Header */}
       <motion.div variants={itemVariants} className="space-y-2 mb-3">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 text-red-700 text-xs font-semibold uppercase tracking-wider">
-          <AlertTriangle className="w-3.5 h-3.5 text-red-600" />
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 text-danger text-xs font-semibold uppercase tracking-wider">
+          <AlertTriangle className="w-3.5 h-3.5 text-danger" />
           <span>Diagnóstico de Fricción Operativa</span>
         </div>
         
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#174235] tracking-tight font-display">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-brand-yellow tracking-tight font-display">
           El dolor en las industrias reguladas
         </h2>
       </motion.div>
@@ -48,20 +48,20 @@ export const Slide2: React.FC = () => {
         <div className="relative">
           <motion.div
             variants={itemVariants}
-            className="bg-white/95 rounded-2xl p-5 md:p-6 border-l-4 border-amber-500 shadow-sm border border-stone-200/80 space-y-2"
+            className="bg-surface rounded-2xl p-5 md:p-6 border-l-4 border-brand-yellow border border-line space-y-2"
           >
-            <div className="flex items-center gap-2 text-amber-700 font-bold text-lg md:text-xl font-display">
-              <FileSpreadsheet className="w-5 h-5 text-amber-600" />
+            <div className="flex items-center gap-2 text-brand-yellow font-bold text-lg md:text-xl font-display">
+              <FileSpreadsheet className="w-5 h-5 text-brand-yellow" />
               <span>Causa raíz:</span>
             </div>
-            <p className="text-base md:text-lg text-stone-700 leading-relaxed font-medium">
+            <p className="text-base md:text-lg text-text leading-relaxed font-medium">
               En campo, los operarios usan planillas de papel, Excels o chats informales porque los sistemas tradicionales son rígidos, lentos e inviables.
             </p>
           </motion.div>
 
           {/* Flecha curva izquierda: conectada desde Causa raíz hacia Se ve reflejado en */}
           <div className="absolute -left-6 sm:-left-9 lg:-left-12 -bottom-9 w-14 sm:w-16 md:w-20 h-24 sm:h-28 md:h-32 pointer-events-none z-30">
-            <svg viewBox="0 0 80 120" fill="none" className="w-full h-full text-amber-600 drop-shadow-xs overflow-visible">
+            <svg viewBox="0 0 80 120" fill="none" className="w-full h-full text-brand-yellow overflow-visible">
               <path
                 d="M 68 6 C 24 16, 4 58, 22 94 C 28 104, 42 110, 58 113"
                 stroke="currentColor"
@@ -83,20 +83,20 @@ export const Slide2: React.FC = () => {
         <div className="relative">
           <motion.div
             variants={itemVariants}
-            className="bg-white/95 rounded-2xl p-5 md:p-6 border-l-4 border-orange-500 shadow-sm border border-stone-200/80 space-y-2"
+            className="bg-surface rounded-2xl p-5 md:p-6 border-l-4 border-brand-yellow border border-line space-y-2"
           >
-            <div className="flex items-center gap-2 text-orange-700 font-bold text-lg md:text-xl font-display">
-              <Layers className="w-5 h-5 text-orange-600" />
+            <div className="flex items-center gap-2 text-brand-yellow font-bold text-lg md:text-xl font-display">
+              <Layers className="w-5 h-5 text-brand-yellow" />
               <span>Se ve reflejado en :</span>
             </div>
-            <p className="text-base md:text-lg text-stone-700 leading-relaxed font-medium">
+            <p className="text-base md:text-lg text-text leading-relaxed font-medium">
               Cargas tardias, datos dispersos, manipulacion, dificil acceso a la trazabilidad de los datos.
             </p>
           </motion.div>
 
           {/* Flecha curva derecha: conectada desde Se ve reflejado en hacia Consecuencia */}
           <div className="absolute -right-6 sm:-right-9 lg:-right-12 -bottom-9 w-14 sm:w-16 md:w-20 h-24 sm:h-28 md:h-32 pointer-events-none z-30">
-            <svg viewBox="0 0 80 120" fill="none" className="w-full h-full text-red-600 drop-shadow-xs overflow-visible">
+            <svg viewBox="0 0 80 120" fill="none" className="w-full h-full text-danger overflow-visible">
               <path
                 d="M 12 6 C 56 16, 76 58, 58 94 C 52 104, 38 110, 22 113"
                 stroke="currentColor"
@@ -118,10 +118,10 @@ export const Slide2: React.FC = () => {
         <div className="relative">
           <motion.div
             variants={itemVariants}
-            className="bg-white/95 rounded-2xl p-5 md:p-6 border-l-4 border-red-500 shadow-sm border border-stone-200/80 space-y-3"
+            className="bg-surface rounded-2xl p-5 md:p-6 border-l-4 border-red-500 border border-line space-y-3"
           >
-            <div className="flex items-center gap-2 text-red-700 font-bold text-lg md:text-xl font-display">
-              <AlertTriangle className="w-5 h-5 text-red-600" />
+            <div className="flex items-center gap-2 text-danger font-bold text-lg md:text-xl font-display">
+              <AlertTriangle className="w-5 h-5 text-danger" />
               <span>Consecuencia:</span>
             </div>
 
@@ -129,7 +129,7 @@ export const Slide2: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 pt-1 items-center">
               {/* Sello 1: MULTAS (Octagonal) */}
               <div className="relative flex flex-col items-center justify-center p-3.5 min-h-[130px] text-center transform -rotate-1 hover:rotate-0 transition-transform">
-                <svg className="absolute inset-0 w-full h-full text-red-600" viewBox="0 0 160 120" preserveAspectRatio="none">
+                <svg className="absolute inset-0 w-full h-full text-danger" viewBox="0 0 160 120" preserveAspectRatio="none">
                   <polygon
                     points="44,4 116,4 156,36 156,84 116,116 44,116 4,84 4,36"
                     fill="rgba(239, 68, 68, 0.08)"
@@ -146,14 +146,14 @@ export const Slide2: React.FC = () => {
                   />
                 </svg>
                 <div className="relative z-10 flex flex-col items-center">
-                  <div className="flex items-center gap-1 text-[11px] font-mono font-bold tracking-widest uppercase text-red-600">
+                  <div className="flex items-center gap-1 text-[11px] font-mono font-bold tracking-widest uppercase text-danger">
                     <AlertTriangle className="w-3.5 h-3.5" />
                     <span>Sanción</span>
                   </div>
-                  <span className="text-xl md:text-2xl font-black font-mono tracking-wider uppercase text-red-700 leading-none my-1">
+                  <span className="text-xl md:text-2xl font-semibold font-mono tracking-wider uppercase text-danger leading-none my-1">
                     MULTAS
                   </span>
-                  <span className="text-[10px] font-mono text-red-600/90 leading-tight">
+                  <span className="text-[10px] font-mono text-danger/90 leading-tight">
                     Pérdidas millonarias
                   </span>
                 </div>
@@ -161,7 +161,7 @@ export const Slide2: React.FC = () => {
 
               {/* Sello 2: AUDITORÍAS DESAPROBADAS (Triangular calibrado) */}
               <div className="relative flex flex-col items-center justify-center p-3 min-h-[130px] text-center transform rotate-1 hover:rotate-0 transition-transform">
-                <svg className="absolute inset-0 w-full h-full text-amber-600" viewBox="0 0 170 130" preserveAspectRatio="none">
+                <svg className="absolute inset-0 w-full h-full text-brand-yellow" viewBox="0 0 170 130" preserveAspectRatio="none">
                   <polygon
                     points="85,6 164,122 6,122"
                     fill="rgba(217, 130, 43, 0.08)"
@@ -177,29 +177,29 @@ export const Slide2: React.FC = () => {
                   />
                 </svg>
                 <div className="relative z-10 flex flex-col items-center pt-7 pb-1">
-                  <div className="flex items-center gap-1 text-[10px] font-mono font-bold tracking-wider uppercase text-amber-700">
+                  <div className="flex items-center gap-1 text-[10px] font-mono font-bold tracking-wider uppercase text-brand-yellow">
                     <XCircle className="w-3 h-3" />
                     <span>No Conformidad</span>
                   </div>
-                  <span className="text-xs sm:text-sm md:text-base font-black font-display tracking-tight uppercase text-amber-800 leading-tight my-0.5">
+                  <span className="text-xs sm:text-sm md:text-base font-semibold font-display tracking-tight uppercase text-brand-yellow leading-tight my-0.5">
                     AUDITORÍAS DESAPROBADAS
                   </span>
-                  <span className="text-[10px] font-medium text-amber-700/90 leading-tight">
+                  <span className="text-[10px] font-medium text-brand-yellow/90 leading-tight">
                     Bloqueo de licencias
                   </span>
                 </div>
               </div>
 
               {/* Sello 3: LOTES RECHAZADOS (Rectangular) */}
-              <div className="relative border-2 border-rose-800 rounded-xl p-3.5 bg-rose-500/10 text-rose-900 flex flex-col items-center justify-center text-center transform -rotate-1 hover:rotate-0 transition-transform shadow-2xs min-h-[130px]">
-                <div className="flex items-center gap-1.5 text-xs font-mono font-bold tracking-widest uppercase text-rose-700 mb-0.5">
+              <div className="relative border-2 border-brand-yellow rounded-xl p-3.5 bg-brand-yellow/10 text-brand-yellow flex flex-col items-center justify-center text-center transform -rotate-1 hover:rotate-0 transition-transform min-h-[130px]">
+                <div className="flex items-center gap-1.5 text-xs font-mono font-bold tracking-widest uppercase text-brand-yellow mb-0.5">
                   <Ban className="w-3.5 h-3.5" />
                   <span>Cuarentena Total</span>
                 </div>
-                <span className="text-xl md:text-2xl font-black tracking-tighter uppercase text-rose-900 font-sans">
+                <span className="text-xl md:text-2xl font-semibold tracking-tighter uppercase text-brand-yellow font-sans">
                   LOTES RECHAZADOS
                 </span>
-                <span className="text-[11px] font-mono text-rose-700/80 mt-1">
+                <span className="text-[11px] font-mono text-brand-yellow/80 mt-1">
                   Destrucción física del producto
                 </span>
               </div>

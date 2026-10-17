@@ -2,123 +2,161 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Tokens de DESIGN.md §9 */
 :root {
-  --primary-deep: #0D261E;
-  --primary: #174235;
-  --primary-light: #245A49;
-  --accent-amber: #D9822B;
-  --accent-gold: #E5A93C;
-  --accent-cyan: #0E8388;
-  --bg-sand: #F7F5EE;
-  --bg-card: #FFFFFF;
-  --bg-card-subtle: #F0ECE1;
-  --text-main: #18181B;
-  --text-muted: #52525B;
-  --text-subtle: #71717A;
-  --border-light: #E4DEC9;
+  --brand-green: #174235;
+  --brand-yellow: #fcd34d;
+
+  --bg: #101411;
+  --surface: #18221c;
+  --surface-deep: #0d110f;
+  --line: #35443c;
+  --text: #f5f4ec;
+  --text-muted: #b9c6bd;
+  --paper: #f5f4ec;
+
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --radius: 0px;
+  --border: 1px solid var(--line);
+  --gutter: clamp(16px, 3vw, 32px);
+
+  --motion-fast: 180ms;
+  --motion-normal: 260ms;
+  --motion-ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * {
   box-sizing: border-box;
+  border-radius: 0;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  background-color: var(--bg-sand);
-  color: var(--text-main);
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--text);
   overflow: hidden;
   user-select: none;
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, .font-display {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: var(--font-display);
+  letter-spacing: -0.025em;
 }
 
 .font-mono {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
 }
 
-/* Presentation Deck Styles */
+:focus-visible {
+  outline: 2px solid var(--paper);
+  outline-offset: 3px;
+}
+
+/* Presentation Deck: retícula visible como arquitectura */
 .deck-container {
   position: fixed;
   inset: 0;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background: radial-gradient(circle at 10% 20%, rgba(230, 222, 203, 0.45) 0%, transparent 40%),
-              radial-gradient(circle at 90% 80%, rgba(27, 77, 62, 0.06) 0%, transparent 40%),
-              #F8F6F0;
+  background: var(--bg);
+  color: var(--text);
 }
 
 .deck-container::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: 
-    linear-gradient(to right, rgba(28, 25, 23, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(28, 25, 23, 0.03) 1px, transparent 1px);
-  background-size: 48px 48px;
+  background-image:
+    linear-gradient(to right, rgba(53, 68, 60, 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(53, 68, 60, 0.35) 1px, transparent 1px);
+  background-size: 64px 64px;
   pointer-events: none;
   z-index: 1;
 }
 
-/* Subtle idle state for deck controls */
+/* Altura dinámica en móvil (evita 100vh) */
+@supports (height: 100dvh) {
+  .deck-container {
+    height: 100dvh;
+  }
+}
+
+/* Controles: estado idle sutil */
 .controls-bar {
-  transition: opacity 0.35s ease, transform 0.35s ease;
+  transition: opacity var(--motion-normal) var(--motion-ease);
 }
 
 .deck-idle .controls-bar {
-  opacity: 0.15;
+  opacity: 0.35;
 }
 
-.controls-bar:hover {
+.controls-bar:hover,
+.controls-bar:focus-within {
   opacity: 1 !important;
 }
 
-/* Card glass effect */
+/* Paneles: superficies por contraste, sin sombras ni blur */
 .glass-card {
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(220, 212, 192, 0.85);
-  box-shadow: 0 10px 30px -10px rgba(27, 45, 38, 0.07),
-              0 4px 6px -2px rgba(27, 45, 38, 0.03);
+  background: var(--surface);
+  border: var(--border);
 }
 
 .glass-card-dark {
-  background: #174235;
-  color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 12px 35px -8px rgba(13, 38, 30, 0.35);
+  background: var(--brand-green);
+  color: var(--text);
+  border: 1px solid var(--brand-green);
 }
 
 .glass-card-gold {
-  background: #E8B958;
-  color: #1A1505;
-  border: 1px solid rgba(184, 138, 34, 0.35);
+  background: var(--brand-yellow);
+  color: var(--brand-green);
+  border: 1px solid var(--brand-yellow);
 }
 
 .glass-card-terracotta {
-  background: #C4623B;
-  color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: var(--surface-deep);
+  color: var(--text);
+  border: var(--border);
 }
 
 /* Progress Segment */
 .progress-segment {
   height: 4px;
-  transition: all 0.3s cubic-bezier(0.2, 0.7, 0.3, 1);
-  background-color: rgba(27, 77, 62, 0.15);
+  transition: all var(--motion-normal) var(--motion-ease);
+  background-color: var(--line);
 }
 
 .progress-segment.active {
-  background-color: #174235;
+  background-color: var(--brand-yellow);
   height: 6px;
-  box-shadow: 0 0 10px rgba(23, 66, 53, 0.4);
 }
 
 .progress-segment.viewed {
-  background-color: rgba(23, 66, 53, 0.45);
+  background-color: var(--text-muted);
+}
+
+/* La diapositiva crece con su contenido: nunca se recorta por arriba en pantallas bajas */
+.slide-stage > * {
+  flex: 1 0 auto;
+  height: auto !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
 }

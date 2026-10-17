@@ -8,21 +8,15 @@ import { ShortcutsModal } from './ShortcutsModal';
 const slideVariants = {
   enter: (direction: number) => ({
     opacity: 0,
-    x: direction > 0 ? 90 : -90,
-    filter: 'blur(8px)',
-    scale: 0.99,
+    x: direction > 0 ? 12 : -12,
   }),
   center: {
     opacity: 1,
     x: 0,
-    filter: 'blur(0px)',
-    scale: 1,
   },
   exit: (direction: number) => ({
     opacity: 0,
-    x: direction > 0 ? -90 : 90,
-    filter: 'blur(8px)',
-    scale: 0.99,
+    x: direction > 0 ? -12 : 12,
   }),
 };
 
@@ -43,10 +37,12 @@ export const Deck: React.FC = () => {
   const lastWheelTime = useRef<number>(0);
   const pointerStart = useRef<{ x: number; y: number; time: number; onControl: boolean } | null>(null);
   const idleTimeout = useRef<number | null>(null);
+  const stageRef = useRef<HTMLElement | null>(null);
 
   // Sync index with URL hash
   useEffect(() => {
     window.history.replaceState(null, '', `#${currentIndex}`);
+    stageRef.current?.scrollTo({ top: 0 });
   }, [currentIndex]);
 
   // Navigate to slide
@@ -158,6 +154,14 @@ export const Deck: React.FC = () => {
       const delta = Math.abs(e.deltaY) > Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
       if (Math.abs(delta) < 35) return;
 
+      // Si la diapositiva es más alta que la pantalla, la rueda desplaza su contenido primero
+      const stage = stageRef.current;
+      if (stage && Math.abs(e.deltaY) >= Math.abs(e.deltaX)) {
+        const canScrollDown = stage.scrollTop + stage.clientHeight < stage.scrollHeight - 2;
+        const canScrollUp = stage.scrollTop > 2;
+        if ((delta > 0 && canScrollDown) || (delta < 0 && canScrollUp)) return;
+      }
+
       lastWheelTime.current = now;
       if (delta > 0) {
         nextSlide();
@@ -260,7 +264,7 @@ export const Deck: React.FC = () => {
       />
 
       {/* Main Slide Stage */}
-      <main className="relative z-10 flex-1 w-full h-full overflow-hidden flex items-center justify-center">
+      <main ref={stageRef} className="relative z-10 flex-1 min-h-0 w-full overflow-x-hidden overflow-y-auto overscroll-contain flex">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={currentIndex}
@@ -270,10 +274,10 @@ export const Deck: React.FC = () => {
             animate="center"
             exit="exit"
             transition={{
-              duration: 0.5,
-              ease: [0.22, 1, 0.36, 1],
+              duration: 0.26,
+              ease: [0.16, 1, 0.3, 1],
             }}
-            className="w-full h-full flex items-center justify-center"
+            className="slide-stage w-full min-h-full flex flex-col"
           >
             <CurrentSlideComponent />
           </motion.div>

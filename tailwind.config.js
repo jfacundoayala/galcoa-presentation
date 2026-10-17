@@ -1,39 +1,53 @@
 /** @type {import('tailwindcss').Config} */
+// Tokens de DESIGN.md (GALCOA+ · Structured Intelligence / Verified Evidence)
 export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    // Radio global 0px: formas rectas en todo el producto
+    borderRadius: {
+      none: '0',
+      sm: '0',
+      DEFAULT: '0',
+      md: '0',
+      lg: '0',
+      xl: '0',
+      '2xl': '0',
+      '3xl': '0',
+      full: '0',
+    },
     extend: {
       colors: {
-        sand: {
-          50: '#FDFCF7',
-          100: '#F6F3EB',
-          200: '#EAE4D5',
-          300: '#DCD4C0',
-          800: '#3A3528',
-          900: '#1C1A14',
+        brand: {
+          green: '#174235',
+          yellow: '#FCD34D',
         },
-        forest: {
-          500: '#1B4D3E',
-          600: '#143C30',
-          700: '#0E2C23',
+        ink: '#101411',
+        surface: {
+          DEFAULT: '#18221C',
+          deep: '#0D110F',
         },
-        amber: {
-          500: '#D9822B',
-          600: '#B86A1D',
+        line: '#35443C',
+        text: {
+          DEFAULT: '#F5F4EC',
+          muted: '#B9C6BD',
         },
-        ocean: {
-          500: '#1F536B',
-          600: '#163E50',
-        }
+        paper: '#F5F4EC',
+        danger: '#F87171',
       },
       fontFamily: {
-        display: ['"Space Grotesk"', 'sans-serif'],
-        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
-      }
+        display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        sans: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+      },
+      maxWidth: {
+        container: '1360px',
+      },
+      transitionTimingFunction: {
+        brand: 'cubic-bezier(0.16, 1, 0.3, 1)',
+      },
     },
   },
   plugins: [],
