@@ -28,6 +28,12 @@ La misma web sirve dos presentaciones, con relato distinto. Se elige con la ruta
 
 ---
 
+## 🎤 Guiones de pitch
+- [`docs/PITCH-HEDERA.md`](docs/PITCH-HEDERA.md): versión Hedera, con tiempos por diapositiva y preguntas del jurado.
+- [`docs/PITCH-AGRO.md`](docs/PITCH-AGRO.md): versión Agro (cannabis medicinal e industrial), con lo que falta confirmar.
+
+---
+
 ## 🎨 Sistema de diseño
 La presentación sigue [`DESIGN.md`](DESIGN.md) (Structured Intelligence / Verified Evidence): fondo oscuro verdoso, retícula visible, esquinas rectas (`border-radius: 0`), verde `#174235` y amarillo `#FCD34D` como únicos colores de marca, Space Grotesk + IBM Plex Mono.
 
