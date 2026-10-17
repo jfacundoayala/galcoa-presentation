@@ -76,7 +76,7 @@ export const Slide0: React.FC = () => {
         {/* Pitch Principal (unificado con el mismo formato y color text-stone-700 font-medium) */}
         <motion.div variants={itemVariants} className="pt-2 md:pt-4 max-w-4xl mx-auto space-y-5 text-center">
           <p className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-medium text-stone-700 leading-relaxed md:leading-relaxed tracking-tight">
-            - En industrias reguladas como Farma, Biotecnologia o Alimentos. La friccion del operario al cargar datos cuesta millones en Multas, Auditorias o Lotes rechazados.
+            - En industrias reguladas como Farma, Biotecnologia o Alimentos. La friccion del operario al cargar datos puede costar millones en Multas, Auditorias o Lotes rechazados.
           </p>
           <p className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-medium text-stone-700 leading-relaxed md:leading-relaxed tracking-tight">
             - <span className="text-[#174235] font-semibold">Galcoa+</span> lo soluciona de forma simple: Automatiza la captura, sanitizacion y validacion de la informacion en tiempo y forma.
