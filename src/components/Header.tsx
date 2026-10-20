@@ -31,9 +31,9 @@ export const Header: React.FC<HeaderProps> = ({
           alt="GALCOA+"
           className="h-7 sm:h-8 md:h-9 w-auto"
         />
-        <span className="hidden md:block font-mono text-[11px] uppercase tracking-[0.05em] text-text-muted font-medium">
-          Hedera · NEA Tech 2026
-        </span>
+        <span className="hidden md:block w-px h-7 bg-line" aria-hidden="true" />
+        <img src="/img/hedera-blanco.svg" alt="Hedera" className="hidden md:block h-6 lg:h-7 w-auto" />
+        <img src="/img/neatech.png" alt="NEA Tech Corrientes 2026" className="hidden md:block h-7 lg:h-8 w-auto" />
       </div>
 
       {/* Categoría de la diapositiva */}

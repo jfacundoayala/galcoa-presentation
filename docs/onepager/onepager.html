@@ -1,34 +1,34 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" style="background:#F7F8F6">
 <head>
 <meta charset="utf-8">
 <title>GALCOA+ · One-pager</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
-  :root { --navy: #1E3A5F; --blue: #2563EB; --ink: #0B1220; --muted: #475569; --line: #CBD5E1; --soft: #EEF4FB; }
+  :root { --navy: #1E3A5F; --green: #176A57; --yellow: #FFDA47; --white: #F7F8F6; --ink: #0B1220; --muted: #475569; --line: #CBD5E1; --soft: #EAF3F0; }
   @page { size: A4; margin: 0; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: "Space Grotesk", system-ui, sans-serif; color: var(--ink); background: #fff; font-size: 9pt; line-height: 1.32; }
+  body { font-family: "Space Grotesk", system-ui, sans-serif; color: var(--ink); background: var(--white); font-size: 9pt; line-height: 1.32; }
   .page { width: 210mm; min-height: 297mm; padding: 9mm 13mm 7mm; display: flex; flex-direction: column; gap: 2.6mm; }
-  header { display: flex; align-items: center; justify-content: space-between; gap: 8mm; padding-bottom: 3.5mm; border-bottom: 2px solid var(--navy); }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 8mm; padding-bottom: 3.5mm; border-bottom: 3px solid var(--yellow); }
   header .galcoa { height: 14mm; }
   header .partners { display: flex; align-items: center; gap: 6mm; }
   header .partners img { height: 8mm; }
   header .partners img.neatech { height: 11mm; }
   header .nea { font-family: "IBM Plex Mono", monospace; font-size: 7.8pt; text-transform: uppercase; letter-spacing: .04em; color: var(--navy); border: 1px solid var(--navy); padding: 1.5mm 2.5mm; }
   .tagline { font-size: 15pt; font-weight: 600; color: var(--navy); line-height: 1.2; }
-  .sub { font-size: 11pt; color: var(--blue); font-weight: 500; margin-top: 0.8mm; }
+  .sub { font-size: 11pt; color: var(--green); font-weight: 500; margin-top: 0.8mm; }
   .meta { font-size: 9pt; color: var(--muted); }
   .meta strong { color: var(--ink); }
   .quote { background: var(--navy); color: #fff; padding: 2.8mm 4mm; font-size: 9.4pt; }
-  .quote strong { color: #BFDBFE; }
-  h2 { font-size: 10.2pt; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: .03em; margin-bottom: 1mm; }
+  .quote strong { color: var(--yellow); }
+  h2 { font-size: 10.2pt; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: .03em; margin-bottom: 1mm; }
   section p + p { margin-top: 1.2mm; }
   ol { padding-left: 5mm; display: grid; gap: 1mm; }
   ul { padding-left: 4.5mm; display: grid; gap: 1mm; }
   .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
-  .box { background: var(--soft); border-left: 3px solid var(--blue); padding: 2.5mm 4mm; }
-  .todo { background: #FEF3C7; padding: 0 1mm; }
+  .box { background: var(--soft); border-left: 3px solid var(--green); padding: 2.5mm 4mm; }
+  .todo { background: var(--yellow); padding: 0 1mm; }
   footer { margin-top: auto; padding-top: 3mm; border-top: 1px solid var(--line); font-size: 8.4pt; color: var(--muted); display: flex; align-items: center; justify-content: space-between; gap: 6mm; }
   footer .links { display: flex; flex-wrap: wrap; gap: 1mm 5mm; }
   footer strong { color: var(--ink); }

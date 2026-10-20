@@ -24,20 +24,26 @@ export const Frame: React.FC<{
   badge: string;
   title: string;
   lead?: React.ReactNode;
+  /** Ilustración que acompaña al título (ruta en public/). */
+  art?: string;
+  artAlt?: string;
   children: React.ReactNode;
-}> = ({ badge, title, lead, children }) => (
+}> = ({ badge, title, lead, art, artAlt = '', children }) => (
   <motion.div
     variants={containerVariants}
     initial="hidden"
     animate="visible"
     className="w-full max-w-6xl mx-auto h-full flex flex-col justify-center px-6 lg:px-12 py-6"
   >
-    <motion.div variants={itemVariants} className="mb-5 md:mb-6 space-y-3">
-      <div className="inline-flex items-center gap-2 px-3 py-1 bg-brand-accent/10 text-brand-accent text-xs font-semibold uppercase tracking-wider">
-        {badge}
+    <motion.div variants={itemVariants} className="mb-5 md:mb-6 flex items-end justify-between gap-6">
+      <div className="space-y-3 min-w-0">
+        <div className="inline-flex items-center gap-2 px-3 py-1 bg-brand-accent/10 text-brand-accent text-xs font-semibold uppercase tracking-wider">
+          {badge}
+        </div>
+        <h2 className="text-3xl md:text-5xl font-semibold text-text tracking-tight font-display">{title}</h2>
+        {lead && <p className="max-w-4xl text-text-muted text-base md:text-lg leading-snug">{lead}</p>}
       </div>
-      <h2 className="text-3xl md:text-5xl font-semibold text-brand-accent tracking-tight font-display">{title}</h2>
-      {lead && <p className="max-w-4xl text-text-muted text-base md:text-lg leading-snug">{lead}</p>}
+      {art && <img src={art} alt={artAlt} className="hidden md:block shrink-0 w-[200px] lg:w-[250px] h-auto -mb-2" />}
     </motion.div>
     {children}
   </motion.div>
@@ -64,7 +70,7 @@ export const Cards: React.FC<{ items: CardItem[]; cols: 2 | 3 | 4 }> = ({ items,
       <motion.div
         key={c.title}
         variants={itemVariants}
-        className={`${c.highlight ? 'bg-brand-accent text-brand-navy' : 'bg-surface text-text'} p-5 lg:p-6 flex flex-col gap-2`}
+        className={`${c.highlight ? 'bg-brand-green text-text' : 'bg-surface text-text'} p-5 lg:p-6 flex flex-col gap-2`}
       >
         {(c.icon || c.tag) && (
           <div className="flex items-center justify-between">

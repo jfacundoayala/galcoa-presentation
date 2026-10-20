@@ -115,7 +115,7 @@ export const Demo: React.FC = () => {
         </div>
 
         <div className="space-y-3">
-          <h1 className="text-3xl md:text-5xl font-semibold text-brand-accent tracking-tight">Del mensaje a la evidencia sellada</h1>
+          <h1 className="text-3xl md:text-5xl font-semibold text-text tracking-tight">Del mensaje a la evidencia sellada</h1>
           <div className="flex flex-wrap gap-px bg-line border border-line w-fit" role="tablist" aria-label="Ejemplo">
             {SAMPLES.map((s) => (
               <button

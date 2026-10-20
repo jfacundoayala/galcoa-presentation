@@ -31,6 +31,8 @@ El lenguaje visual combina **modernismo suizo, diagramación editorial técnica 
 
 ## 2. Paleta cromática
 
+> **Paleta definitiva (20/10/2026, elegida por el equipo):** Azul institucional `#1E3A5F` (bandas y recuadros), Verde GALCOA+ `#176A57` (tarjetas destacadas y títulos de sección en documentos claros), Blanco `#F7F8F6` (títulos y texto sobre oscuro, fondo de documentos) y Amarillo de acción `#FFDA47` (solo detalles: etiquetas, íconos, botones y lo más importante; nunca títulos largos). En la presentación: `brand-navy`, `brand-green`, `brand-accent` (amarillo) y `text`. Reemplaza a la paleta azul anterior.
+
 > **Cambio de paleta (2026-10-20):** la presentación pasó de verde y amarillo a azul, alineada con el azul marino `#1E3A5F` de la app. En el resto de este documento, donde dice **verde** leer **azul marino** (`--brand-navy`), donde dice **amarillo** leer **azul claro** (`--brand-accent`) y donde dice **crema** leer **blanco frío** (`--text`). El logo también pasó a azul y blanco.
 
 ### Colores de identidad (fijos)

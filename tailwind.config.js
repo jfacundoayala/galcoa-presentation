@@ -22,7 +22,8 @@ export default {
       colors: {
         brand: {
           navy: '#1E3A5F',
-          accent: '#7DB4F5',
+          accent: '#FFDA47',
+          green: '#176A57',
         },
         ink: '#0B1220',
         surface: {
@@ -31,10 +32,10 @@ export default {
         },
         line: '#26344D',
         text: {
-          DEFAULT: '#F1F5F9',
+          DEFAULT: '#F7F8F6',
           muted: '#AAB6C8',
         },
-        paper: '#F1F5F9',
+        paper: '#F7F8F6',
         danger: '#F87171',
       },
       fontFamily: {

@@ -13,7 +13,7 @@ const icon = (Icon: React.ComponentType<{ className?: string }>) => <Icon classN
 /** 2 · El problema: trabaja bien, pero no lo puede demostrar. */
 export const SlideProblema: React.FC = () => (
   <Frame
-    badge="El problema"
+    badge="El problema" art="/img/ilus/problema.svg" artAlt="Distribuidor agarrándose la cabeza entre papeles sueltos mientras pierde plata"
     title="Trabajan bien, pero no lo pueden demostrar"
     lead="Las distribuidoras pymes de alimentos y bebidas llevan todo en papel, planillas y WhatsApp. Cuando una marca nueva pregunta «¿cómo trabajás?», no tienen pruebas para mostrar."
   >
@@ -37,7 +37,7 @@ export const SlideProblema: React.FC = () => (
 /** 3 · Cómo funciona, en cuatro pasos. */
 export const SlideComoFunciona: React.FC = () => (
   <Frame
-    badge="Cómo funciona"
+    badge="Cómo funciona" art="/img/ilus/como-funciona.svg" artAlt="Celular con el chat, documento revisado y confirmación por QR"
     title="Cada entrega se convierte en una prueba"
     lead="Sin planillas ni sistemas complicados: se usa desde el celular."
   >
@@ -63,7 +63,7 @@ export const SlideComoFunciona: React.FC = () => (
 /** 4 · Por qué Hedera: qué viaja, qué prueba y qué no. */
 export const SlideHedera: React.FC = () => (
   <Frame
-    badge="Por qué Hedera"
+    badge="Por qué Hedera" art="/img/ilus/hedera.svg" artAlt="Documento que se convierte en una huella guardada en una cadena con candado"
     title="Una prueba que nadie puede reescribir"
     lead="Una blockchain hace que un dato sea inalterable, no que sea verdadero. Por eso sumamos la confirmación del comercio."
   >
@@ -121,7 +121,7 @@ export const SlideHedera: React.FC = () => (
 /** 5 · Qué gana cada uno. */
 export const SlideValor: React.FC = () => (
   <Frame
-    badge="Qué gana cada uno"
+    badge="Qué gana cada uno" art="/img/ilus/valor.svg" artAlt="Un distribuidor y un comerciante se dan la mano y cierran la operación"
     title="Tu historial es tu carta de presentación"
   >
     <Cards
@@ -156,7 +156,7 @@ export const SlideValor: React.FC = () => (
 /** 6 · Modelo de negocio y cómo lo validamos. */
 export const SlideModelo: React.FC = () => (
   <Frame
-    badge="Modelo de negocio"
+    badge="Modelo de negocio" art="/img/ilus/modelo.svg" artAlt="Barras que crecen con monedas y una flecha hacia arriba"
     title="Un abono mensual, accesible para una pyme"
     lead="Precios de prueba: los vamos a ajustar con entrevistas y un piloto."
   >
@@ -182,18 +182,18 @@ export const SlideModelo: React.FC = () => (
   </Frame>
 );
 
-/** 7 · Próximos pasos y equipo. */
+/** 8 · Próximos pasos y equipo. */
 export const SlideRoadmap: React.FC = () => {
   const team = ['Gastón Persoglia', 'Nahuel Noir', 'Facundo Ayala', 'Federico Fontana', 'Thomas Skarp'];
   return (
-    <Frame badge="Próximos pasos" title="Empezamos en el NEA, sirve en cualquier lado">
+    <Frame badge="Próximos pasos" art="/img/ilus/roadmap.svg" artAlt="Camino con cuatro etapas y un camión que avanza" title="Empezamos en el NEA, sirve en cualquier lado">
       <Cards
         cols={4}
         items={[
           { tag: 'Fase 1 · hoy', title: 'MVP en Hedera Testnet', text: 'Chat con IA, PDF, confirmación por QR y huella en Hedera. Premiado en NEA Tech.', highlight: true },
           { tag: 'Fase 2', title: 'Piloto en el NEA', text: 'Primeras distribuidoras pagando, pase a la red principal de Hedera y panel para marcas.' },
           { tag: 'Fase 3', title: 'Acuerdos automáticos', text: 'Contratos inteligentes en Hedera: por ejemplo, un premio por entregas confirmadas. Todo el país.' },
-          { tag: 'Fase 4 · objetivo', title: 'Otros mercados y países', text: 'Farma, agro, objetos de alto valor y operaciones internas. Distribuidoras de América y Europa.' },
+          { tag: 'Fase 4 · objetivo', title: 'Otros mercados y países', text: 'Cannabis medicinal, farma, agro, objetos de alto valor y operaciones internas. Distribuidoras de América y Europa.' },
         ]}
       />
       <Band>
@@ -213,7 +213,7 @@ export const SlideRoadmap: React.FC = () => {
 /** 7 · Mercado potencial: de dónde arrancamos y hasta dónde puede llegar. */
 export const SlideMercado: React.FC = () => (
   <Frame
-    badge="Mercado potencial · a explorar"
+    badge="Mercado potencial · a explorar" art="/img/ilus/mercado.svg" artAlt="Globo terráqueo con pines que parten del NEA"
     title="Empezamos en el NEA. El objetivo es el mundo."
     lead="Cifras de cada sector, para dimensionar hacia dónde puede crecer. No son el mercado que vamos a captar."
   >
@@ -233,14 +233,14 @@ export const SlideMercado: React.FC = () => (
 
 /** 9 · Cierre: el proyecto en una frase y lo que el jurado tiene que recordar. */
 export const SlideCierre: React.FC = () => (
-  <Frame badge="En una frase" title="Las distribuidoras ya trabajan bien. Nosotros hacemos que lo puedan demostrar.">
+  <Frame badge="En una frase" art="/img/ilus/cierre.svg" artAlt="Distribuidor seguro con su historial verificado y el pulgar arriba" title="Las distribuidoras ya trabajan bien. Nosotros hacemos que lo puedan demostrar.">
     <motion.p variants={itemVariants} className="max-w-4xl text-text text-base md:text-lg leading-relaxed">
-      Nos dirigimos a <strong className="text-brand-accent">distribuidoras pymes de alimentos y bebidas</strong>. Resolvemos que{' '}
-      <strong className="text-brand-accent">trabajan bien pero no lo pueden demostrar</strong>, mediante{' '}
-      <strong className="text-brand-accent">un chat con IA que convierte cada entrega en una prueba confirmada por el comercio y sellada en Hedera</strong>.
-      Generamos valor porque <strong className="text-brand-accent">su historial se vuelve una carta de presentación para conseguir nuevas marcas</strong>.
-      Nuestro modelo de ingresos es <strong className="text-brand-accent">un abono mensual</strong>, y llegamos a los clientes mediante{' '}
-      <strong className="text-brand-accent">un piloto en el NEA y las cámaras de distribuidores</strong>.
+      Nos dirigimos a <strong className="text-text font-semibold">distribuidoras pymes de alimentos y bebidas</strong>. Resolvemos que{' '}
+      <strong className="text-text font-semibold">trabajan bien pero no lo pueden demostrar</strong>, mediante{' '}
+      <strong className="text-text font-semibold">un chat con IA que convierte cada entrega en una prueba confirmada por el comercio y sellada en Hedera</strong>.
+      Generamos valor porque <strong className="text-text font-semibold">su historial se vuelve una carta de presentación para conseguir nuevas marcas</strong>.
+      Nuestro modelo de ingresos es <strong className="text-text font-semibold">un abono mensual</strong>, y llegamos a los clientes mediante{' '}
+      <strong className="text-text font-semibold">un piloto en el NEA y las cámaras de distribuidores</strong>.
     </motion.p>
     <motion.p
       variants={itemVariants}

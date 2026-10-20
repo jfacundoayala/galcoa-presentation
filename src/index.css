@@ -5,15 +5,16 @@
 /* Tokens de DESIGN.md §9 */
 :root {
   --brand-navy: #1e3a5f;
-  --brand-accent: #7db4f5;
+  --brand-accent: #ffda47;
+  --brand-green: #176a57;
 
   --bg: #0b1220;
   --surface: #111b2e;
   --surface-deep: #0a101c;
   --line: #26344d;
-  --text: #f1f5f9;
+  --text: #f7f8f6;
   --text-muted: #aab6c8;
-  --paper: #f1f5f9;
+  --paper: #f7f8f6;
 
   --font-display: "Space Grotesk", system-ui, sans-serif;
   --font-body: "Space Grotesk", system-ui, sans-serif;
