@@ -97,6 +97,6 @@ Para calcular cuánto gana una distribuidora con ventas extra conviene usar el *
 | Argentina (~10.000) | 500 → USD 360.000/año | 3.000 → USD 4,3 M/año | 5.000 → USD 7,2 M/año |
 | Mundo | 1.000 → USD 3,6 M/año | 10.000 → USD 36 M/año | 50.000 → USD 180 M/año |
 
-Supuestos de precio: USD 60/mes en el conservador; USD 120/mes en Argentina y USD 299/mes afuera en el optimista y el máximo.
+Supuestos de precio: en el NEA y Argentina, USD 60/mes en el conservador y USD 120/mes en el optimista y el máximo; afuera, USD 299/mes en los tres.
 
 **Regla para el pitch:** mostrar los tres escenarios juntos y decir "escenario" u "objetivo", nunca "vamos a facturar".
