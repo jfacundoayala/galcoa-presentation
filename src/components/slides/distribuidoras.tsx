@@ -121,7 +121,7 @@ export const SlideHedera: React.FC = () => (
 /** 5 · Qué gana cada uno. */
 export const SlideValor: React.FC = () => (
   <Frame
-    badge="Qué gana cada uno" art="/img/ilus/valor.svg" artAlt="Un distribuidor y un comerciante se dan la mano y cierran la operación"
+    badge="Qué gana cada uno" art="/img/ilus/valor-negocio.svg" artAlt="Un distribuidor y un comerciante se estrechan la mano y cierran la operación"
     title="Tu historial es tu carta de presentación"
   >
     <Cards
