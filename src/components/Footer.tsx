@@ -54,7 +54,7 @@ export const Footer: React.FC<FooterProps> = ({
               <span
                 className={`block w-full transition-all duration-[260ms] ease-brand ${
                   isCurrent
-                    ? 'h-1.5 bg-brand-yellow'
+                    ? 'h-1.5 bg-brand-accent'
                     : isViewed
                     ? 'h-1 bg-text-muted'
                     : 'h-px bg-line'
@@ -70,7 +70,7 @@ export const Footer: React.FC<FooterProps> = ({
         className="flex items-center px-3 sm:px-5 border-l border-line font-mono text-xs sm:text-sm font-medium text-text-muted"
         data-no-nav="true"
       >
-        <span className="text-brand-yellow font-semibold">{padZero(currentIndex + 1)}</span>
+        <span className="text-brand-accent font-semibold">{padZero(currentIndex + 1)}</span>
         <span className="mx-1 text-line">/</span>
         <span>{padZero(totalSlides)}</span>
       </div>

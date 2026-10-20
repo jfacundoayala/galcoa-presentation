@@ -46,7 +46,7 @@ export const Header: React.FC<HeaderProps> = ({
             transition={{ duration: 0.26, ease: [0.16, 1, 0.3, 1] }}
             className="hidden sm:block truncate font-mono text-[11px] sm:text-xs uppercase tracking-[0.05em] text-text-muted font-medium"
           >
-            <span className="text-brand-yellow">{pad(currentIndex + 1)}</span>
+            <span className="text-brand-accent">{pad(currentIndex + 1)}</span>
             <span className="mx-2 text-line">/</span>
             {category}
             <span className="sr-only"> de {totalSlides}</span>
@@ -54,16 +54,16 @@ export const Header: React.FC<HeaderProps> = ({
         )}
       </div>
 
-      {/* Selector de versión: Hedera / Agro */}
+      {/* Selector de versión: se muestra solo si hay más de una */}
       <nav aria-label="Versión de la presentación" className="flex items-stretch border-l border-line">
-        {decks.map((d) => (
+        {decks.length > 1 && decks.map((d) => (
           <a
             key={d.id}
             href={`/${d.id}#0`}
             aria-current={d.id === deckId ? 'page' : undefined}
             data-no-nav="true"
             className={`min-h-[44px] px-3 sm:px-5 flex items-center font-mono text-[11px] sm:text-xs uppercase tracking-[0.05em] font-semibold border-r border-line transition-colors ${
-              d.id === deckId ? 'bg-brand-yellow text-brand-green' : 'text-text-muted hover:bg-surface hover:text-text'
+              d.id === deckId ? 'bg-brand-accent text-brand-navy' : 'text-text-muted hover:bg-surface hover:text-text'
             }`}
           >
             {d.label}
@@ -72,7 +72,7 @@ export const Header: React.FC<HeaderProps> = ({
         <a
           href="/demo"
           data-no-nav="true"
-          className="hidden sm:flex min-h-[44px] px-5 items-center font-mono text-xs uppercase tracking-[0.05em] font-semibold border-r border-line text-brand-yellow hover:bg-surface"
+          className="hidden sm:flex min-h-[44px] px-5 items-center font-mono text-xs uppercase tracking-[0.05em] font-semibold border-r border-line text-brand-accent hover:bg-surface"
         >
           Demo
         </a>

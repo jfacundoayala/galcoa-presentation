@@ -21,20 +21,20 @@ export default {
     extend: {
       colors: {
         brand: {
-          green: '#174235',
-          yellow: '#FCD34D',
+          navy: '#1E3A5F',
+          accent: '#7DB4F5',
         },
-        ink: '#101411',
+        ink: '#0B1220',
         surface: {
-          DEFAULT: '#18221C',
-          deep: '#0D110F',
+          DEFAULT: '#111B2E',
+          deep: '#0A101C',
         },
-        line: '#35443C',
+        line: '#26344D',
         text: {
-          DEFAULT: '#F5F4EC',
-          muted: '#B9C6BD',
+          DEFAULT: '#F1F5F9',
+          muted: '#AAB6C8',
         },
-        paper: '#F5F4EC',
+        paper: '#F1F5F9',
         danger: '#F87171',
       },
       fontFamily: {

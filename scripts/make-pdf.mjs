@@ -1,15 +1,14 @@
 // Genera el PDF de la presentación de punta a punta (multiplataforma):
 //   npm run pdf
-// Compila, levanta la app local, captura las 11 filminas y guarda el PDF en
-// la raíz y en public/ (una por versión: Hedera y Agro). Opcional: CHROME_PATH=/ruta/a/chrome
+// Compila, levanta la app local, captura las 7 filminas y guarda el PDF en
+// la raíz y en public/ (versión Hedera). Opcional: CHROME_PATH=/ruta/a/chrome
 import { spawn, spawnSync } from 'node:child_process';
 import { existsSync, copyFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 
 const PORT = 4173;
 const DECKS = [
-  { deck: 'hedera', total: 11, pdf: 'GALCOA_Presentacion_Hedera_Ideathon.pdf' },
-  { deck: 'agro', total: 11, pdf: 'GALCOA_Presentacion_Agro.pdf' },
+  { deck: 'hedera', total: 7, pdf: 'GALCOA_Presentacion_Hedera_Ideathon.pdf' },
 ];
 const npx = process.platform === 'win32' ? 'npx.cmd' : 'npx';
 const npm = process.platform === 'win32' ? 'npm.cmd' : 'npm';

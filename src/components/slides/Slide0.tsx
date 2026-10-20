@@ -27,16 +27,17 @@ export const Slide0: React.FC = () => {
     <div className="relative w-full h-full flex items-center justify-center overflow-hidden px-4 sm:px-6">
       {/* Diffused side image (sin recuadro, difuminada a un costado) */}
       <div
-        className="pointer-events-none absolute right-[-40px] md:right-2 lg:right-6 top-1/2 -translate-y-1/2 w-[320px] md:w-[440px] lg:w-[540px] h-[75%] max-h-[580px] opacity-20 lg:opacity-35 select-none z-0"
+        className="pointer-events-none absolute right-[-40px] md:right-2 lg:right-6 top-1/2 -translate-y-1/2 w-[320px] md:w-[440px] lg:w-[540px] h-[75%] max-h-[580px] opacity-20 lg:opacity-30 select-none z-0"
         style={{
           maskImage: 'radial-gradient(ellipse at 70% 50%, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 75%)',
           WebkitMaskImage: 'radial-gradient(ellipse at 70% 50%, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 75%)',
         }}
       >
         <img
-          src="/img/hero-galcoa.jpg"
-          alt="Harness para Sanitización de Datos GALCOA+"
-          className="w-full h-full object-cover object-center filter blur-[0.5px]"
+          src="/img/hero-distribucion.svg"
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-contain object-center"
         />
       </div>
 
@@ -49,8 +50,8 @@ export const Slide0: React.FC = () => {
       >
         {/* Top Centered Section: Badge, GALCOA+, Subtítulo y Recuadritos sin puntitos */}
         <motion.div variants={itemVariants} className="flex flex-col items-center space-y-2">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-brand-yellow/10 border border-line text-brand-yellow text-xs md:text-sm font-semibold tracking-wide">
-            <ShieldCheck className="w-3.5 h-3.5 text-brand-yellow" />
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-brand-accent/10 border border-line text-brand-accent text-xs md:text-sm font-semibold tracking-wide">
+            <ShieldCheck className="w-3.5 h-3.5 text-brand-accent" />
             <span>Ideathon Hedera · NEA Tech</span>
           </div>
 
@@ -62,16 +63,16 @@ export const Slide0: React.FC = () => {
           />
 
           <p className="text-base sm:text-lg md:text-xl font-medium text-text">
-            Documentación y trazabilidad de datos.
+            Evidencia comercial verificable para distribuidoras.
           </p>
 
           {/* Recuadritos debajo de GALCOA+ (sin puntitos) */}
           <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3.5 pt-1">
-            <span className="px-4 py-2 bg-brand-green border border-text/25 text-text font-mono font-bold text-sm sm:text-base">
-              + datos en tiempo y forma
+            <span className="px-4 py-2 bg-brand-navy border border-text/25 text-text font-mono font-bold text-sm sm:text-base">
+              + historial que se puede probar
             </span>
             <span className="px-3.5 py-1 bg-danger/10 border border-danger/40 text-danger font-mono font-bold text-xs sm:text-sm">
-              - pérdidas millonarias
+              - oportunidades perdidas
             </span>
           </div>
         </motion.div>
@@ -79,10 +80,10 @@ export const Slide0: React.FC = () => {
         {/* Pitch Principal (sin recuadro blanco, perfectamente visible y legible sin desbordar) */}
         <motion.div variants={itemVariants} className="pt-1 md:pt-2 max-w-4xl mx-auto space-y-3.5 text-center">
           <p className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium text-text leading-snug md:leading-relaxed tracking-tight">
-            En industrias reguladas como Farma, Biotecnología o Alimentos, GAMP 5 y ALCOA+ no son opcionales. Un dato mal cargado puede costar millones en multas, auditorías y lotes rechazados.
+            Tu historial de operaciones es tu mejor carta de presentación.
           </p>
           <p className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium text-text leading-snug md:leading-relaxed tracking-tight">
-            <span className="text-brand-yellow font-semibold">GALCOA+</span> lo resuelve de raíz: captura, sanea y valida cada dato en tiempo y forma, y lo sella en Hedera.
+            <span className="text-brand-accent font-semibold">GALCOA+</span> lo convierte en evidencia verificable en Hedera, para demostrar tu capacidad y abrir nuevas oportunidades comerciales.
           </p>
         </motion.div>
       </motion.div>

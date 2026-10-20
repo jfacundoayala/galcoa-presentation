@@ -11,7 +11,7 @@
 
 **Concepto:** `Structured Intelligence / Verified Evidence`.
 
-El lenguaje visual combina **modernismo suizo, diagramación editorial técnica y neo-brutalismo contenido**. Toda la interfaz se organiza en una retícula visible de módulos rectangulares. La identidad se construye con un contraste marcado entre fondo oscuro, superficies verdes, acentos amarillos y texto de gran escala.
+El lenguaje visual combina **modernismo suizo, diagramación editorial técnica y neo-brutalismo contenido**. Toda la interfaz se organiza en una retícula visible de módulos rectangulares. La identidad se construye con un contraste marcado entre fondo azul noche, superficies azul marino, acentos azul claro y texto de gran escala.
 
 ### Principios no negociables
 
@@ -19,7 +19,7 @@ El lenguaje visual combina **modernismo suizo, diagramación editorial técnica 
 2. **Formas rectas:** contenedores, botones, tarjetas, campos, navegación y paneles usan esquinas cuadradas (`border-radius: 0`). El isotipo del cerebro conserva su forma orgánica propia.
 3. **Tipografía protagonista:** títulos grandes, grotescos, precisos; microcopy técnico en monoespaciada.
 4. **Geometría con significado:** arcos, círculos, sectores, líneas y checkpoints representan ciclos de captura, procesamiento y verificación.
-5. **Color disciplinado:** verde y amarillo son los únicos colores de identidad. Los neutros no se convierten en nuevos acentos; colores semánticos de error son una excepción funcional.
+5. **Color disciplinado:** azul marino y azul claro son los únicos colores de identidad (el azul transmite confiabilidad). El logo también es azul y blanco: cerebro `#2563EB`, tilde y letras blancas, `+` azul claro. Los neutros no se convierten en nuevos acentos; colores semánticos de error son una excepción funcional.
 6. **Calma operacional:** evitar efectos de IA genéricos, neón, glassmorphism, difuminados, ilustraciones 3D y sombras profundas.
 7. **Inspirarse sin clonar:** conservar la lógica de composición de Stellar Apex, pero crear figuras, navegación, secciones y layouts propios para GALCOA+.
 
@@ -31,35 +31,38 @@ El lenguaje visual combina **modernismo suizo, diagramación editorial técnica 
 
 ## 2. Paleta cromática
 
+> **Cambio de paleta (2026-10-20):** la presentación pasó de verde y amarillo a azul, alineada con el azul marino `#1E3A5F` de la app. En el resto de este documento, donde dice **verde** leer **azul marino** (`--brand-navy`), donde dice **amarillo** leer **azul claro** (`--brand-accent`) y donde dice **crema** leer **blanco frío** (`--text`). El logo también pasó a azul y blanco.
+
 ### Colores de identidad (fijos)
 
 | Token | Valor | Uso |
 |---|---|---|
-| `--brand-green` | `#174235` | Logotipo, paneles de marca, bloques destacados, botones secundarios sobre fondo claro |
-| `--brand-yellow` | `#FCD34D` | Check del isotipo, símbolo `+`, CTA principal, números clave, focos geométricos |
+| `--brand-navy` | `#1E3A5F` | Paneles de marca, bandas, bloques destacados, botones secundarios |
+| `--brand-accent` | `#7DB4F5` | Títulos, CTA principal, números clave, íconos y focos geométricos |
 
-### Neutros de interfaz (propuestos)
+### Neutros de interfaz
 
 | Token | Valor | Uso |
 |---|---|---|
-| `--bg` | `#101411` | Fondo principal, oscuridad verdosa en vez de negro puro |
-| `--surface` | `#18221C` | Paneles elevados por contraste de fondo, sin sombra |
-| `--surface-deep` | `#0D110F` | Zonas de alto contraste y módulos técnicos |
-| `--line` | `#35443C` | Retícula, bordes y divisores estructurales |
-| `--text` | `#F5F4EC` | Texto primario y títulos neutros |
-| `--text-muted` | `#B9C6BD` | Texto secundario legible |
-| `--paper` | `#F5F4EC` | Fondos claros ocasionales, ilustraciones geométricas y exportables |
+| `--bg` | `#0B1220` | Fondo principal, azul noche en vez de negro puro |
+| `--surface` | `#111B2E` | Paneles elevados por contraste de fondo, sin sombra |
+| `--surface-deep` | `#0A101C` | Zonas de alto contraste y módulos técnicos |
+| `--line` | `#26344D` | Retícula, bordes y divisores estructurales |
+| `--text` | `#F1F5F9` | Texto primario y títulos neutros |
+| `--text-muted` | `#AAB6C8` | Texto secundario legible |
+| `--paper` | `#F1F5F9` | Fondos claros ocasionales, ilustraciones geométricas y exportables |
 
-**Proporción sugerida de una página oscura:** 70% fondos oscuros, 20% verde y neutros estructurales, 10% amarillo. No es una cuota exacta: el amarillo debe destacar por contraste, no llenar cada bloque.
+**Proporción sugerida de una página oscura:** 70% fondos oscuros, 20% azul marino y neutros estructurales, 10% azul claro. El acento debe destacar por contraste, no llenar cada bloque.
 
 ### Reglas de contraste
 
-- Amarillo `#FCD34D` sobre verde `#174235`: **7.80:1**.
-- Crema `#F5F4EC` sobre verde `#174235`: **10.19:1**.
-- Crema `#F5F4EC` sobre fondo `#101411`: **16.84:1**.
-- **No usar texto verde `#174235` sobre fondo oscuro `#101411`**: el contraste es ~**1.65:1**, insuficiente.
-- **No usar texto amarillo sobre fondo crema**: contraste ~**1.31:1**, insuficiente.
-- CTA amarillo: texto verde. CTA verde: texto crema o amarillo. El contraste debe pasar WCAG AA.
+- Azul claro `#7DB4F5` sobre fondo `#0B1220`: **8.67:1**.
+- Azul marino `#1E3A5F` sobre azul claro `#7DB4F5`: **5.32:1**.
+- Texto `#F1F5F9` sobre azul marino `#1E3A5F`: **10.50:1**.
+- Texto `#F1F5F9` sobre fondo `#0B1220`: **17.09:1**.
+- Texto secundario `#AAB6C8` sobre superficie `#111B2E`: **8.39:1**.
+- **No usar texto azul marino `#1E3A5F` sobre el fondo `#0B1220`**: contraste ~**1.63:1**, insuficiente.
+- CTA azul claro: texto azul marino. CTA azul marino: texto blanco frío. El contraste debe pasar WCAG AA.
 - Estados críticos de error pueden introducir un rojo semántico accesible, pero nunca como color publicitario de marca ni como único indicador de error.
 
 ### Muestra visual de proporciones

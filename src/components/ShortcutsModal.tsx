@@ -39,7 +39,7 @@ export const ShortcutsModal: React.FC<ShortcutsModalProps> = ({
           >
             <div className="flex items-stretch justify-between border-b border-line">
               <div className="flex items-center gap-3 px-5 py-4">
-                <Keyboard className="w-5 h-5 text-brand-yellow" />
+                <Keyboard className="w-5 h-5 text-brand-accent" />
                 <h3 className="font-semibold text-lg font-display text-text">
                   Atajos de teclado
                 </h3>
@@ -71,7 +71,7 @@ export const ShortcutsModal: React.FC<ShortcutsModalProps> = ({
             <button
               type="button"
               onClick={onClose}
-              className="w-full min-h-[44px] bg-brand-yellow hover:brightness-95 text-brand-green font-semibold text-sm transition-colors"
+              className="w-full min-h-[44px] bg-brand-accent hover:brightness-95 text-brand-navy font-semibold text-sm transition-colors"
             >
               Entendido
             </button>

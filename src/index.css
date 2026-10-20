@@ -4,16 +4,16 @@
 
 /* Tokens de DESIGN.md §9 */
 :root {
-  --brand-green: #174235;
-  --brand-yellow: #fcd34d;
+  --brand-navy: #1e3a5f;
+  --brand-accent: #7db4f5;
 
-  --bg: #101411;
-  --surface: #18221c;
-  --surface-deep: #0d110f;
-  --line: #35443c;
-  --text: #f5f4ec;
-  --text-muted: #b9c6bd;
-  --paper: #f5f4ec;
+  --bg: #0b1220;
+  --surface: #111b2e;
+  --surface-deep: #0a101c;
+  --line: #26344d;
+  --text: #f1f5f9;
+  --text-muted: #aab6c8;
+  --paper: #f1f5f9;
 
   --font-display: "Space Grotesk", system-ui, sans-serif;
   --font-body: "Space Grotesk", system-ui, sans-serif;
@@ -114,15 +114,15 @@ h1, h2, h3, .font-display {
 }
 
 .glass-card-dark {
-  background: var(--brand-green);
+  background: var(--brand-navy);
   color: var(--text);
-  border: 1px solid var(--brand-green);
+  border: 1px solid var(--brand-navy);
 }
 
 .glass-card-gold {
-  background: var(--brand-yellow);
-  color: var(--brand-green);
-  border: 1px solid var(--brand-yellow);
+  background: var(--brand-accent);
+  color: var(--brand-navy);
+  border: 1px solid var(--brand-accent);
 }
 
 .glass-card-terracotta {
@@ -139,7 +139,7 @@ h1, h2, h3, .font-display {
 }
 
 .progress-segment.active {
-  background-color: var(--brand-yellow);
+  background-color: var(--brand-accent);
   height: 6px;
 }
 

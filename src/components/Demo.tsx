@@ -17,41 +17,25 @@ type Sample = {
 
 const SAMPLES: Sample[] = [
   {
-    id: 'farma',
-    tab: 'Farma · cadena de frío',
-    message: 'Recibí el lote MED-2210. El termómetro del camión marcaba 4,8 °C a las 09:42. Adjunto foto.',
-    attachment: 'foto_termometro.jpg',
+    id: 'entrega',
+    tab: 'Entrega a un comercio',
+    message: 'Entregué el pedido 2210 en el almacén de la esquina: 40 cajas de yogur, a las 09:42, con el camión a 4,8 °C. Adjunto foto del remito.',
+    attachment: 'foto_remito.jpg',
     record: [
-      { campo: 'Lote', valor: 'MED-2210' },
-      { campo: 'Etapa', valor: 'Recepción en depósito' },
+      { campo: 'Pedido', valor: 'PED-2210' },
+      { campo: 'Cliente', valor: 'Almacén (ejemplo)' },
+      { campo: 'Mercadería', valor: '40 cajas de yogur' },
       { campo: 'Temperatura', valor: '4,8 °C (rango 2–8 °C)' },
       { campo: 'Hora', valor: '09:42' },
       { campo: 'Responsable', valor: 'Ana P.' },
     ],
     tamperField: 2,
-    tamperTo: '7,9 °C (rango 2–8 °C)',
-    missing: 'hora de salida del transporte',
-  },
-  {
-    id: 'cannabis',
-    tab: 'Cannabis · secado',
-    message: 'Lote CAN-0142 en secado desde ayer: 21 °C y 45 % de humedad, 48 horas. Adjunto foto de la sala.',
-    attachment: 'foto_sala_secado.jpg',
-    record: [
-      { campo: 'Lote', valor: 'CAN-0142' },
-      { campo: 'Etapa', valor: 'Secado' },
-      { campo: 'Temperatura', valor: '21 °C' },
-      { campo: 'Humedad relativa', valor: '45 %' },
-      { campo: 'Duración', valor: '48 h' },
-      { campo: 'Responsable', valor: 'Ana P.' },
-    ],
-    tamperField: 2,
-    tamperTo: '27 °C',
-    missing: 'peso inicial del lote',
+    tamperTo: '48 cajas de yogur',
+    missing: 'número de remito',
   },
 ];
 
-const CONFIRMERS = ['Ana P. · operaria', 'Marcos R. · calidad'];
+const CONFIRMERS = ['Ana P. · distribuidora', 'Almacén · confirma por QR'];
 const STEPS = ['Captura', 'IA', 'Confirmación', 'Sello'];
 
 const sha256 = async (text: string) => {
@@ -123,15 +107,15 @@ export const Demo: React.FC = () => {
       </header>
 
       <main className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-6 space-y-5">
-        <div role="note" className="border border-brand-yellow bg-brand-yellow/10 px-4 py-3 text-sm text-text flex gap-3">
-          <AlertTriangle className="w-5 h-5 shrink-0 text-brand-yellow" aria-hidden="true" />
+        <div role="note" className="border border-brand-accent bg-brand-accent/10 px-4 py-3 text-sm text-text flex gap-3">
+          <AlertTriangle className="w-5 h-5 shrink-0 text-brand-accent" aria-hidden="true" />
           <p>
-            <strong className="text-brand-yellow">Demostración con datos de ejemplo.</strong> Muestra el flujo de punta a punta y calcula una huella SHA-256 real en tu navegador, pero <strong>no publica nada en Hedera</strong>.
+            <strong className="text-brand-accent">Demostración con datos de ejemplo.</strong> Muestra el flujo de punta a punta y calcula una huella SHA-256 real en tu navegador, pero <strong>no publica nada en Hedera</strong>.
           </p>
         </div>
 
         <div className="space-y-3">
-          <h1 className="text-3xl md:text-5xl font-semibold text-brand-yellow tracking-tight">Del mensaje a la evidencia sellada</h1>
+          <h1 className="text-3xl md:text-5xl font-semibold text-brand-accent tracking-tight">Del mensaje a la evidencia sellada</h1>
           <div className="flex flex-wrap gap-px bg-line border border-line w-fit" role="tablist" aria-label="Ejemplo">
             {SAMPLES.map((s) => (
               <button
@@ -139,7 +123,7 @@ export const Demo: React.FC = () => {
                 role="tab"
                 aria-selected={s.id === sampleId}
                 onClick={() => reset(s.id)}
-                className={`min-h-[44px] px-4 font-mono text-xs uppercase tracking-[0.05em] font-semibold ${s.id === sampleId ? 'bg-brand-yellow text-brand-green' : 'bg-surface text-text-muted hover:text-text'}`}
+                className={`min-h-[44px] px-4 font-mono text-xs uppercase tracking-[0.05em] font-semibold ${s.id === sampleId ? 'bg-brand-accent text-brand-navy' : 'bg-surface text-text-muted hover:text-text'}`}
               >
                 {s.tab}
               </button>
@@ -151,7 +135,7 @@ export const Demo: React.FC = () => {
           {STEPS.map((label, i) => {
             const n = i + 1;
             return (
-              <li key={label} aria-current={n === step ? 'step' : undefined} className={`px-2 sm:px-4 py-3 ${n === step ? 'bg-brand-yellow text-brand-green' : n < step ? 'bg-brand-green text-text' : 'bg-surface text-text-muted'}`}>
+              <li key={label} aria-current={n === step ? 'step' : undefined} className={`px-2 sm:px-4 py-3 ${n === step ? 'bg-brand-accent text-brand-navy' : n < step ? 'bg-brand-navy text-text' : 'bg-surface text-text-muted'}`}>
                 <span className="font-mono text-xs font-semibold">0{n}</span>
                 <span className="block font-display font-semibold text-[11px] sm:text-base leading-tight break-words">{label}</span>
               </li>
@@ -163,13 +147,13 @@ export const Demo: React.FC = () => {
           {/* Chat */}
           <section className="bg-surface p-4 sm:p-5 space-y-3 min-h-[260px]" aria-label="Chat">
             <h2 className="font-mono text-[11px] uppercase tracking-[0.05em] text-text-muted">Chat</h2>
-            <motion.div key={`m1-${sampleId}`} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="ml-auto max-w-[90%] bg-brand-green p-3 space-y-2">
+            <motion.div key={`m1-${sampleId}`} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="ml-auto max-w-[90%] bg-brand-navy p-3 space-y-2">
               <p className="text-sm leading-snug">{sample.message}</p>
               <span className="inline-flex items-center gap-1.5 border border-text/30 px-2 py-1 font-mono text-[11px]"><Camera className="w-3.5 h-3.5" aria-hidden="true" />{sample.attachment}</span>
             </motion.div>
             {step >= 2 && (
               <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="max-w-[90%] bg-surface-deep border border-line p-3 text-sm leading-snug">
-                Registro ordenado. Lo revisé contra ALCOA+: <strong className="text-brand-yellow">1 advertencia</strong> (no bloquea).
+                Registro ordenado. Lo revisé contra ALCOA+: <strong className="text-brand-accent">1 advertencia</strong> (no bloquea).
               </motion.div>
             )}
             {step >= 3 && (
@@ -207,8 +191,8 @@ export const Demo: React.FC = () => {
               <ul className="space-y-1.5">
                 {checks.map((c) => (
                   <li key={c.name} className="flex items-start gap-2 text-sm">
-                    {c.ok ? <CheckCircle2 className="w-4 h-4 mt-0.5 text-text" aria-hidden="true" /> : <AlertTriangle className="w-4 h-4 mt-0.5 text-brand-yellow" aria-hidden="true" />}
-                    <span><strong>{c.name}</strong> <span className={c.ok ? 'text-text-muted' : 'text-brand-yellow'}>· {c.ok ? 'cumple' : 'advertencia'}. {c.note}</span></span>
+                    {c.ok ? <CheckCircle2 className="w-4 h-4 mt-0.5 text-text" aria-hidden="true" /> : <AlertTriangle className="w-4 h-4 mt-0.5 text-brand-accent" aria-hidden="true" />}
+                    <span><strong>{c.name}</strong> <span className={c.ok ? 'text-text-muted' : 'text-brand-accent'}>· {c.ok ? 'sin observaciones' : 'advertencia'}. {c.note}</span></span>
                   </li>
                 ))}
               </ul>
@@ -223,7 +207,7 @@ export const Demo: React.FC = () => {
                     <button
                       onClick={() => setConfirmed((c) => c.map((v, j) => (j === i ? true : v)))}
                       disabled={confirmed[i]}
-                      className={`min-h-[44px] px-4 font-mono text-xs uppercase tracking-[0.05em] font-semibold ${confirmed[i] ? 'bg-brand-green text-text' : 'bg-brand-yellow text-brand-green hover:brightness-95'}`}
+                      className={`min-h-[44px] px-4 font-mono text-xs uppercase tracking-[0.05em] font-semibold ${confirmed[i] ? 'bg-brand-navy text-text' : 'bg-brand-accent text-brand-navy hover:brightness-95'}`}
                     >
                       {confirmed[i] ? 'Confirmado ✓' : 'Confirmar'}
                     </button>
@@ -234,16 +218,16 @@ export const Demo: React.FC = () => {
 
             {step === 4 && sealed && (
               <div className="space-y-3">
-                <div className="flex items-center gap-2 font-display font-semibold"><Fingerprint className="w-5 h-5 text-brand-yellow" aria-hidden="true" /> Huella SHA-256 · {sealed.at}</div>
+                <div className="flex items-center gap-2 font-display font-semibold"><Fingerprint className="w-5 h-5 text-brand-accent" aria-hidden="true" /> Huella SHA-256 · {sealed.at}</div>
                 <p className="font-mono text-xs break-all leading-relaxed border border-line bg-ink p-3">{sealed.hash}</p>
                 <p className="text-xs text-text-muted">Red: Hedera Testnet · <strong>no publicado en esta demo</strong>.</p>
 
                 <div className="border-t border-line pt-3 space-y-2">
                   <p className="text-sm">Probá alterar un dato después del sello:</p>
-                  <button onClick={() => setTampered((t) => !t)} className="min-h-[44px] px-4 inline-flex items-center gap-2 border border-brand-yellow text-brand-yellow font-mono text-xs uppercase tracking-[0.05em] font-semibold hover:bg-brand-yellow/10">
+                  <button onClick={() => setTampered((t) => !t)} className="min-h-[44px] px-4 inline-flex items-center gap-2 border border-brand-accent text-brand-accent font-mono text-xs uppercase tracking-[0.05em] font-semibold hover:bg-brand-accent/10">
                     <Pencil className="w-4 h-4" aria-hidden="true" /> {tampered ? 'Restaurar el dato original' : 'Alterar un dato'}
                   </button>
-                  <div role="status" className={`flex items-start gap-2 p-3 border text-sm ${matches ? 'border-line bg-brand-green' : 'border-danger bg-danger/10'}`}>
+                  <div role="status" className={`flex items-start gap-2 p-3 border text-sm ${matches ? 'border-line bg-brand-navy' : 'border-danger bg-danger/10'}`}>
                     {matches ? <ShieldCheck className="w-5 h-5 shrink-0" aria-hidden="true" /> : <XCircle className="w-5 h-5 shrink-0 text-danger" aria-hidden="true" />}
                     <span>
                       {matches
@@ -261,7 +245,7 @@ export const Demo: React.FC = () => {
           <button
             onClick={goNext}
             disabled={nextDisabled}
-            className="min-h-[44px] px-5 inline-flex items-center gap-2 bg-brand-yellow text-brand-green font-display font-semibold hover:brightness-95 disabled:opacity-40 disabled:cursor-not-allowed"
+            className="min-h-[44px] px-5 inline-flex items-center gap-2 bg-brand-accent text-brand-navy font-display font-semibold hover:brightness-95 disabled:opacity-40 disabled:cursor-not-allowed"
           >
             {step === 3 ? 'Sellar registro' : 'Siguiente'} <ArrowRight className="w-4 h-4" aria-hidden="true" />
           </button>

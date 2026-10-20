@@ -1,20 +1,13 @@
 import React from 'react';
 import { Slide0 } from '../components/slides/Slide0';
-import { Slide1 } from '../components/slides/Slide1';
-import { Slide2 } from '../components/slides/Slide2';
-import { Slide5 } from '../components/slides/Slide5';
-import { Slide3 } from '../components/slides/Slide3';
-import { SlideAdopcion } from '../components/slides/SlideAdopcion';
-import { Slide4 } from '../components/slides/Slide4';
-import { Slide6 } from '../components/slides/Slide6';
-import { Slide8 } from '../components/slides/Slide8';
-import { Slide9 } from '../components/slides/Slide9';
-import { Slide10 } from '../components/slides/Slide10';
-import { Slide4Agro } from '../components/slides/Slide4';
-import { AgroPortada } from '../components/slides/agro/AgroPortada';
-import { AgroDolor } from '../components/slides/agro/AgroDolor';
-import { AgroCiclo } from '../components/slides/agro/AgroCiclo';
-import { AgroValor } from '../components/slides/agro/AgroValor';
+import {
+  SlideProblema,
+  SlideComoFunciona,
+  SlideHedera,
+  SlideValor,
+  SlideModelo,
+  SlideRoadmap,
+} from '../components/slides/distribuidoras';
 
 export interface SlideDefinition {
   id: string;
@@ -24,87 +17,18 @@ export interface SlideDefinition {
   Component: React.ComponentType;
 }
 
+/** Siete diapositivas: distribuidoras pymes del NEA; su historial de entregas como prueba verificable en Hedera. */
 export const SLIDES: SlideDefinition[] = [
-  {
-    id: 'intro',
-    index: 0,
-    title: 'GALCOA+ · Trazabilidad de datos',
-    category: 'Portada',
-    Component: Slide0,
-  },
-  {
-    id: 'estandares',
-    index: 1,
-    title: 'Estándares · GAMP 5 & ALCOA+',
-    category: 'Compliance',
-    Component: Slide1,
-  },
-  {
-    id: 'dolor',
-    index: 2,
-    title: 'El dolor en las industrias reguladas',
-    category: 'Problema',
-    Component: Slide2,
-  },
-  {
-    id: 'solucion',
-    index: 3,
-    title: 'Solución · Pipeline IA y Salida',
-    category: 'Solución',
-    Component: Slide5,
-  },
-  {
-    id: 'adopcion-operativa',
-    index: 4,
-    title: 'Cero fricción de entrada = Máxima adopción operativa.',
-    category: 'Propuesta de Valor',
-    Component: SlideAdopcion,
-  },
-  {
-    id: 'validacion',
-    index: 5,
-    title: 'Validación real en campo',
-    category: 'Validación',
-    Component: Slide3,
-  },
-  {
-    id: 'como-funciona',
-    index: 6,
-    title: 'Cómo funciona · De mensaje a evidencia sellada',
-    category: 'Producto',
-    Component: Slide4,
-  },
-  {
-    id: 'blockchain',
-    index: 7,
-    title: '¿Por qué Blockchain? · Hedera HCS',
-    category: 'Tecnología',
-    Component: Slide6,
-  },
-  {
-    id: 'arquitectura',
-    index: 8,
-    title: 'Arquitectura robusta y moderna',
-    category: 'Arquitectura',
-    Component: Slide8,
-  },
-  {
-    id: 'modelo-b2b',
-    index: 9,
-    title: 'Modelo SaaS B2B escalable',
-    category: 'Negocio',
-    Component: Slide9,
-  },
-  {
-    id: 'roadmap-equipo',
-    index: 10,
-    title: 'Roadmap y equipo',
-    category: 'Roadmap',
-    Component: Slide10,
-  },
-];
+  { id: 'intro', title: 'GALCOA+ · Evidencia comercial verificable', category: 'Portada', Component: Slide0 },
+  { id: 'problema', title: 'Trabajan bien, pero no lo pueden demostrar', category: 'Problema', Component: SlideProblema },
+  { id: 'como-funciona', title: 'Cada entrega se convierte en una prueba', category: 'Cómo funciona', Component: SlideComoFunciona },
+  { id: 'hedera', title: 'Una prueba que nadie puede reescribir', category: 'Hedera', Component: SlideHedera },
+  { id: 'valor', title: 'Tu historial es tu carta de presentación', category: 'Valor', Component: SlideValor },
+  { id: 'modelo', title: 'Un abono mensual, accesible para una pyme', category: 'Negocio', Component: SlideModelo },
+  { id: 'roadmap-equipo', title: 'Próximos pasos y equipo', category: 'Roadmap', Component: SlideRoadmap },
+].map((slide, index) => ({ ...slide, index }));
 
-export type DeckId = 'hedera' | 'agro';
+export type DeckId = 'hedera';
 
 export interface DeckDefinition {
   id: DeckId;
@@ -112,37 +36,9 @@ export interface DeckDefinition {
   slides: SlideDefinition[];
 }
 
-const byId = (id: string) => {
-  const slide = SLIDES.find((s) => s.id === id);
-  if (!slide) throw new Error(`Diapositiva inexistente: ${id}`);
-  return slide;
-};
-
-/** Versión Agro: cannabis medicinal e industrial (cáñamo) rumbo a la industria farma; Hedera como sello de confianza. */
-const AGRO_SLIDES: SlideDefinition[] = [
-  { id: 'agro-portada', title: 'GALCOA+ Cannabis · De la semilla al producto', category: 'Portada', Component: AgroPortada },
-  { id: 'agro-dolor', title: 'El dolor en la cadena del cannabis', category: 'Problema', Component: AgroDolor },
-  byId('estandares'),
-  byId('solucion'),
-  { id: 'agro-como-funciona', title: 'Cómo funciona · Del cultivo a evidencia sellada', category: 'Producto', Component: Slide4Agro },
-  { id: 'agro-ciclo', title: 'Cada etapa deja evidencia', category: 'Trazabilidad', Component: AgroCiclo },
-  byId('blockchain'),
-  { id: 'agro-valor', title: 'Qué gana el productor · Vale más, se vende más, se exporta', category: 'Valor', Component: AgroValor },
-  byId('validacion'),
-  byId('modelo-b2b'),
-  byId('roadmap-equipo'),
-].map((slide, index) => ({ ...slide, index }));
-
 export const DECKS: Record<DeckId, DeckDefinition> = {
   hedera: { id: 'hedera', label: 'Hedera', slides: SLIDES },
-  agro: { id: 'agro', label: 'Agro', slides: AGRO_SLIDES },
 };
 
-/** Ruta limpia (/agro, /hedera) con respaldo en ?deck=agro. Sin nada, Hedera. */
-export const getDeckFromUrl = (): DeckDefinition => {
-  const fromPath = window.location.pathname.split('/').filter(Boolean)[0];
-  const requested = fromPath === 'agro' || fromPath === 'hedera'
-    ? fromPath
-    : new URLSearchParams(window.location.search).get('deck');
-  return requested === 'agro' ? DECKS.agro : DECKS.hedera;
-};
+/** Queda una sola versión: Hedera. */
+export const getDeckFromUrl = (): DeckDefinition => DECKS.hedera;

@@ -9,33 +9,26 @@ Presentación interactiva y pitch deck para **Ideathon Hedera · NEA Tech 2026**
 ---
 
 ## 💡 Sobre el Proyecto
-**GALCOA+** es un harness de sanitización y validación de datos para industrias altamente reguladas (**Farma, Biotecnología, Alimentos y Cosmética**).
+**GALCOA+** convierte las operaciones cotidianas de una **distribuidora pyme** (alimentos, bebidas y consumo masivo, empezando por el NEA) en **evidencia comercial verificable**, para ayudarla a generar confianza, resolver disputas y acceder a nuevas marcas.
 
-Automatiza la captura ágil de datos de campo (mediante chat conversacional en lenguaje natural o imágenes), estructurándolos y validándolos según la guía de buenas prácticas **GAMP 5** y los principios de integridad de datos **ALCOA+**, y anclando hashes criptográficos SHA-256 en **Hedera Consensus Service (HCS)** para lograr trazabilidad inmutable y auditable en tiempo real.
+La distribuidora cuenta cada operación por chat; la IA arma y revisa el documento; el comercio confirma la entrega por QR; y la huella SHA-256 queda en **Hedera Consensus Service (HCS)**. El enfoque completo está en [`docs/ORIENTACION-DISTRIBUIDORES.md`](docs/ORIENTACION-DISTRIBUIDORES.md).
 
 ---
 
-## 🔀 Versiones del pitch
-La misma web sirve dos presentaciones, con relato distinto. Se elige con la ruta (`/agro`, `/hedera`; también funciona `/?deck=agro`) y con el selector `HEDERA | AGRO` del header:
+## 🔀 Versión del pitch
+Hay una sola versión: **Hedera** (`/`), con 7 diapositivas definidas en `src/data/slides.ts`.
 
-| Versión | URL | Foco | Diapositivas |
-|---|---|---|---|
-| **Hedera** (por defecto) | `/` o `/hedera` | Industrias reguladas (farma primero) y Hedera como tecnología. | 11 |
-| **Agro** | `/agro` | Cannabis medicinal e industrial (cáñamo) hacia la industria farma: de la semilla al producto, con Hedera como sello de confianza y el valor para el productor. | 11 |
-
-- Las definiciones están en `src/data/slides.ts` (`DECKS`). Las diapositivas propias de Agro están en `src/components/slides/agro/`.
-- `npm run pdf` genera un PDF por versión: `GALCOA_Presentacion_Hedera_Ideathon.pdf` y `GALCOA_Presentacion_Agro.pdf`.
+- `npm run pdf` genera `GALCOA_Presentacion_Hedera_Ideathon.pdf`.
 
 ---
 
 ## 🎤 Guiones de pitch
 - [`docs/PITCH-HEDERA.md`](docs/PITCH-HEDERA.md): versión Hedera, con tiempos por diapositiva y preguntas del jurado.
-- [`docs/PITCH-AGRO.md`](docs/PITCH-AGRO.md): versión Agro (cannabis medicinal e industrial), con lo que falta confirmar.
 
 ---
 
 ## 🧪 Demo interactiva
-`/demo` recorre el flujo (captura → IA → confirmación → sello) con datos de ejemplo (farma y cannabis). Calcula una huella SHA-256 real en el navegador y permite alterar un dato para ver cómo deja de coincidir. **No publica en Hedera.**
+`/demo` recorre el flujo (captura → IA → confirmación → sello) con datos de ejemplo. Calcula una huella SHA-256 real en el navegador y permite alterar un dato para ver cómo deja de coincidir. **No publica en Hedera.**
 
 ## 📦 Entrega al formulario
 - [`docs/ENTREGA-FORMS.md`](docs/ENTREGA-FORMS.md): qué va en cada campo.
@@ -44,10 +37,10 @@ La misma web sirve dos presentaciones, con relato distinto. Se elige con la ruta
 ---
 
 ## 🎨 Sistema de diseño
-La presentación sigue [`DESIGN.md`](DESIGN.md) (Structured Intelligence / Verified Evidence): fondo oscuro verdoso, retícula visible, esquinas rectas (`border-radius: 0`), verde `#174235` y amarillo `#FCD34D` como únicos colores de marca, Space Grotesk + IBM Plex Mono.
+La presentación sigue [`DESIGN.md`](DESIGN.md) (Structured Intelligence / Verified Evidence): fondo azul noche, retícula visible, esquinas rectas (`border-radius: 0`), azul marino `#1E3A5F` y azul claro `#7DB4F5` como únicos colores de marca, Space Grotesk + IBM Plex Mono.
 
 - Los tokens viven en `tailwind.config.js` (`brand`, `ink`, `surface`, `line`, `text`) y en las variables CSS de `src/index.css`.
-- Logos en `public/img/`: `logo-galcoa-oscuro.svg` (horizontal, letras en crema, para fondos oscuros; es el que usa la app), `logo-galcoa.svg` (colores originales, para fondos claros) e `isotipo-galcoa.svg`.
+- Logos en `public/img/`: `logo-galcoa-oscuro.svg` (cerebro azul, tilde y letras blancas, para fondos oscuros; es el que usa la app), `logo-galcoa.svg` (azul marino, para fondos claros) e `isotipo-galcoa.svg` (ícono de la pestaña).
 - Responsive verificado en 375, 768, 1024 y 1440 px sin overflow horizontal; en pantallas bajas la diapositiva se desplaza verticalmente.
 
 ---
