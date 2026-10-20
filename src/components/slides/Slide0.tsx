@@ -86,6 +86,15 @@ export const Slide0: React.FC = () => {
             <span className="text-brand-accent font-semibold">GALCOA+</span> lo convierte en evidencia verificable en Hedera, para demostrar tu capacidad y abrir nuevas oportunidades comerciales.
           </p>
         </motion.div>
+
+        {/* Construido sobre Hedera */}
+        <motion.div variants={itemVariants} className="flex items-center justify-center gap-3 pt-2">
+          <span className="font-mono text-[11px] uppercase tracking-[0.05em] text-text-muted">Construido sobre</span>
+          <img src="/img/hedera-blanco.svg" alt="Hedera" className="h-8 sm:h-9 w-auto" />
+          <span className="w-px h-8 bg-line mx-2" aria-hidden="true" />
+          <span className="font-mono text-[11px] uppercase tracking-[0.05em] text-text-muted">3er puesto en</span>
+          <img src="/img/neatech.png" alt="NEA Tech Corrientes 2026" className="h-9 sm:h-10 w-auto" />
+        </motion.div>
       </motion.div>
     </div>
   );

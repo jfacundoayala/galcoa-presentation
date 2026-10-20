@@ -19,18 +19,18 @@ const SAMPLES: Sample[] = [
   {
     id: 'entrega',
     tab: 'Entrega a un comercio',
-    message: 'Entregué el pedido 2210 en el almacén de la esquina: 40 cajas de yogur, a las 09:42, con el camión a 4,8 °C. Adjunto foto del remito.',
+    message: 'Entregué el pedido 2210 en el almacén de la esquina: 200 cajas de yogur, a las 09:42, con el camión a 4,8 °C. Adjunto foto del remito.',
     attachment: 'foto_remito.jpg',
     record: [
       { campo: 'Pedido', valor: 'PED-2210' },
       { campo: 'Cliente', valor: 'Almacén (ejemplo)' },
-      { campo: 'Mercadería', valor: '40 cajas de yogur' },
+      { campo: 'Mercadería', valor: '200 cajas de yogur' },
       { campo: 'Temperatura', valor: '4,8 °C (rango 2–8 °C)' },
       { campo: 'Hora', valor: '09:42' },
       { campo: 'Responsable', valor: 'Ana P.' },
     ],
     tamperField: 2,
-    tamperTo: '48 cajas de yogur',
+    tamperTo: '198 cajas de yogur',
     missing: 'número de remito',
   },
 ];

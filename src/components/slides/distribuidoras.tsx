@@ -4,7 +4,7 @@ import {
   FileStack, MessagesSquare, SearchX,
   Truck, Building2,
   MessageSquareText, Sparkles, QrCode, Fingerprint,
-  FileText, ArrowDown, Check, X, Users, Handshake,
+  FileText, ArrowDown, Check, X, Users, Handshake, MapPin, Globe,
 } from 'lucide-react';
 import { Frame, Cards, Band, Screenshot, itemVariants } from './kit';
 
@@ -44,8 +44,8 @@ export const SlideComoFunciona: React.FC = () => (
     <Cards
       cols={4}
       items={[
-        { icon: icon(MessageSquareText), tag: 'Paso 1', title: 'Lo cuenta por chat', text: '«Entregué 40 cajas en el almacén a las 9:42.» Y adjunta la foto del remito.' },
-        { icon: icon(Sparkles), tag: 'Paso 2', title: 'La IA lo ordena', text: 'Arma el documento y avisa si falta un dato. No inventa nada: la persona lo revisa y lo aprueba.' },
+        { icon: icon(MessageSquareText), tag: 'Paso 1', title: 'Lo cuenta por chat', text: '«Entregué 200 cajas en el almacén a las 9:42.» Y adjunta la foto del remito.' },
+        { icon: icon(Sparkles), tag: 'Paso 2', title: 'La IA lo controla', text: 'Si el pedido dice 200 cajas y el remito 200, sigue. Si dice 198, lo marca y no se sella hasta aclarar la diferencia. No inventa nada.' },
         { icon: icon(QrCode), tag: 'Paso 3', title: 'El comercio confirma', text: 'Escanea un QR y confirma que recibió la mercadería. Sin crearse una cuenta.' },
         { icon: icon(Fingerprint), tag: 'Paso 4', title: 'Queda sellado en Hedera', text: 'Se guarda la huella del documento. Si alguien lo cambia después, se nota.', highlight: true },
       ]}
@@ -110,7 +110,7 @@ export const SlideHedera: React.FC = () => (
     <Screenshot
       className="lg:w-[340px] xl:w-[380px]"
       src="/img/demo-sello.png"
-      alt="Demo: después del sello se cambió la cantidad a 48 cajas y la app avisa que la huella ya no coincide"
+      alt="Demo: después del sello se cambió la cantidad a 198 cajas y la app avisa que la huella ya no coincide"
       caption="Demo · si alguien cambia un dato, la huella ya no coincide"
       imgClassName="max-h-[420px] object-contain object-top"
     />
@@ -188,11 +188,12 @@ export const SlideRoadmap: React.FC = () => {
   return (
     <Frame badge="Próximos pasos" title="Empezamos en el NEA, sirve en cualquier lado">
       <Cards
-        cols={3}
+        cols={4}
         items={[
-          { tag: 'Hoy', title: 'MVP en Hedera Testnet', text: 'Chat con IA, PDF, confirmación por QR y huella en Hedera.', highlight: true },
-          { tag: 'Después', title: 'Panel para marcas', text: 'Indicadores y un perfil que la distribuidora comparte con un link.' },
-          { tag: 'Más adelante', title: 'Acuerdos automáticos', text: 'Contratos inteligentes en Hedera: por ejemplo, un premio por entregas confirmadas.' },
+          { tag: 'Fase 1 · hoy', title: 'MVP en Hedera Testnet', text: 'Chat con IA, PDF, confirmación por QR y huella en Hedera. Premiado en NEA Tech.', highlight: true },
+          { tag: 'Fase 2', title: 'Piloto en el NEA', text: 'Primeras distribuidoras pagando, pase a la red principal de Hedera y panel para marcas.' },
+          { tag: 'Fase 3', title: 'Acuerdos automáticos', text: 'Contratos inteligentes en Hedera: por ejemplo, un premio por entregas confirmadas. Todo el país.' },
+          { tag: 'Fase 4 · objetivo', title: 'Otros mercados y países', text: 'Farma, agro, objetos de alto valor y operaciones internas. Distribuidoras de América y Europa.' },
         ]}
       />
       <Band>
@@ -209,7 +210,28 @@ export const SlideRoadmap: React.FC = () => {
   );
 };
 
-/** 8 · Cierre: el proyecto en una frase y lo que el jurado tiene que recordar. */
+/** 7 · Mercado potencial: de dónde arrancamos y hasta dónde puede llegar. */
+export const SlideMercado: React.FC = () => (
+  <Frame
+    badge="Mercado potencial · a explorar"
+    title="Empezamos en el NEA. El objetivo es el mundo."
+    lead="Cifras de cada sector, para dimensionar hacia dónde puede crecer. No son el mercado que vamos a captar."
+  >
+    <Cards
+      cols={3}
+      items={[
+        { icon: icon(MapPin), tag: 'Argentina · punto de partida', title: '+14.700 empresas', text: 'de alimentos y bebidas representadas por COPAL. El 95 % son pymes.', highlight: true },
+        { icon: icon(Globe), tag: 'Estados Unidos', title: 'US$ 8,2 billones', text: 'por año mueve la distribución mayorista (8,2 millones de millones de dólares). Fuente: NAW.' },
+        { icon: icon(Globe), tag: 'Unión Europea · 2023', title: '5,8 millones de empresas', text: 'de comercio y distribución, que facturan € 11,4 billones por año. Fuente: Eurostat.' },
+      ]}
+    />
+    <Band>
+      <strong className="text-brand-accent">Escenario de ingresos:</strong> si 1.000 distribuidoras pagan el plan Crecimiento (USD 60 por mes), son <strong>USD 720.000 por año</strong>; con 5.000, <strong>USD 3,6 millones</strong>. Es una cuenta para dimensionar, no una proyección.
+    </Band>
+  </Frame>
+);
+
+/** 9 · Cierre: el proyecto en una frase y lo que el jurado tiene que recordar. */
 export const SlideCierre: React.FC = () => (
   <Frame badge="En una frase" title="Las distribuidoras ya trabajan bien. Nosotros hacemos que lo puedan demostrar.">
     <motion.p variants={itemVariants} className="max-w-4xl text-text text-base md:text-lg leading-relaxed">

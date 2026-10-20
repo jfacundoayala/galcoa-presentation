@@ -13,8 +13,8 @@ Pasá las diapositivas con la flecha derecha. En 0:45 pasá a `/demo`.
 | 1:15 | Demo · paso 3 | «La distribuidora aprueba y el almacén confirma con un QR.» → confirmar a los dos → **Sellar registro**. |
 | 1:30 | Demo · paso 4 | «Se calcula la huella. Si alguien cambia la cantidad…» → **Alterar un dato**. «…la huella ya no coincide.» |
 | 1:50 | Volver · Diapositiva 4 · Hedera | «A Hedera solo va la huella. Prueba que nadie cambió el documento; la confirmación del comercio respalda la entrega.» |
-| 2:10 | Diapositiva 7 · Próximos pasos | «Sigue un panel para marcas y contratos inteligentes en Hedera. Empezamos en el NEA.» |
-| 2:20 | Diapositiva 8 · Cierre | «Las distribuidoras ya trabajan bien. Nosotros hacemos que lo puedan demostrar. Gracias.» |
+| 2:10 | Diapositiva 8 · Próximos pasos | «Sigue un panel para marcas y contratos inteligentes en Hedera. Empezamos en el NEA.» |
+| 2:20 | Diapositiva 9 · Cierre | «Las distribuidoras ya trabajan bien. Nosotros hacemos que lo puedan demostrar. Gracias.» |
 
 ## Antes de grabar
 - La demo **no publica en Hedera**: lo dice en pantalla. No la presentes como producción.

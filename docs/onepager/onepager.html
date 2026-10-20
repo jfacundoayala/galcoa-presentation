@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>GALCOA+ · One-pager</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root { --navy: #1E3A5F; --blue: #2563EB; --ink: #0B1220; --muted: #475569; --line: #CBD5E1; --soft: #EEF4FB; }
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Space Grotesk", system-ui, sans-serif; color: var(--ink); background: #fff; font-size: 9pt; line-height: 1.32; }
+  .page { width: 210mm; min-height: 297mm; padding: 9mm 13mm 7mm; display: flex; flex-direction: column; gap: 2.6mm; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 8mm; padding-bottom: 3.5mm; border-bottom: 2px solid var(--navy); }
+  header .galcoa { height: 14mm; }
+  header .partners { display: flex; align-items: center; gap: 6mm; }
+  header .partners img { height: 8mm; }
+  header .partners img.neatech { height: 11mm; }
+  header .nea { font-family: "IBM Plex Mono", monospace; font-size: 7.8pt; text-transform: uppercase; letter-spacing: .04em; color: var(--navy); border: 1px solid var(--navy); padding: 1.5mm 2.5mm; }
+  .tagline { font-size: 15pt; font-weight: 600; color: var(--navy); line-height: 1.2; }
+  .sub { font-size: 11pt; color: var(--blue); font-weight: 500; margin-top: 0.8mm; }
+  .meta { font-size: 9pt; color: var(--muted); }
+  .meta strong { color: var(--ink); }
+  .quote { background: var(--navy); color: #fff; padding: 2.8mm 4mm; font-size: 9.4pt; }
+  .quote strong { color: #BFDBFE; }
+  h2 { font-size: 10.2pt; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: .03em; margin-bottom: 1mm; }
+  section p + p { margin-top: 1.2mm; }
+  ol { padding-left: 5mm; display: grid; gap: 1mm; }
+  ul { padding-left: 4.5mm; display: grid; gap: 1mm; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+  .box { background: var(--soft); border-left: 3px solid var(--blue); padding: 2.5mm 4mm; }
+  .todo { background: #FEF3C7; padding: 0 1mm; }
+  footer { margin-top: auto; padding-top: 3mm; border-top: 1px solid var(--line); font-size: 8.4pt; color: var(--muted); display: flex; align-items: center; justify-content: space-between; gap: 6mm; }
+  footer .links { display: flex; flex-wrap: wrap; gap: 1mm 5mm; }
+  footer strong { color: var(--ink); }
+  footer .qr { display: flex; align-items: center; gap: 2.5mm; font-family: "IBM Plex Mono", monospace; font-size: 7.5pt; text-transform: uppercase; color: var(--navy); }
+  footer .qr img { width: 19mm; height: 19mm; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <img class="galcoa" src="../../public/img/logo-galcoa.svg" alt="GALCOA+">
+    <div class="partners">
+      <span class="nea">3er puesto<br>Track Hedera</span>
+      <img src="neatech.png" alt="NEA Tech Corrientes 2026" class="neatech">
+      <img src="hedera.svg" alt="Hedera">
+    </div>
+  </header>
+
+  <div>
+    <p class="tagline">Tu historial de operaciones es tu mejor carta de presentación.</p>
+    <p class="sub">Registros que se pueden comprobar, no solo creer.</p>
+  </div>
+
+  <p class="meta"><strong>Equipo:</strong> Nahuel Noir · Gastón Persoglia · Juan Facundo Ayala · Thomas Skarp · Federico Fontana</p>
+
+  <p class="quote"><strong>Producto funcionando y premiado.</strong> El jurado destacó la originalidad, la ingeniería para proteger los registros y que resuelve «un problema empresarial concreto e importante».</p>
+
+  <section>
+    <h2>Introducción al problema</h2>
+    <p>Las empresas registran sus operaciones en papel, planillas y WhatsApp, tanto las que hacen con otras empresas (una entrega a un cliente, una compra a un proveedor) como las de adentro de la propia empresa (del depósito a la sucursal, de un área a otra). Cuando algo sale mal, nadie puede demostrar qué pasó.</p>
+  </section>
+
+  <section>
+    <h2>El problema</h2>
+    <p>Empezamos por las distribuidoras pymes de alimentos y bebidas. Muchas trabajan bien durante años, pero no lo pueden demostrar: los remitos están dispersos, los acuerdos son de palabra y todo es «palabra de la distribuidora», sin un tercero que lo confirme. Eso termina en reclamos sin respaldo y en oportunidades perdidas, porque es difícil que una marca te elija como representante sin un historial que se pueda comprobar.</p>
+    <p>Solo COPAL, la entidad que agrupa a la industria de alimentos y bebidas, representa a más de 14.700 empresas del sector, el 95 % pymes. En Argentina hay unos 10.000 mayoristas que abastecen a 140.000 almacenes (CADAM); en el NEA estimamos unas 900 distribuidoras y 13.000 almacenes. Estamos validando el problema con entrevistas a distribuidoras y marcas de la región.</p>
+  </section>
+
+  <section>
+    <h2>La solución y su implementación</h2>
+    <p>GALCOA+ convierte cada operación en una prueba, en cuatro pasos:</p>
+    <ol>
+      <li>Se cuenta la operación por chat, con la foto del remito o del comprobante.</li>
+      <li>La inteligencia artificial arma el documento y lo controla. Si el pedido dice 200 cajas y el remito firmado también dice 200, sigue. Si el remito dice 198, lo detecta y <strong>no se sella</strong>: primero hay que aclarar la diferencia, corregir el documento y que la otra parte confirme. La IA no inventa datos: una persona revisa y aprueba.</li>
+      <li>La otra parte confirma desde el celular, con un QR o un enlace, sin crearse una cuenta.</li>
+      <li>La huella del documento se registra en Hedera, una red pública. Solo viaja la huella, nunca el contenido. Si alguien cambia algo después, se nota. <strong>Si después hay un reclamo, la prueba ya está.</strong></li>
+    </ol>
+    <p>La prueba no depende de confiar en nadie, ni siquiera en nosotros, y cada registro cuesta menos de un centavo de dólar. Hoy funciona en la red de prueba de Hedera (Testnet) para demostrar que el sistema anda; el próximo paso es la red principal.</p>
+  </section>
+
+  <section>
+    <h2>Escenario proyectado</h2>
+    <div class="grid2">
+      <ul>
+        <li><strong>Quién paga:</strong> la distribuidora que quiere ser representante oficial o de zona de una marca, ganar prestigio y distribuir mejores productos, demostrando trazabilidad y confiabilidad. Suscripción mensual desde USD 30.</li>
+        <li><strong>Qué gana:</strong> nuevas marcas, menos reclamos perdidos y un historial verificable para vender y pedir crédito.</li>
+        <li><strong>Cómo llegamos:</strong> un piloto con distribuidoras del NEA, después las cámaras y asociaciones de distribuidores, y la recomendación de los comercios que confirman entregas.</li>
+      </ul>
+      <ul>
+        <li><strong>Mercados secundarios:</strong> cannabis medicinal, farma y agro (registros de cultivo, cosecha, lotes y auditorías), objetos de alto valor (relojes, joyas) y operaciones internas de cualquier empresa.</li>
+        <li><strong>Hacia dónde crece:</strong> las distribuidoras regionales existen en todo el mundo. Solo en Estados Unidos, la distribución mayorista mueve US$ 8,2 billones por año.</li>
+        <li><strong>Próximos pasos:</strong> red principal de Hedera, panel para compartir el historial con las marcas y, más adelante, acuerdos automáticos con contratos inteligentes.</li>
+      </ul>
+    </div>
+    <div class="box" style="margin-top:2.5mm">
+      <strong>Con el financiamiento:</strong> <span class="todo">[a completar por el equipo: por ejemplo, el piloto con X distribuidoras, el pase a la red principal y el panel para marcas]</span>
+    </div>
+  </section>
+
+  <footer>
+    <div class="links">
+      <span><strong>Demo:</strong> galcoa.noirnahuel.com</span>
+      <span><strong>Presentación:</strong> galcoa-presentation.vercel.app</span>
+      <span><strong>Video:</strong> <span class="todo">[link del video nuevo]</span></span>
+      <span><strong>Hedera:</strong> <span class="todo">[link de HashScan]</span></span>
+      <span><strong>Contacto:</strong> galcoa.ok@gmail.com</span>
+    </div>
+    <div class="qr"><img src="qr-demo.svg" alt="QR a la demo"><span>Escaneá<br>y probá<br>la demo</span></div>
+  </footer>
+</div>
+</body>
+</html>
