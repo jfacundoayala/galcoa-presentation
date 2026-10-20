@@ -7,6 +7,7 @@ import {
   SlideValor,
   SlideModelo,
   SlideRoadmap,
+  SlideCierre,
 } from '../components/slides/distribuidoras';
 
 export interface SlideDefinition {
@@ -17,7 +18,7 @@ export interface SlideDefinition {
   Component: React.ComponentType;
 }
 
-/** Siete diapositivas: distribuidoras pymes del NEA; su historial de entregas como prueba verificable en Hedera. */
+/** Ocho diapositivas: distribuidoras pymes del NEA; su historial de entregas como prueba verificable en Hedera. */
 export const SLIDES: SlideDefinition[] = [
   { id: 'intro', title: 'GALCOA+ · Evidencia comercial verificable', category: 'Portada', Component: Slide0 },
   { id: 'problema', title: 'Trabajan bien, pero no lo pueden demostrar', category: 'Problema', Component: SlideProblema },
@@ -26,6 +27,7 @@ export const SLIDES: SlideDefinition[] = [
   { id: 'valor', title: 'Tu historial es tu carta de presentación', category: 'Valor', Component: SlideValor },
   { id: 'modelo', title: 'Un abono mensual, accesible para una pyme', category: 'Negocio', Component: SlideModelo },
   { id: 'roadmap-equipo', title: 'Próximos pasos y equipo', category: 'Roadmap', Component: SlideRoadmap },
+  { id: 'cierre', title: 'Las distribuidoras ya trabajan bien. Nosotros hacemos que lo puedan demostrar.', category: 'Cierre', Component: SlideCierre },
 ].map((slide, index) => ({ ...slide, index }));
 
 export type DeckId = 'hedera';

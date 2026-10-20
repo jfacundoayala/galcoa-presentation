@@ -28,6 +28,9 @@ export const SlideProblema: React.FC = () => (
     <Band>
       <strong>¿Cuántas oportunidades pierde una distribuidora por no poder demostrar todo lo que ya hace bien?</strong>
     </Band>
+    <Band tone="deep">
+      <strong className="text-brand-accent">Por qué ahora:</strong> todos tienen celular y WhatsApp, la IA ya puede ordenar un mensaje en segundos y sellar un registro en Hedera cuesta una fracción de centavo. Hace unos años, algo así era caro y complicado para una pyme. Hoy no.
+    </Band>
   </Frame>
 );
 
@@ -150,10 +153,13 @@ export const SlideModelo: React.FC = () => (
       ]}
     />
     <Band>
+      <strong className="text-brand-accent">Quién paga:</strong> la distribuidora que quiere ser representante oficial o de zona de una marca, ganar prestigio y distribuir mejores productos a mejor precio, demostrando trazabilidad, seguridad y confiabilidad. El comercio y la marca no pagan.
+    </Band>
+    <Band tone="deep">
       <span className="inline-flex items-start gap-2">
         <Users className="w-5 h-5 shrink-0 text-brand-accent" aria-hidden="true" />
         <span>
-          <strong>Cómo lo validamos:</strong> entrevistas con 3 distribuidoras y 2 marcas, y un piloto en el NEA. Sellar en Hedera cuesta una fracción de centavo de dólar, así que el precio puede ser bajo.
+          <strong className="text-brand-accent">Cómo llegamos:</strong> con un piloto cara a cara con distribuidoras del NEA, y después a través de cámaras y asociaciones de distribuidores, que llegan a muchas a la vez. Además, cada comercio que confirma una entrega conoce GALCOA+ y lo puede recomendar a otros proveedores.
         </span>
       </span>
     </Band>
@@ -173,6 +179,9 @@ export const SlideRoadmap: React.FC = () => {
           { tag: 'Más adelante', title: 'Acuerdos automáticos', text: 'Contratos inteligentes en Hedera: por ejemplo, un premio por entregas confirmadas.' },
         ]}
       />
+      <Band>
+        <strong className="text-brand-accent">Por qué nosotros:</strong> conocemos las necesidades de las distribuidoras, las pymes y los negocios de la región. Juntamos tecnología, negocio y soluciones.
+      </Band>
       <Band tone="deep">
         <span className="inline-flex items-center gap-2 flex-wrap">
           <Handshake className="w-4 h-4 text-brand-accent" aria-hidden="true" />
@@ -183,3 +192,23 @@ export const SlideRoadmap: React.FC = () => {
     </Frame>
   );
 };
+
+/** 8 · Cierre: el proyecto en una frase y lo que el jurado tiene que recordar. */
+export const SlideCierre: React.FC = () => (
+  <Frame badge="En una frase" title="Las distribuidoras ya trabajan bien. Nosotros hacemos que lo puedan demostrar.">
+    <motion.p variants={itemVariants} className="max-w-4xl text-text text-base md:text-lg leading-relaxed">
+      Nos dirigimos a <strong className="text-brand-accent">distribuidoras pymes de alimentos y bebidas</strong>. Resolvemos que{' '}
+      <strong className="text-brand-accent">trabajan bien pero no lo pueden demostrar</strong>, mediante{' '}
+      <strong className="text-brand-accent">un chat con IA que convierte cada entrega en una prueba confirmada por el comercio y sellada en Hedera</strong>.
+      Generamos valor porque <strong className="text-brand-accent">su historial se vuelve una carta de presentación para conseguir nuevas marcas</strong>.
+      Nuestro modelo de ingresos es <strong className="text-brand-accent">un abono mensual</strong>, y llegamos a los clientes mediante{' '}
+      <strong className="text-brand-accent">un piloto en el NEA y las cámaras de distribuidores</strong>.
+    </motion.p>
+    <motion.p
+      variants={itemVariants}
+      className="mt-6 border border-line bg-brand-navy px-5 py-5 text-2xl md:text-4xl font-semibold font-display text-text leading-tight"
+    >
+      Tu historial de operaciones es tu mejor carta de presentación.
+    </motion.p>
+  </Frame>
+);

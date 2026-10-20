@@ -16,7 +16,7 @@ La distribuidora cuenta cada operación por chat; la IA arma y revisa el documen
 ---
 
 ## 🔀 Versión del pitch
-Hay una sola versión: **Hedera** (`/`), con 7 diapositivas definidas en `src/data/slides.ts`.
+Hay una sola versión: **Hedera** (`/`), con 8 diapositivas definidas en `src/data/slides.ts`.
 
 - `npm run pdf` genera `GALCOA_Presentacion_Hedera_Ideathon.pdf`.
 

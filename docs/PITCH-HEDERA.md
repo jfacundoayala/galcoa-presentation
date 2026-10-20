@@ -1,4 +1,4 @@
-# Guion de pitch · Versión Hedera (7 diapositivas · ~3 min)
+# Guion de pitch · Versión Hedera (8 diapositivas · ~3 min)
 
 URL: `/` · Foco: **distribuidoras pymes del NEA (alimentos y bebidas): su historial de entregas como prueba verificable en Hedera**. Fuente del enfoque: [`ORIENTACION-DISTRIBUIDORES.md`](ORIENTACION-DISTRIBUIDORES.md).
 Regla de oro: palabras simples y vender fuerte lo que sí hacemos. No decir «certificado», «validado», «cumple», «garantizado» ni «a prueba de». No nombrar empresas ni casos reales. Las cifras son ilustrativas y se dicen como tales.
@@ -6,12 +6,13 @@ Regla de oro: palabras simples y vender fuerte lo que sí hacemos. No decir «ce
 | # | Diapositiva | Tiempo | Qué decir (línea fuerte en **negrita**) |
 |---|---|---|---|
 | 1 | Portada | 0:15 | «**Tu historial de operaciones es tu mejor carta de presentación.** GALCOA+ lo convierte en una prueba verificable en Hedera.» |
-| 2 | El problema | 0:30 | «Las distribuidoras pymes trabajan bien, pero llevan todo en papel y WhatsApp. Cuando una marca nueva pregunta cómo trabajan, no tienen pruebas. **¿Cuántas oportunidades pierden por eso?**» |
+| 2 | El problema | 0:30 | «Las distribuidoras pymes trabajan bien, pero llevan todo en papel y WhatsApp. Cuando una marca nueva pregunta cómo trabajan, no tienen pruebas. **¿Cuántas oportunidades pierden por eso?** Y por qué ahora: todos tienen celular, la IA ordena un mensaje en segundos y sellar en Hedera cuesta una fracción de centavo.» |
 | 3 | Cómo funciona | 0:35 | «Lo cuentan por chat, la IA lo ordena sin inventar nada, **el comercio confirma con un QR** y queda sellado en Hedera.» Si hay tiempo, mostrar `/demo`. |
 | 4 | Por qué Hedera | 0:35 | «A Hedera solo va la huella del documento, nunca el documento. **Una blockchain hace que un dato sea inalterable, no que sea verdadero:** por eso sumamos la confirmación del comercio.» Mostrar el Topic ID y una transacción real en HashScan. |
 | 5 | Qué gana cada uno | 0:20 | «La distribuidora puede demostrar cómo trabaja. La marca puede elegir con datos. **No prometemos ventas: damos pruebas.**» |
-| 6 | Modelo | 0:25 | «Un abono mensual desde 39.900 pesos. Son precios de prueba: los vamos a ajustar con entrevistas y un piloto en el NEA.» |
-| 7 | Próximos pasos y equipo | 0:20 | «Hoy, el MVP en Testnet. Después, un panel para marcas. Más adelante, contratos inteligentes en Hedera. **Empezamos en el NEA y sirve en cualquier lado.** Somos 5.» |
+| 6 | Modelo | 0:25 | «Un abono mensual desde 39.900 pesos. Paga la distribuidora que quiere ser representante oficial o de zona de una marca y ganar prestigio. Llegamos con un piloto en el NEA y por las cámaras de distribuidores. Son precios de prueba.» |
+| 7 | Próximos pasos y equipo | 0:20 | «Hoy, el MVP en Testnet. Después, un panel para marcas. Más adelante, contratos inteligentes en Hedera. **Empezamos en el NEA y sirve en cualquier lado.** Conocemos las necesidades de las distribuidoras y los negocios de la región: juntamos tecnología, negocio y soluciones.» |
+| 8 | Cierre | 0:15 | «**Las distribuidoras ya trabajan bien. Nosotros hacemos que lo puedan demostrar.** Tu historial de operaciones es tu mejor carta de presentación.» |
 
 ## Preguntas probables del jurado
 - **¿Hedera prueba que la entrega pasó?** No. Prueba cuándo se registró el documento y que no cambió. La entrega la respalda la confirmación del comercio, y lo declarado nunca se muestra como confirmado.
