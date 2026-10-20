@@ -10,7 +10,7 @@ Regla de oro: palabras simples y vender fuerte lo que sí hacemos. No decir «ce
 | 3 | Cómo funciona | 0:35 | «Lo cuentan por chat, la IA lo ordena sin inventar nada, **el comercio confirma con un QR** y queda sellado en Hedera.» Si hay tiempo, mostrar `/demo`. |
 | 4 | Por qué Hedera | 0:35 | «A Hedera solo va la huella del documento, nunca el documento. **Una blockchain hace que un dato sea inalterable, no que sea verdadero:** por eso sumamos la confirmación del comercio.» Mostrar el Topic ID y una transacción real en HashScan. |
 | 5 | Qué gana cada uno | 0:20 | «La distribuidora puede demostrar cómo trabaja. La marca puede elegir con datos. **No prometemos ventas: damos pruebas.**» |
-| 6 | Modelo | 0:25 | «Un abono mensual desde 39.900 pesos. Paga la distribuidora que quiere ser representante oficial o de zona de una marca y ganar prestigio. Llegamos con un piloto en el NEA y por las cámaras de distribuidores. Son precios de prueba.» |
+| 6 | Modelo | 0:25 | «Un abono mensual desde 30 dólares. Paga la distribuidora que quiere ser representante oficial o de zona de una marca y ganar prestigio. Llegamos con un piloto en el NEA y por las cámaras de distribuidores. Son precios de prueba.» |
 | 7 | Próximos pasos y equipo | 0:20 | «Hoy, el MVP en Testnet. Después, un panel para marcas. Más adelante, contratos inteligentes en Hedera. **Empezamos en el NEA y sirve en cualquier lado.** Conocemos las necesidades de las distribuidoras y los negocios de la región: juntamos tecnología, negocio y soluciones.» |
 | 8 | Cierre | 0:15 | «**Las distribuidoras ya trabajan bien. Nosotros hacemos que lo puedan demostrar.** Tu historial de operaciones es tu mejor carta de presentación.» |
 

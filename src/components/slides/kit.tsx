@@ -93,6 +93,22 @@ export const Cards: React.FC<{ items: CardItem[]; cols: 2 | 3 | 4 }> = ({ items,
   </div>
 );
 
+/** Captura de la app con marco y una aclaración debajo. */
+export const Screenshot: React.FC<{ src: string; alt: string; caption: string; imgClassName?: string; className?: string }> = ({
+  src,
+  alt,
+  caption,
+  imgClassName = '',
+  className = '',
+}) => (
+  <motion.figure variants={itemVariants} className={`border border-line bg-surface-deep ${className}`}>
+    <img src={src} alt={alt} className={`block w-full ${imgClassName}`} />
+    <figcaption className="border-t border-line px-3 py-2 font-mono text-[11px] uppercase tracking-[0.05em] text-text-muted">
+      {caption}
+    </figcaption>
+  </motion.figure>
+);
+
 export const Band: React.FC<{ children: React.ReactNode; tone?: 'navy' | 'deep' }> = ({ children, tone = 'navy' }) => (
   <motion.div
     variants={itemVariants}

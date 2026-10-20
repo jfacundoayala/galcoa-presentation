@@ -26,7 +26,7 @@ Son el mismo contenido en dos formatos: el **Pitch deck** es el link para verlo 
 
 **Por qué Hedera.** Solo se publica la huella y un identificador opaco, nunca el documento. Hedera prueba cuándo se registró y que no cambió; la confirmación del comercio respalda la entrega. Lo declarado y lo confirmado van siempre separados. Etapa posterior: acuerdos programables con Smart Contract Service.
 
-**Modelo.** Suscripción mensual para pymes, con precios de prueba a validar (ARS 39.900, 79.900 y 149.900).
+**Modelo.** Suscripción mensual para pymes, con precios de prueba a validar (USD 30, 60 y 120 por mes).
 
 **Qué falta.** [Estado real: qué está construido hoy]. Entrevistas con 3 distribuidoras y 2 marcas y un piloto (validación); panel de indicadores y perfil para marcas (Fase 2); acuerdos programables (Fase 3).
 ```

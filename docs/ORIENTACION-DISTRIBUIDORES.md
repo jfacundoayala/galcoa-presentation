@@ -94,11 +94,13 @@ En distribución importa distinguir **facturación** de **ganancia neta**. Una e
 
 ### Hipótesis de planes SaaS
 
+> **Actualización 20/10/2026:** los precios de prueba pasan a dólares (USD 30 / 60 / 120 por mes), porque el dólar no queda viejo con la inflación, los costos del producto son en dólares y es la moneda del financiamiento. A una distribuidora se le informa el equivalente en pesos al momento.
+
 | Plan | Precio mensual sugerido para testear | Alcance tentativo |
 |---|---:|---|
-| Inicial | ARS 39.900 | Hasta 150 documentos, confirmaciones y trazabilidad |
-| Crecimiento | ARS 79.900 | Hasta 600 documentos, perfil comercial e indicadores; acuerdos programables básicos |
-| Pro | ARS 149.900 | Hasta 3.000 documentos, reportes e integraciones |
+| Inicial | USD 30 | Hasta 150 documentos, confirmaciones y trazabilidad |
+| Crecimiento | USD 60 | Hasta 600 documentos, perfil comercial e indicadores; acuerdos programables básicos |
+| Pro | USD 120 | Hasta 3.000 documentos, reportes e integraciones |
 
 Estos valores son **precios de prueba**, no precios finales ni disposición a pagar demostrada. Deben validarse con entrevistas y pilotos; revisar periódicamente costos de IA, infraestructura, almacenamiento y transacciones.
 
@@ -106,8 +108,8 @@ Estos valores son **precios de prueba**, no precios finales ni disposición a pa
 
 Con una utilidad marginal **hipotética** del 4%:
 
-- Un plan de **ARS 79.900/mes** requiere alrededor de **ARS 1.997.500 en ventas mensuales adicionales** para cubrir su costo, siempre que esas ventas generen ese mismo 4% de contribución neta.
-- Si una distribuidora consiguiera **ARS 10 millones adicionales en ventas/mes** atribuibles al uso de GALCOA+, con el mismo 4% de margen, serían **ARS 400.000 de ganancia adicional** antes de la suscripción y **ARS 320.100 después**.
+- Un plan de **USD 60/mes** requiere alrededor de **USD 1.500 en ventas mensuales adicionales** para cubrir su costo, siempre que esas ventas generen ese mismo 4% de contribución neta.
+- Si una distribuidora consiguiera **USD 10.000 adicionales en ventas/mes** atribuibles al uso de GALCOA+, con el mismo 4% de margen, serían **USD 400 de ganancia adicional** antes de la suscripción y **USD 340 después**.
 
 **Importante:** estas cifras explican un ROI posible; no demuestran que GALCOA+ genere nuevas ventas. El valor también puede surgir de ahorro de tiempo, reducción de disputas y menor costo administrativo.
 

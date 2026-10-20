@@ -4,9 +4,9 @@ import {
   FileStack, MessagesSquare, SearchX,
   Truck, Building2,
   MessageSquareText, Sparkles, QrCode, Fingerprint,
-  FileText, ArrowRight, ArrowDown, Check, X, Users, Handshake,
+  FileText, ArrowDown, Check, X, Users, Handshake,
 } from 'lucide-react';
-import { Frame, Cards, Band, itemVariants } from './kit';
+import { Frame, Cards, Band, Screenshot, itemVariants } from './kit';
 
 const icon = (Icon: React.ComponentType<{ className?: string }>) => <Icon className="w-6 h-6" aria-hidden="true" />;
 
@@ -50,7 +50,13 @@ export const SlideComoFunciona: React.FC = () => (
         { icon: icon(Fingerprint), tag: 'Paso 4', title: 'Queda sellado en Hedera', text: 'Se guarda la huella del documento. Si alguien lo cambia después, se nota.', highlight: true },
       ]}
     />
-    <Band tone="deep">Probalo en la demo: un pedido entregado, confirmado y sellado.</Band>
+    <Screenshot
+      className="mt-4"
+      src="/img/demo-ia.png"
+      alt="Demo: el mensaje de la entrega en el chat y, al lado, el registro ordenado por la IA con pedido, cliente, mercadería, temperatura y hora"
+      caption="Demo con datos de ejemplo · el mensaje del chat se convierte en un registro ordenado"
+      imgClassName="h-[200px] lg:h-[250px] object-cover object-top"
+    />
   </Frame>
 );
 
@@ -61,8 +67,10 @@ export const SlideHedera: React.FC = () => (
     title="Una prueba que nadie puede reescribir"
     lead="Una blockchain hace que un dato sea inalterable, no que sea verdadero. Por eso sumamos la confirmación del comercio."
   >
+    <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-4 lg:gap-6 items-start">
+    <div>
     <motion.div variants={itemVariants} className="border border-line bg-brand-navy p-4 lg:p-5">
-      <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-3">
+      <div className="flex flex-col gap-2">
         {[
           { i: FileText, t: 'El documento', d: 'Se queda privado en nuestro sistema.' },
           { i: Fingerprint, t: 'Su huella (SHA-256)', d: 'Un código único. No revela nada del contenido.' },
@@ -71,8 +79,7 @@ export const SlideHedera: React.FC = () => (
           <React.Fragment key={s.t}>
             {idx > 0 && (
               <span className="text-brand-accent self-center" aria-hidden="true">
-                <ArrowDown className="w-5 h-5 md:hidden" />
-                <ArrowRight className="w-5 h-5 hidden md:block" />
+                <ArrowDown className="w-4 h-4" />
               </span>
             )}
             <div className="flex-1 bg-surface-deep border border-line p-3 space-y-1">
@@ -98,6 +105,15 @@ export const SlideHedera: React.FC = () => (
         </div>
         <p className="text-text-muted text-sm leading-snug">Que la entrega haya pasado de verdad. Eso lo respalda el comercio que confirma.</p>
       </motion.div>
+    </div>
+    </div>
+    <Screenshot
+      className="lg:w-[340px] xl:w-[380px]"
+      src="/img/demo-sello.png"
+      alt="Demo: después del sello se cambió la cantidad a 48 cajas y la app avisa que la huella ya no coincide"
+      caption="Demo · si alguien cambia un dato, la huella ya no coincide"
+      imgClassName="max-h-[420px] object-contain object-top"
+    />
     </div>
   </Frame>
 );
@@ -147,9 +163,9 @@ export const SlideModelo: React.FC = () => (
     <Cards
       cols={3}
       items={[
-        { tag: 'Inicial', title: 'ARS 39.900 / mes', text: 'Hasta 150 documentos.' },
-        { tag: 'Crecimiento', title: 'ARS 79.900 / mes', text: 'Hasta 600 documentos e indicadores para marcas.', highlight: true },
-        { tag: 'Pro', title: 'ARS 149.900 / mes', text: 'Hasta 3.000 documentos, reportes e integraciones.' },
+        { tag: 'Inicial', title: 'USD 30 / mes', text: 'Hasta 150 documentos.' },
+        { tag: 'Crecimiento', title: 'USD 60 / mes', text: 'Hasta 600 documentos e indicadores para marcas.', highlight: true },
+        { tag: 'Pro', title: 'USD 120 / mes', text: 'Hasta 3.000 documentos, reportes e integraciones.' },
       ]}
     />
     <Band>
