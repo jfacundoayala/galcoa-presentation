@@ -121,7 +121,7 @@ export const SlideHedera: React.FC = () => (
 /** 5 · Qué gana cada uno. */
 export const SlideValor: React.FC = () => (
   <Frame
-    badge="Qué gana cada uno" art="/img/ilus/valor-negocio.svg" artAlt="Un distribuidor y un comerciante se estrechan la mano y cierran la operación"
+    badge="Qué gana cada uno" art="/img/ilus/valor-acuerdo.svg" artAlt="Una distribuidora y un comercio cierran un acuerdo con un apretón de manos"
     title="Tu historial es tu carta de presentación"
   >
     <Cards
@@ -186,7 +186,7 @@ export const SlideModelo: React.FC = () => (
 export const SlideRoadmap: React.FC = () => {
   const team = ['Gastón Persoglia', 'Nahuel Noir', 'Facundo Ayala', 'Federico Fontana', 'Thomas Skarp'];
   return (
-    <Frame badge="Próximos pasos" art="/img/ilus/roadmap.svg" artAlt="Camino con cuatro etapas y un camión que avanza" title="Empezamos en el NEA, sirve en cualquier lado">
+    <Frame badge="Próximos pasos" art="/img/ilus/roadmap-fases.svg" artAlt="Escalera de cuatro fases: hoy, piloto en el NEA, acuerdos automáticos y otros países" title="Empezamos en el NEA, sirve en cualquier lado">
       <Cards
         cols={4}
         items={[
@@ -213,7 +213,7 @@ export const SlideRoadmap: React.FC = () => {
 /** 7 · Mercado potencial: de dónde arrancamos y hasta dónde puede llegar. */
 export const SlideMercado: React.FC = () => (
   <Frame
-    badge="Mercado potencial · a explorar" art="/img/ilus/mercado.svg" artAlt="Globo terráqueo con pines que parten del NEA"
+    badge="Mercado potencial · a explorar" art="/img/ilus/mercado-nea-mundo.svg" artAlt="Círculos que crecen del NEA a la Argentina y al mundo"
     title="Empezamos en el NEA. El objetivo es el mundo."
     lead="Cifras de cada sector, para dimensionar hacia dónde puede crecer. No son el mercado que vamos a captar."
   >
